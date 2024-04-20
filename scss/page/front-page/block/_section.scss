@@ -1,0 +1,48 @@
+@use '../../../setting/config' as *;
+@use '../../../mixin/_mixin' as *;
+
+/**********************************************
+  セクション共通
+**********************************************/
+// セクション内の設定
+.section {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+
+  &--bg {
+    // @include bg-expand();
+    background-color: $section-color;
+  }
+
+  &__header {
+    text-align: center;
+  }
+
+  &__title {
+    font-weight: bold;
+    color: $main-color;
+    &--ja {
+      font-size: $front-page-heading-level2;
+    }
+    &--en {
+      opacity: $opacity;
+    }
+  }
+
+  &__border-title {
+    position: relative;
+    &::after {
+      position: absolute;
+      font-size: clamp(4rem, 3.091rem + 4.55vw, 6rem);
+      color: $main-color-light;
+      opacity: $opacity;
+      font-family: $font-family-accent;
+      top: 0;
+      transform: translateY( -50%);
+    }
+  }
+
+  &__body {
+    margin-top: 4rem;
+  }
+}

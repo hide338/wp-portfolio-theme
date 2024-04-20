@@ -1,0 +1,186 @@
+/* ---------------------------------------------
+  Gap
+--------------------------------------------- */
+@mixin gap($px: 1) {
+  $gap-rem: calc($px / 16);
+  gap: $gap-rem + rem;
+}
+
+/* Gapをループですべて作成する場合、下記を有効化 */
+/* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
+// $i: 0;
+// $class-count: 0;
+// @while $i <= 10 {
+//   $gap-rem: calc($i / 4);
+//   .gap-#{$class-count} {
+//     gap: $gap-rem + rem;
+//   }
+//   $i : $i + 0.5;
+//   $class-count: $class-count + 2;
+// }
+
+/* ---------------------------------------------
+  Grid Columns
+--------------------------------------------- */
+@mixin grid-cols($cols: 1) {
+  display: grid;
+  @if $cols == none {
+  grid-template-columns: none;
+  }
+  @else if $cols == subgrid {
+  grid-template-columns: subgrid;
+  }
+  @else {
+    grid-template-columns: repeat($cols, minmax(0, 1fr));
+  }
+}
+
+/* Grid Columnsをループですべて作成する場合、下記を有効化 */
+/* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
+// @for $i from 1 to 12 {
+//   .grid-cols-#{$i} {
+//     grid-template-columns: repeat($i, minmax(0, 1fr));
+//   }
+// }
+
+/* ---------------------------------------------
+  Grid Columns Span
+--------------------------------------------- */
+@mixin col-span($span: 1) {
+  @if $span == auto {
+  grid-column: auto;
+  }
+  @else if $span == full {
+  grid-column: 1 / -1;
+  }
+  @else {
+    grid-column: span $span / span $span;
+  }
+}
+
+/* col-spanをループですべて作成する場合、下記を有効化 */
+/* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
+// @for $i from 1 to 12 {
+//   .col-span-#{$i} {
+//     grid-column: span $i / span $i;
+//   }
+// }
+
+/* ------------ col-start --------------- */
+@mixin col-start($start: 1) {
+  @if $start == auto {
+  grid-column-start: auto;
+  }
+  @else {
+    grid-column-start: $start;
+  }
+}
+
+/* col-startをループですべて作成する場合、下記を有効化 */
+/* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
+// @for $i from 1 to 13 {
+//   .col-start-#{$i} {
+//     grid-column-start: $i;
+//   }
+// }
+
+/* ------------ col-end --------------- */
+@mixin col-end($end: 1) {
+  @if $end == auto {
+  grid-column-end: auto;
+  }
+  @else {
+    grid-column-end: $end;
+  }
+}
+
+/* col-endをループですべて作成する場合、下記を有効化 */
+/* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
+// @for $i from 1 to 13 {
+//   .col-end-#{$i} {
+//     grid-column-end: $i;
+//   }
+// }
+
+/* ---------------------------------------------
+  Grid rows
+--------------------------------------------- */
+@mixin grid-rows($rows: 1) {
+  display: grid;
+  @if $rows == none {
+    grid-template-rows: none;
+  }
+  @else if $rows == subgrid {
+    grid-template-rows: subgrid;
+  }
+  @else {
+    grid-template-rows: repeat($rows, minmax(0, 1fr));
+  }
+}
+
+/* Grid rowsをループですべて作成する場合、下記を有効化 */
+/* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
+// @for $i from 1 to 12 {
+//   .grid-rows-#{$i} {
+//     grid-template-rows: repeat($i, minmax(0, 1fr));
+//   }
+// }
+
+/* ---------------------------------------------
+  Grid Rows Span
+--------------------------------------------- */
+@mixin row-span($span: 1) {
+  @if $span == auto {
+  grid-row: auto;
+  }
+  @else if $span == full {
+  grid-row: 1 / -1;
+  }
+  @else {
+    grid-row: span $span / span $span;
+  }
+}
+
+/* row-spanをループですべて作成する場合、下記を有効化 */
+/* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
+// @for $i from 1 to 12 {
+//   .row-span-#{$i} {
+//     grid-row: span $i / span $i;
+//   }
+// }
+
+/* ------------ row-start --------------- */
+@mixin row-start($start: 1) {
+  @if $start == auto {
+  grid-row-start: auto;
+  }
+  @else {
+    grid-row-start: $start;
+  }
+}
+
+/* row-startをループですべて作成する場合、下記を有効化 */
+/* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
+// @for $i from 1 to 13 {
+//   .row-start-#{$i} {
+//     grid-row-start: $i;
+//   }
+// }
+
+/* ------------ row-end --------------- */
+@mixin row-end($end: 1) {
+  @if $end == auto {
+  grid-row-end: auto;
+  }
+  @else {
+    grid-row-end: $end;
+  }
+}
+
+/* row-endをループですべて作成する場合、下記を有効化 */
+/* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
+// @for $i from 1 to 13 {
+//   .row-end-#{$i} {
+//     grid-row-end: $i;
+//   }
+// }

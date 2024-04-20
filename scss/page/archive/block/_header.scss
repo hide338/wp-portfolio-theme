@@ -1,0 +1,19 @@
+@use '../../../setting/config' as *;
+@use '../../../mixin/_mixin' as *;
+
+/**********************************************
+  アーカイブ　ヘッダー
+**********************************************/
+.archive__header {
+  padding: 1.25rem 0;
+}
+
+.archive__title {
+  font-size: $sp-heading-level-1;
+  font-weight: bold;
+  border-bottom: 3px solid $main-color;
+  padding: 0.5rem;
+  @include mq(tb) {
+    font-size: $heading-level-1;
+  }
+}

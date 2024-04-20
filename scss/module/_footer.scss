@@ -1,0 +1,15 @@
+@use '../setting/config' as *;
+@use '../mixin/_mixin' as *;
+
+/**********************************************
+  フッター
+**********************************************/
+.footer {
+  background-color: #fff;
+
+  &-info {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+    text-align: center;
+  }
+}

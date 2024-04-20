@@ -1,0 +1,19 @@
+@use '../setting/config' as *;
+@use 'hover' as *;
+
+/**********************************************
+  Tag
+**********************************************/
+@mixin tag($bg-color: $main-color, $text-color: #fff, $border-radius: $border-radius, $shadow-color: $shadow-color) {
+  font-size: 0.875rem;
+  padding: 0.125rem 0.25rem;
+  background-color: $bg-color;
+  color: $text-color;
+  border-radius: $border-radius;
+  display: inline-block;
+  margin-left: 0.5rem;
+  &:first-of-type {
+    margin-left: 0;
+  }
+  @include hover-pale();
+}

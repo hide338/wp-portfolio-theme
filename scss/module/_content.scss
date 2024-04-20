@@ -1,0 +1,16 @@
+@use '../setting/config' as *;
+@use '../mixin/_mixin' as *;
+
+/**********************************************
+  コンテンツエリア
+**********************************************/
+// サイトコンテンツエリアのスタイル
+.content-area {
+  @include container();
+  margin: 3rem auto;
+
+  &--mt-none {
+    margin-top: 0 !important;
+  }
+}
+

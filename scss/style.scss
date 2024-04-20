@@ -1,0 +1,22 @@
+/*
+Theme Name: WordPress BASE
+Author: Toshihide Nakahara
+Version: 1.0.0
+*/
+/**********************************************
+  各スタイルのインポート
+**********************************************/
+// 変数
+@use './setting/config' as *;
+@use './mixin/_mixin' as *;
+
+// base
+@forward './base/base';
+// reset
+@forward './base/reset';
+
+// module
+@forward './module/_module';
+
+// プラグインのスタイル
+@forward './pulgins/_pulgins';

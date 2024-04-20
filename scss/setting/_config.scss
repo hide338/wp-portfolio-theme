@@ -1,0 +1,78 @@
+/**********************************************
+  変数
+**********************************************/
+// Breakpoint
+$breakpoints: (
+  'tb': 600px,
+  'pc': 1024px,
+) !default;
+
+//サイトで使用するカラー
+$base-color: #F7F7F7;
+$main-color: #1C75BC;
+$main-color-light: #75B7EB;
+$accent-color: #F9A638;
+$section-color: #edf8fd;
+$text-color: #3b3b3b;
+$shadow-color: #ccc;
+$icon-color: #3b3b3b;
+$border-color: #3b3b3b;
+
+// 透過度
+$opacity: 0.85;
+
+//画像格納ディレクトリ
+$imgDir: './img/';
+
+//PCレイアウト時の最大横幅
+$pc-max-content-width: 80rem;
+
+// ヘッダーの高さ
+$header-height: 6rem;
+$sp-header-height: 4rem;
+
+// フォントファミリー
+$font-family: "Roboto", "Noto Sans JP", sans-serif;
+$font-family-accent: "Rubik Dirt", system-ui, sans-serif;
+$font-family-number: "Protest Guerrilla", sans-serif;
+
+// フォントサイズ
+$sp-font-size: 0.875rem;
+
+// 文字間
+$letter-spacing: 0.05em;
+
+// 行間
+$line-height: 1.6;
+
+// アクション時間
+$duration-time: .3s;
+
+// アクション待機時間
+$delay-time: .3s;
+
+// DisplayGridのアイテム間隔（gap-size）
+$gap-size: 16;
+
+//要素の丸め
+$border-radius: 0.25rem;
+
+// BASEフォントサイズ
+$heading-level-1: 1.625rem;
+$heading-level-2: 1.5rem;
+$heading-level-3: 1.25rem;
+$heading-level-4: 1.125rem;
+$sp-heading-level-1: 1.5rem;
+$sp-heading-level-2: 1.375rem;
+$sp-heading-level-3: 1.125rem;
+
+
+// プロジェクトフォントサイズ
+  // front-page
+  $front-page-heading-level1: clamp(2.488rem, 2.307rem + 0.91vw, 2.986rem);
+  $front-page-heading-level2: clamp(2.074rem, 1.923rem + 0.75vw, 2.488rem);
+  $front-page-heading-level3: clamp(1.728rem, 1.602rem + 0.63vw, 2.074rem);
+  $front-page-heading-level4: clamp(1.44rem, 1.344rem + 0.48vw, 1.728rem);
+  $front-page-heading-level5: clamp(1.2rem, 1.12rem + 0.4vw, 1.44rem);
+  $front-page-heading-level6: clamp(1rem, 0.933rem + 0.33vw, 1.2rem);
+  $front-page-heading-level6: clamp(1rem, 0.933rem + 0.33vw, 1.2rem);

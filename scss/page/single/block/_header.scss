@@ -1,0 +1,27 @@
+@use '../../../setting/config' as *;
+@use '../../../mixin/_mixin' as *;
+
+/**********************************************
+  singleページ　headerブロック
+**********************************************/
+.article__header {
+  padding: 2rem 0;
+}
+
+.article__meta {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #6d6d6d;
+}
+
+.article__title {
+  font-weight: bold;
+  font-size: $sp-heading-level-1;
+  text-align: center;
+  @include mq(tb) {
+    font-size: $heading-level-1;
+  }
+}
+
+
+

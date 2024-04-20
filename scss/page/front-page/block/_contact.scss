@@ -1,0 +1,30 @@
+@use '../../../setting/config' as *;
+@use '../../../mixin/_mixin' as *;
+
+/**********************************************
+  Contact お問い合わせ
+**********************************************/
+.section__border-title--contact {
+  &::after {
+    content: 'CONTACT';
+    left: auto;
+    right: 0;
+  }
+}
+
+.contact {
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+  &__comment {
+    text-align: center;
+    margin-top: 2rem;
+  }
+}
+
+.mw_wp_form {
+  input[type="submit"] {
+    margin-top: 2rem;
+  }
+}

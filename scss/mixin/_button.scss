@@ -1,0 +1,24 @@
+@use '../setting/config' as *;
+@use 'hover' as *;
+
+/**********************************************
+  Button
+**********************************************/
+@mixin button($type: 'normal', $bg-color: $main-color, $text-color: #fff, $border-radius: 9999px, $shadow-color: $shadow-color) {
+  @if $type == 'contact' {
+    background-color: $accent-color;
+    color: $text-color;
+    padding: 1rem 2rem;
+    border-radius: $border-radius;
+    box-shadow: 0.125rem 0.125rem 0.25rem $shadow-color;
+    @include hover-pale();
+  }
+  @else {
+    background-color: $bg-color;
+    color: $text-color;
+    padding: 1rem 2rem;
+    border-radius: $border-radius;
+    box-shadow: 0.125rem 0.125rem 0.25rem $shadow-color;
+    @include hover-pale();
+  }
+}

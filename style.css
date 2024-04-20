@@ -1,0 +1,1125 @@
+@charset "UTF-8";
+/*
+Theme Name: WordPress BASE
+Author: Toshihide Nakahara
+Version: 1.0.0
+*/
+/**********************************************
+  各スタイルのインポート
+**********************************************/
+/**********************************************
+  変数
+**********************************************/
+/*
+Theme Name: WordPress BASE
+Author: Toshihide Nakahara
+Version: 1.0.0
+*/
+/**********************************************
+  各スタイルのインポート
+**********************************************/
+/**********************************************
+  Break Points
+**********************************************/
+/* ---------------------------------------------
+  Gap
+--------------------------------------------- */
+/* Gapをループですべて作成する場合、下記を有効化 */
+/* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
+/* ---------------------------------------------
+  Grid Columns
+--------------------------------------------- */
+/* Grid Columnsをループですべて作成する場合、下記を有効化 */
+/* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
+/* ---------------------------------------------
+  Grid Columns Span
+--------------------------------------------- */
+/* col-spanをループですべて作成する場合、下記を有効化 */
+/* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
+/* ------------ col-start --------------- */
+/* col-startをループですべて作成する場合、下記を有効化 */
+/* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
+/* ------------ col-end --------------- */
+/* col-endをループですべて作成する場合、下記を有効化 */
+/* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
+/* ---------------------------------------------
+  Grid rows
+--------------------------------------------- */
+/* Grid rowsをループですべて作成する場合、下記を有効化 */
+/* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
+/* ---------------------------------------------
+  Grid Rows Span
+--------------------------------------------- */
+/* row-spanをループですべて作成する場合、下記を有効化 */
+/* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
+/* ------------ row-start --------------- */
+/* row-startをループですべて作成する場合、下記を有効化 */
+/* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
+/* ------------ row-end --------------- */
+/* row-endをループですべて作成する場合、下記を有効化 */
+/* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
+/*
+Theme Name: WordPress BASE
+Author: Toshihide Nakahara
+Version: 1.0.0
+*/
+/**********************************************
+  各スタイルのインポート
+**********************************************/
+/**********************************************
+  ホバーアクション
+**********************************************/
+/*
+Theme Name: WordPress BASE
+Author: Toshihide Nakahara
+Version: 1.0.0
+*/
+/**********************************************
+  各スタイルのインポート
+**********************************************/
+/**********************************************
+  Button
+**********************************************/
+/*
+Theme Name: WordPress BASE
+Author: Toshihide Nakahara
+Version: 1.0.0
+*/
+/**********************************************
+  各スタイルのインポート
+**********************************************/
+/**********************************************
+  Tag
+**********************************************/
+/*
+Theme Name: WordPress BASE
+Author: Toshihide Nakahara
+Version: 1.0.0
+*/
+/**********************************************
+  各スタイルのインポート
+**********************************************/
+/**********************************************
+  Card
+**********************************************/
+/*
+Theme Name: WordPress BASE
+Author: Toshihide Nakahara
+Version: 1.0.0
+*/
+/**********************************************
+  各スタイルのインポート
+**********************************************/
+/**********************************************
+  Button
+**********************************************/
+/*
+Theme Name: WordPress BASE
+Author: Toshihide Nakahara
+Version: 1.0.0
+*/
+/**********************************************
+  各スタイルのインポート
+**********************************************/
+/**********************************************
+  サイトのベーススタイル(タグ指定)
+  JavaScript使用のスタイル
+**********************************************/
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+@media screen and (min-width: 600px) {
+  html {
+    scroll-padding-top: 6rem;
+  }
+}
+
+body {
+  color: #3b3b3b;
+  font-family: "Roboto", "Noto Sans JP", sans-serif;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  background-color: #F7F7F7;
+  line-height: 1.6;
+}
+@media screen and (min-width: 600px) {
+  body {
+    font-size: 1rem;
+  }
+}
+
+main {
+  overflow: hidden;
+}
+
+._pc {
+  display: none;
+}
+@media screen and (min-width: 600px) {
+  ._pc {
+    display: block;
+  }
+}
+
+._sp {
+  display: block;
+}
+@media screen and (min-width: 600px) {
+  ._sp {
+    display: none;
+  }
+}
+
+/**********************************************
+  リセットCSS
+**********************************************/
+/*! destyle.css v4.0.1 | MIT License | https://github.com/nicolas-cusan/destyle.css */
+/* Reset box-model and set borders */
+/* ============================================ */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 0;
+  min-width: 0;
+}
+
+/* Document */
+/* ============================================ */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ * 3. Remove gray overlay on links for iOS.
+ */
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -webkit-tap-highlight-color: transparent; /* 3*/
+}
+
+/* Sections */
+/* ============================================ */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/* Vertical rhythm */
+/* ============================================ */
+p,
+table,
+blockquote,
+address,
+pre,
+iframe,
+form,
+figure,
+dl {
+  margin: 0;
+}
+
+/* Headings */
+/* ============================================ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
+
+/* Lists (enumeration) */
+/* ============================================ */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Lists (definition) */
+/* ============================================ */
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0;
+}
+
+/* Grouping content */
+/* ============================================ */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+  border-top-width: 1px;
+  margin: 0;
+  clear: both;
+  color: inherit;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: inherit; /* 2 */
+}
+
+address {
+  font-style: inherit;
+}
+
+/* Text-level semantics */
+/* ============================================ */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: inherit; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Replaced content */
+/* ============================================ */
+/**
+ * Prevent vertical alignment issues.
+ */
+svg,
+img,
+embed,
+object,
+iframe {
+  vertical-align: bottom;
+}
+
+/* Forms */
+/* ============================================ */
+/**
+ * Reset form fields to make them styleable.
+ * 1. Make form elements stylable across systems iOS especially.
+ * 2. Inherit text-transform from parent.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  -webkit-appearance: none; /* 1 */
+  -moz-appearance: none;
+       appearance: none;
+  vertical-align: middle;
+  color: inherit;
+  font: inherit;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  text-align: inherit;
+  text-transform: inherit; /* 2 */
+}
+
+/**
+ * Correct cursors for clickable elements.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  cursor: pointer;
+}
+
+button:disabled,
+[type=button]:disabled,
+[type=reset]:disabled,
+[type=submit]:disabled {
+  cursor: default;
+}
+
+/**
+ * Improve outlines for Firefox and unify style with input elements & buttons.
+ */
+:-moz-focusring {
+  outline: auto;
+}
+
+select:disabled {
+  opacity: inherit;
+}
+
+/**
+ * Remove padding
+ */
+option {
+  padding: 0;
+}
+
+/**
+ * Reset to invisible
+ */
+fieldset {
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * Correct the outline style in Safari.
+ */
+[type=search] {
+  outline-offset: -2px; /* 1 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Fix font inheritance.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/**
+ * Fix appearance for Firefox
+ */
+[type=number] {
+  -webkit-appearance: textfield;
+          appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+/**
+ * Clickable labels
+ */
+label[for] {
+  cursor: pointer;
+}
+
+/* Interactive */
+/* ============================================ */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/*
+ * Remove outline for editable content.
+ */
+[contenteditable]:focus {
+  outline: auto;
+}
+
+/* Tables */
+/* ============================================ */
+/**
+1. Correct table border color inheritance in all Chrome and Safari.
+*/
+table {
+  border-color: inherit; /* 1 */
+  border-collapse: collapse;
+}
+
+caption {
+  text-align: left;
+}
+
+td,
+th {
+  vertical-align: top;
+  padding: 0;
+}
+
+th {
+  text-align: left;
+  font-weight: bold;
+}
+
+/*
+Theme Name: WordPress BASE
+Author: Toshihide Nakahara
+Version: 1.0.0
+*/
+/**********************************************
+  各スタイルのインポート
+**********************************************/
+/**********************************************
+  ヘッダー
+**********************************************/
+.header {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  box-shadow: 0 10px 25px 0 #ccc;
+  z-index: 10;
+  height: 4rem;
+}
+@media screen and (min-width: 600px) {
+  .header {
+    height: 6rem;
+  }
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.branding__title {
+  font-size: 1.5rem;
+  font-family: "Rubik Dirt", system-ui, sans-serif;
+  font-weight: normal;
+  color: #1C75BC;
+  transition-duration: 0.3s;
+}
+.branding__title:hover {
+  opacity: 0.85;
+}
+
+/*
+Theme Name: WordPress BASE
+Author: Toshihide Nakahara
+Version: 1.0.0
+*/
+/**********************************************
+  各スタイルのインポート
+**********************************************/
+/**********************************************
+  メイン
+**********************************************/
+.site-main {
+  margin: 0 auto;
+}
+
+/*
+Theme Name: WordPress BASE
+Author: Toshihide Nakahara
+Version: 1.0.0
+*/
+/**********************************************
+  各スタイルのインポート
+**********************************************/
+/**********************************************
+  コンテンツエリア
+**********************************************/
+.content-area {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 3%;
+  margin: 3rem auto;
+}
+.content-area--mt-none {
+  margin-top: 0 !important;
+}
+
+/*
+Theme Name: WordPress BASE
+Author: Toshihide Nakahara
+Version: 1.0.0
+*/
+/**********************************************
+  各スタイルのインポート
+**********************************************/
+/**********************************************
+  フッター
+**********************************************/
+.footer {
+  background-color: #fff;
+}
+.footer-info {
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
+  text-align: center;
+}
+
+/*
+Theme Name: WordPress BASE
+Author: Toshihide Nakahara
+Version: 1.0.0
+*/
+/**********************************************
+  各スタイルのインポート
+**********************************************/
+/**********************************************
+  グローバルナビゲーション
+**********************************************/
+.gnav {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .gnav {
+    display: block;
+  }
+}
+.gnav__list {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  align-items: center;
+}
+.gnav__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.gnav__link {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.2, 1, 0.2, 1);
+  text-decoration: none;
+  color: #3b3b3b;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.gnav__link::before, .gnav__link::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 1px;
+  content: "";
+  background: #1C75BC;
+  transform: translateX(-105%);
+  transition: all 0.3s cubic-bezier(0.2, 1, 0.2, 1);
+}
+.gnav__link:hover {
+  color: #1C75BC;
+  opacity: 0.85;
+}
+.gnav__link:hover::before {
+  transform: translateX(0);
+  transition-delay: 0.2s;
+}
+.gnav__link:hover::after {
+  transform: translateX(100%);
+}
+
+@media screen and (min-width: 1024px) {
+  .sp-gnav {
+    display: none;
+  }
+}
+.sp-gnav__btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #3b3b3b;
+  position: fixed;
+  top: 2rem;
+  right: 0;
+  padding-right: 1rem;
+  transform: translateY(-50%);
+  z-index: 20;
+}
+@media screen and (min-width: 600px) {
+  .sp-gnav__btn {
+    top: 3rem;
+  }
+}
+.sp-gnav__list {
+  list-style: none;
+  position: fixed;
+  top: 0;
+  left: 50vw;
+  width: 50vw;
+  height: 100vh;
+  text-align: center;
+  background-color: #F7F7F7;
+  opacity: 0.85;
+  padding: 10px;
+  margin: 0;
+  transition-duration: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 10;
+}
+.sp-gnav__list.translate-x-full {
+  translate: 100vw;
+}
+.sp-gnav__item {
+  margin-bottom: 5px;
+}
+.sp-gnav__link {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.2, 1, 0.2, 1);
+  text-decoration: none;
+  color: #3b3b3b;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.sp-gnav__link::before, .sp-gnav__link::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 1px;
+  content: "";
+  background: #1C75BC;
+  transform: translateX(-105%);
+  transition: all 0.3s cubic-bezier(0.2, 1, 0.2, 1);
+}
+.sp-gnav__link:hover {
+  color: #1C75BC;
+  opacity: 0.85;
+}
+.sp-gnav__link:hover::before {
+  transform: translateX(0);
+  transition-delay: 0.2s;
+}
+.sp-gnav__link:hover::after {
+  transform: translateX(100%);
+}
+
+/*
+Theme Name: WordPress BASE
+Author: Toshihide Nakahara
+Version: 1.0.0
+*/
+/**********************************************
+  各スタイルのインポート
+**********************************************/
+/**********************************************
+  パンくずリスト
+**********************************************/
+.breadcrumb__item {
+  display: inline-block;
+}
+.breadcrumb__item:nth-of-type(n + 2):before {
+  content: "";
+  display: inline-block;
+  transform: rotate(45deg);
+  width: 5px;
+  height: 5px;
+  border-top: 1px solid #3b3b3b;
+  border-right: 1px solid #3b3b3b;
+  vertical-align: 3px;
+}
+.breadcrumb__item a {
+  transition: opacity 0.6s;
+}
+.breadcrumb__item a:hover {
+  opacity: 0.85;
+}
+
+/*
+Theme Name: WordPress BASE
+Author: Toshihide Nakahara
+Version: 1.0.0
+*/
+/**********************************************
+  各スタイルのインポート
+**********************************************/
+/**********************************************
+  ページャースタイル
+**********************************************/
+.pager {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+@media screen and (min-width: 600px) {
+  .pager {
+    gap: 1rem;
+  }
+}
+.pager__item {
+  text-align: center;
+  margin-top: 0.5rem;
+  overflow: hidden;
+  grid-column: span 3/span 3;
+}
+@media screen and (min-width: 600px) {
+  .pager__item {
+    margin-top: 0;
+    grid-column: span 1/span 1;
+  }
+}
+@media screen and (min-width: 600px) {
+  .pager__item--prev {
+    grid-column-start: 1;
+  }
+}
+@media screen and (min-width: 600px) {
+  .pager__item--return {
+    grid-column-start: 2;
+  }
+}
+@media screen and (min-width: 600px) {
+  .pager__item--next {
+    grid-column-start: 3;
+  }
+}
+.pager__link {
+  display: block;
+  padding: 0.5rem 2rem;
+  background-color: #F3F3F3;
+  transition-duration: 0.3s;
+}
+.pager__link:hover {
+  background-color: #1C75BC;
+  color: #fff;
+}
+
+/*
+Theme Name: WordPress BASE
+Author: Toshihide Nakahara
+Version: 1.0.0
+*/
+/**********************************************
+  各スタイルのインポート
+**********************************************/
+/**********************************************
+  その他のモジュール
+**********************************************/
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 3%;
+}
+
+.hidden {
+  display: none;
+}
+
+.snap-start {
+  scroll-snap-align: start;
+}
+
+.emphasized {
+  color: #1C75BC;
+}
+
+.card {
+  overflow: hidden;
+  background-color: white;
+  padding: 3rem 0;
+}
+.card__img {
+  position: relative;
+  padding-top: 56.25%;
+  overflow: hidden;
+}
+.card__img img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+.card__body {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card__tag {
+  margin-top: 2rem;
+  display: block;
+}
+.card__title {
+  font-weight: bold;
+  font-size: 1.125rem;
+  margin-top: 1rem;
+}
+.card__text {
+  text-align: left;
+}
+.card__link {
+  transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.card__link:hover {
+  opacity: 0.85;
+}
+.card__link:hover {
+  text-decoration: underline;
+}
+.card__btn {
+  margin: 0 auto;
+  width: 60%;
+  margin-top: 2rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  text-align: center;
+  border: 1px solid #3b3b3b;
+}
+.card__btn a {
+  transition-duration: 0.3s;
+}
+.card__btn a:hover {
+  text-decoration: underline;
+}
+
+.tag {
+  font-size: 0.875rem;
+  padding: 0.125rem 0.25rem;
+  background-color: #1C75BC;
+  color: #fff;
+  border-radius: 0.25rem;
+  display: inline-block;
+  margin-left: 0.5rem;
+  transition-duration: 0.3s;
+}
+.tag:first-of-type {
+  margin-left: 0;
+}
+.tag:hover {
+  opacity: 0.85;
+}
+
+/**********************************************
+  プラグインのスタイル
+**********************************************/
+/*
+Theme Name: WordPress BASE
+Author: Toshihide Nakahara
+Version: 1.0.0
+*/
+/**********************************************
+  各スタイルのインポート
+**********************************************/
+.wp-pagenavi {
+  text-align: center;
+}
+
+.wp-pagenavi span.current,
+.page.smaller,
+.page.larger,
+.nextpostslink,
+.previouspostslink {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  padding: 0;
+  background: #1C75BC;
+  color: #FFFFFF;
+  border-radius: 50%;
+  border: none;
+}
+
+/* 共通スタイル*/
+.page.smaller,
+.page.larger {
+  background: #fff;
+  color: #1C75BC;
+  border: 1px solid #1C75BC;
+  padding: 0;
+}
+
+/* 現在ページより前のボタン */
+.page.smaller {
+  margin-right: 25px;
+}
+
+/* 現在ページより後のボタン */
+.page.larger {
+  margin-left: 25px;
+}
+
+.wp-pagenavi a:hover {
+  color: #FFF;
+  background-color: #999;
+  border: 1px solid #999 !important;
+}
+
+.nextpostslink,
+.previouspostslink {
+  line-height: 40px;
+  border: 1px solid #1C75BC !important;
+  color: #1C75BC !important;
+  position: relative;
+  background: #fff;
+  color: #1C75BC;
+  top: -3px;
+}
+
+.nextpostslink {
+  left: 25px;
+}
+
+.previouspostslink {
+  right: 25px;
+}
+
+.nextpostslink::before,
+.previouspostslink::after {
+  content: "";
+  width: 0.5px;
+  height: 40px;
+  background-color: rgb(224, 215, 215);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nextpostslink::before {
+  left: -15px;
+}
+
+.previouspostslink::after {
+  right: -15px;
+}
+
+/* 〇/〇 の部分のスタイル → 不要の場合は非表示 */
+.pages {
+  display: none;
+}
+
+/*
+Theme Name: WordPress BASE
+Author: Toshihide Nakahara
+Version: 1.0.0
+*/
+/**********************************************
+  各スタイルのインポート
+**********************************************/
+.xo-event-calendar table.xo-month button {
+  text-align: center;
+}
+.xo-event-calendar table.xo-month button span.nav-prev {
+  border-color: #3b3b3b;
+  border-top: none;
+  border-right: none;
+  transition-duration: 0.3s;
+}
+.xo-event-calendar table.xo-month button span.nav-next {
+  border-color: #3b3b3b;
+  border-bottom: none;
+  border-left: none;
+  transition-duration: 0.3s;
+}
+.xo-event-calendar table.xo-month button:hover span.nav-prev,
+.xo-event-calendar table.xo-month button:hover span.nav-next {
+  opacity: 0.85;
+}
+.xo-event-calendar table.xo-month .month-dayname td div {
+  border: none;
+}/*# sourceMappingURL=style.css.map */

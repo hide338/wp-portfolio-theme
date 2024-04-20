@@ -1,0 +1,10 @@
+@use '../setting/config' as *;
+
+/**********************************************
+  Button
+**********************************************/
+@mixin container() {
+  max-width: $pc-max-content-width;
+  margin: 0 auto;
+  padding: 0 3%;
+}

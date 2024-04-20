@@ -1,0 +1,46 @@
+@use '../../../setting/config' as *;
+@use '../../../mixin/_mixin' as *;
+
+/**********************************************
+  Profile プロフィール
+**********************************************/
+.section__border-title--profile {
+  &::after {
+    content: 'PLOFILE';
+  }
+}
+
+.profile {
+
+
+  &__img {
+    display: flex;
+    align-items: center;
+
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__text {
+    p {
+      margin-top: 1rem;
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+
+  }
+}
+
+.ark-block-timeline {
+  margin-top: 1rem;
+  &__body {
+    ul {
+      list-style: inside;
+      list-style-position: inside;
+      padding-left: 1rem;
+    }
+  }
+}

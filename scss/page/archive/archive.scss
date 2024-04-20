@@ -1,0 +1,17 @@
+/**********************************************
+  archiveページ　ブロックインポート
+**********************************************/
+// archive header
+@forward './block/header';
+
+// archive body
+@forward './block/body';
+
+// archive posts
+@forward './block/posts';
+
+// archive footer
+@forward './block/footer';
+
+// archive work
+@forward './block/work';

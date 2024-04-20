@@ -1,0 +1,31 @@
+// ヘッダー
+@forward 'header';
+
+// メイン
+@forward 'main';
+
+// コンテンツ
+@forward 'content';
+
+// フッター
+@forward 'footer';
+
+// サイドバー
+@forward 'side';
+
+// ナビゲーション
+@forward 'gnav';
+@forward 'fnav';
+@forward 'snav';
+
+// パンくずリスト
+@forward 'breadcrumb';
+
+// ページャー
+@forward 'pager';
+
+// シェアエリア
+@forward 'share';
+
+// その他
+@forward 'etc';

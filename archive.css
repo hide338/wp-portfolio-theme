@@ -147,5 +147,15 @@
   アーカイブ　Work　実績一覧
 **********************************************/
 .work-post {
-  grid-column: span 4/span 4;
+  grid-column: span 12/span 12;
+}
+@media screen and (min-width: 600px) {
+  .work-post {
+    grid-column: span 6/span 6;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .work-post {
+    grid-column: span 4/span 4;
+  }
 }/*# sourceMappingURL=archive.css.map */

@@ -5,5 +5,11 @@
   アーカイブ　Work　実績一覧
 **********************************************/
 .work-post {
-  @include col-span(4);
+  @include col-span(12);
+  @include mq(tb) {
+    @include col-span(6);
+  }
+  @include mq(pc) {
+    @include col-span(4);
+  }
 }

@@ -145,8 +145,8 @@
   }
 }
 .fv__img img {
-  height: 100%;
-  aspect-ratio: 384.938/676;
+  height: auto;
+  aspect-ratio: 1/1;
 }
 
 /**********************************************

@@ -36,11 +36,6 @@ get_header();
           </div>
         <?php endwhile; ?>
 
-        <div class="article__footer">
-          <?php pager('work'); ?>
-        </div>
-        <!-- /.article__footer -->
-  
       </article>
 
     </div>

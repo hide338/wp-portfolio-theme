@@ -74,13 +74,13 @@
 }
 .fv__bg-img {
   height: 100%;
-  background-image: url("./img/sp-hero.png");
+  background-image: url("../img/sp-hero.png");
   background-size: cover;
   background-position: right bottom;
 }
 @media screen and (min-width: 600px) {
   .fv__bg-img {
-    background-image: url("./img/hero.jpg");
+    background-image: url("../img/hero.jpg");
   }
 }
 .fv__container {
@@ -145,8 +145,8 @@
   }
 }
 .fv__img img {
-  height: 100%;
-  aspect-ratio: 384.938/676;
+  height: auto;
+  aspect-ratio: 1/1;
 }
 
 /**********************************************

@@ -25,7 +25,7 @@ Template Name: front-page
               <a class="fv__btn--contact" href="<?php echo esc_url( get_the_permalink( 2173 ) ); ?>">お問い合わせ</a>
             </div>
             <div class="fv__img">
-              <img class="animate-scale-down-bottom h-full object-cover mx-auto" src="<?= get_template_directory_uri(); ?>/img/profile-imge.png" alt="メインイメージ">
+              <img class="animate-scale-down-bottom h-full object-cover mx-auto" src="<?= get_template_directory_uri(); ?>/img/my-icon_main.png" alt="メインイメージ">
             </div>
         </div>
       </div>

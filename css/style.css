@@ -1122,4 +1122,61 @@ Version: 1.0.0
 }
 .xo-event-calendar table.xo-month .month-dayname td div {
   border: none;
+}
+
+/*
+Theme Name: Portfolio Original Theme
+Author: Toshihide Nakahara
+Version: 1.0.0
+*/
+/**********************************************
+  各スタイルのインポート
+**********************************************/
+/* ======================================
+* mw_wp_formプラグインスタイル
+* =================================== */
+.mw_wp_form .attention {
+  color: red; /* アスタリスクを赤色に */
+}
+.mw_wp_form input {
+  -webkit-appearance: revert;
+     -moz-appearance: revert;
+          appearance: revert;
+}
+.mw_wp_form input[type=text], .mw_wp_form input[type=email], .mw_wp_form textarea {
+  width: 100%; /* 記入欄を画面サイズいっぱいにする */
+  border: 1px solid #3b3b3b;
+  border-radius: 0.25rem;
+  padding: 5px;
+}
+.mw_wp_form input[type=text], .mw_wp_form input[type=email] {
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .mw_wp_form input[type=text], .mw_wp_form input[type=email] {
+    width: 50%;
+  }
+}
+.mw_wp_form input[type=radio], .mw_wp_form input[type=check] {
+  cursor: pointer;
+}
+.mw_wp_form [type=submit] {
+  background-color: #1C75BC;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  box-shadow: 0.125rem 0.125rem 0.25rem #ccc;
+  transition-duration: 0.3s;
+  margin-inline: auto;
+}
+.mw_wp_form [type=submit]:hover {
+  opacity: 0.85;
+}
+.mw_wp_form p {
+  font-weight: bold; /* 項目名を太字 */
+  padding-bottom: 20px; /* 項目の間に余白を設置 */
+  margin-top: 0 !important;
+}
+.mw_wp_form p:last-of-type {
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

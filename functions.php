@@ -130,10 +130,10 @@ add_action('init', function() {
 /* スタイルシート・JSファイル読み込み設定 */
 function add_link_files() {
   // CSSの読み込み
-  wp_enqueue_style( 'style', get_stylesheet_directory_uri().'/style.css' );
-  wp_enqueue_style( 'front-page', get_stylesheet_directory_uri().'/front-page.css', array('style'));
-  wp_enqueue_style( 'archive', get_stylesheet_directory_uri().'/archive.css', array('style'));
-  wp_enqueue_style( 'article', get_stylesheet_directory_uri().'/article.css', array('style'));
+  wp_enqueue_style( 'style', get_stylesheet_directory_uri().'/css/style.css' );
+  wp_enqueue_style( 'front-page', get_stylesheet_directory_uri().'/css/front-page.css', array('style'));
+  wp_enqueue_style( 'archive', get_stylesheet_directory_uri().'/css/archive.css', array('style'));
+  wp_enqueue_style( 'article', get_stylesheet_directory_uri().'/css/article.css', array('style'));
 
   // JavaScriptの読み込み
   // wp_enqueue_script( 'my-script', get_template_directory_uri().'/js/script.js', array('jquery'), false, true );
@@ -243,7 +243,7 @@ function breadcrumb() {
         </li>
 
         <!-- 固定ページの子ページの場合 -->
-        <?php if(is_page() && $post->post_parent): ?>
+        <!-- <?php if(is_page() && $post->post_parent): ?>
           <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
             <a itemscope itemtype="https://schema.org/WebPage" itemprop="item" itemid="<?php echo get_page_link($post->post_parent); ?>" href="<?php echo get_page_link($post->post_parent); ?>">
               <span itemprop="name"><?php echo get_the_title($post->post_parent); ?></span>
@@ -254,7 +254,7 @@ function breadcrumb() {
           <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
             <span itemprop="name"><?php echo get_the_title(); ?></span>
             <meta itemprop="position" content="3">
-          </li>
+          </li> -->
 
         <!-- 固定ページの場合 -->
         <?php elseif(is_page()): ?>

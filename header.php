@@ -1,14 +1,16 @@
-<!doctype html>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
-<head>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website:http://ogp.me/ns/website#">
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
+  <!-- OGPなど -->
+  <title><?php bloginfo('name') ?></title>
+
   <!-- fontawesome -->
   <script src="https://kit.fontawesome.com/33b766862d.js" crossorigin="anonymous"></script>
 
-  
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +25,6 @@
   <link rel="preload" as="image" href="<?= get_template_directory_uri(); ?>/img/sp-hero.png">
   <link rel="preload" as="image" href="<?= get_template_directory_uri(); ?>/img/profile-imge.png">
   
-  <title><?php bloginfo('name') ?></title>
 	<?php wp_head(); ?>
 </head>
 
@@ -43,12 +44,6 @@
           <p class="branding__title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
         <?php
           endif;
-          $portfolio_description = get_bloginfo( 'description', 'display' );
-          if ( $portfolio_description || is_customize_preview() ) :
-        ?>
-          <p class="description"><?php echo $portfolio_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-        <?php 
-          endif; 
         ?>
       </div>
       <!-- .branding -->

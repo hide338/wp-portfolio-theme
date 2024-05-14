@@ -100,6 +100,33 @@
     }
   }
 
+  &__btn {
+    padding: 1rem 5rem;
+    text-align: center;
+    @include mq(pc) {
+      text-align: left;
+    }
+
+    &--copy {
+      font-weight: bold;
+      margin-bottom: .2em;
+      text-align: center;
+      color: $accent-color;
+      &::before {
+        margin-right: 1rem;
+        content: '＼';
+      }
+      &::after {
+        margin-left: 1rem;
+        content: '／';
+      }
+    }
+
+    &--link {
+      @include left-to-right-coloring-btn(100%, 4rem, 9999px);
+    }
+  }
+
   &:nth-of-type(odd) {
     &::before {
       left: auto;

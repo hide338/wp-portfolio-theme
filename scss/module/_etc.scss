@@ -13,7 +13,9 @@
 
 // 非表示
 .hidden {
-  display: none;
+  opacity: 0;
+  pointer-events: none;
+  transition-duration: $duration-time;
 }
 
 // スムーススクロールの停止位置

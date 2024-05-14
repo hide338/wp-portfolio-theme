@@ -36,10 +36,12 @@ get_header();
           </div>
         <?php endwhile; ?>
 
-        <div class="article__footer">
-          <?php pager('work'); ?>
-        </div>
-        <!-- /.article__footer -->
+        <?php if(get_post_type() === 'work'): ?>
+          <div class="article__footer">
+            <?php pager('work'); ?>
+          </div>
+          <!-- /.article__footer -->
+        <?php endif; ?>
   
       </article>
 

@@ -719,6 +719,16 @@ Version: 1.0.0
     display: none;
   }
 }
+.sp-gnav__mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #c4c4c4;
+  opacity: 0.5;
+  transition-duration: 1s;
+}
 .sp-gnav__btn {
   background: none;
   border: none;
@@ -726,8 +736,12 @@ Version: 1.0.0
   color: #3b3b3b;
   position: fixed;
   top: 2rem;
-  right: 0;
-  padding-right: 1rem;
+  right: 1rem;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 999px;
+  background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
+  box-shadow: 0 3px 2px 1px #fcfcfc, 0 4px 6px #cecfd1, 0 -2px 2px #cecfd1, 0 -4px 2px #eee, inset 0 0 2px 2px #cecfd1;
   transform: translateY(-50%);
   z-index: 20;
 }
@@ -735,6 +749,40 @@ Version: 1.0.0
   .sp-gnav__btn {
     top: 3rem;
   }
+}
+.sp-gnav__hamburger {
+  position: relative;
+  height: 40%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.sp-gnav__hamburger span {
+  height: 3px;
+  width: 1.5rem;
+  border-radius: 999px;
+  background: #1C75BC;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s;
+}
+.sp-gnav__hamburger span:first-child {
+  top: 0;
+}
+.sp-gnav__hamburger span:last-child {
+  top: 100%;
+}
+.sp-gnav__hamburger.active span:nth-of-type(1) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.sp-gnav__hamburger.active span:nth-of-type(2) {
+  opacity: 0;
+}
+.sp-gnav__hamburger.active span:nth-of-type(3) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 .sp-gnav__list {
   list-style: none;
@@ -744,8 +792,7 @@ Version: 1.0.0
   width: 50vw;
   height: 100vh;
   text-align: center;
-  background-color: #F7F7F7;
-  opacity: 0.85;
+  background-color: #1C75BC;
   padding: 10px;
   margin: 0;
   transition-duration: 0.3s;
@@ -766,7 +813,7 @@ Version: 1.0.0
   overflow: hidden;
   transition: all 0.3s cubic-bezier(0.2, 1, 0.2, 1);
   text-decoration: none;
-  color: #3b3b3b;
+  color: #fff;
   padding-left: 1rem;
   padding-right: 1rem;
 }
@@ -778,13 +825,13 @@ Version: 1.0.0
   width: 100%;
   height: 1px;
   content: "";
-  background: #1C75BC;
+  background: #fff;
   transform: translateX(-105%);
   transition: all 0.3s cubic-bezier(0.2, 1, 0.2, 1);
 }
 .sp-gnav__link:hover {
-  color: #1C75BC;
-  opacity: 0.85;
+  color: #fff;
+  opacity: "";
 }
 .sp-gnav__link:hover::before {
   transform: translateX(0);
@@ -903,7 +950,9 @@ Version: 1.0.0
 }
 
 .hidden {
-  display: none;
+  opacity: 0;
+  pointer-events: none;
+  transition-duration: 0.3s;
 }
 
 .snap-start {
@@ -1137,6 +1186,10 @@ Version: 1.0.0
 * =================================== */
 .mw_wp_form .attention {
   color: red; /* アスタリスクを赤色に */
+}
+.mw_wp_form .must {
+  color: rgb(253, 25, 93);
+  padding-left: 1rem;
 }
 .mw_wp_form input {
   -webkit-appearance: revert;

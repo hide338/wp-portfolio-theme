@@ -1,15 +1,24 @@
 const NAV_BTN = document.getElementById('navbtn');
+const bars = document.getElementById('bars');
+const xmark = document.getElementById('xmark');
+const menu = document.getElementById('menu');
+const mask = document.getElementById('mask');
+const hamburger = document.getElementById('hamburger');
 navbtn.addEventListener('click', e => {
-  console.log(e);
-  bars.classList.toggle('hidden')
-  xmark.classList.toggle('hidden')
-  menu.classList.toggle('translate-x-full')
+  menu.classList.toggle('translate-x-full');
+  mask.classList.toggle('hidden');
+  hamburger.classList.toggle('active');
 });
-document.querySelectorAll('.nav-link').forEach(item => {
+mask.addEventListener('click', e => {
+  menu.classList.toggle('translate-x-full');
+  mask.classList.toggle('hidden');
+  hamburger.classList.toggle('active');
+});
+document.querySelectorAll('.sp-gnav__link').forEach(item => {
   item.addEventListener('click', () => {
     menu.classList.toggle('translate-x-full');
-    bars.classList.toggle('hidden');
-    xmark.classList.toggle('hidden');
+    mask.classList.toggle('hidden');
+    hamburger.classList.toggle('active');
   });
 });
 

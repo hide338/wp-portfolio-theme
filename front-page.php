@@ -22,7 +22,10 @@ Template Name: front-page
                   信頼と幅広い知識でIT技術のトータルパートナーを務めます。
                 </p>
               </div>
-              <a class="fv__btn--contact" href="<?php echo esc_url( get_the_permalink( 2173 ) ); ?>">お問い合わせ</a>
+              <div class="fv__btn">
+                <div class="fv__btn--copy">お気軽にお問い合わせください！</div>
+                <a class="fv__btn--contact" href="<?php echo esc_url( get_the_permalink( 2173 ) ); ?>">お問い合わせ</a>
+              </div>
             </div>
             <div class="fv__img">
               <img class="animate-scale-down-bottom h-full object-cover mx-auto" src="<?= get_template_directory_uri(); ?>/img/my-icon_main.png" alt="メインイメージ">
@@ -65,6 +68,10 @@ Template Name: front-page
                 <div class="service-post__text-slide">
                   <h3 class="service-post__title"><?php the_title(); ?></h3>
                   <p class="service-post__description"><?= get_the_excerpt(); ?></p>
+                  <div class="service-post__btn">
+                    <p class="service-post__btn--copy">料金・納品までの流れをチェック</p>
+                    <a href="<?php echo get_the_permalink(); ?>" class="service-post__btn--link"><span>詳しく見る</span></a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -128,7 +135,7 @@ Template Name: front-page
         <?php endif; ?>
         </div>
         <div class="work__link">
-          <a href="<?= esc_url(get_post_type_archive_link('work')); ?>" class="work__btn">実績一覧へ</a>
+          <a href="<?= esc_url(get_post_type_archive_link('work')); ?>" class="work__btn"><span>実績一覧へ</span></a>
         </div>
       </section>
     </div>

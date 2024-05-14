@@ -45,5 +45,9 @@
 }
 .work__btn {
   display: inline-block;
-  @include button();
+  margin-inline: auto;
+  @include left-to-right-coloring-btn(50%, 4rem, 9999px);
+  @include mq(pc) {
+    @include left-to-right-coloring-btn(30%, 4rem, 9999px);
+  }
 }

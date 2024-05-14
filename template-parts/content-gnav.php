@@ -19,10 +19,16 @@
 </nav><!-- #site-navigation -->
 <!-- モバイルナビゲーション -->
 <nav class="sp-gnav">
-  <button id="navbtn" type="button" class="sp-gnav__btn">
-    <i id="bars" class="fa-solid fa-bars fa-2x"></i>
-    <i id="xmark" class="fa-solid fa-x fa-2x hidden"></i>
-  </button>
+  <div id="mask" class="sp-gnav__mask hidden"></div>
+  <div id="navbtn" type="button" class="sp-gnav__btn">
+    <div id="hamburger" class="sp-gnav__hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <!-- <i id="bars" class="fa-solid fa-bars fa-2x"></i>
+    <i id="xmark" class="fa-solid fa-x fa-2x hidden"></i> -->
+  </div>
   <ul id="menu" class="sp-gnav__list translate-x-full">
     <?php foreach($menu_items as $item): ?>
     <li class="sp-gnav__item">

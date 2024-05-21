@@ -1,0 +1,25 @@
+@use '../foundation/variables' as *;
+@use '../foundation/mixins' as *;
+
+/* ==========================================================================================================
+  headerレイアウト
+  =========================================================================================================== */
+  .l-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    height: $header-height;
+    @include mq(md) {
+      height: $sp-header-height;
+    }
+    
+    &__flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+    }
+  }

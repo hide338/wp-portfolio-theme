@@ -1,0 +1,32 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+/* ==========================================================================================================
+  サイトのベーススタイル(タグ指定)
+  JavaScript使用のスタイル
+  =========================================================================================================== */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: $header-height;
+  @include mq(md) {
+    scroll-padding-top: $sp-header-height;
+  }
+}
+
+body {
+  color: $text-color;
+  font-family: $font-family;
+  letter-spacing: $letter-spacing;
+  background-color: $base-color;
+  line-height: $line-height;
+  font-feature-settings: "palt";
+}
+
+main {
+  overflow-x: hidden;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  appearance: revert;
+}

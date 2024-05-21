@@ -1,22 +1,22 @@
 /*
-Theme Name: Portfolio Original Theme
-Author: Toshihide Nakahara
-Version: 1.0.0
-*/
-/**********************************************
-  各スタイルのインポート
-**********************************************/
-// 変数
-@use './setting/config' as *;
-@use './mixin/_mixin' as *;
+  fundation
+********************************/
+@forward './foundation/base';
+@forward './foundation/reset';
 
-// base
-@forward './base/base';
-// reset
-@forward './base/reset';
+/*
+  layout
+********************************/
+@forward './layout/header';
+@forward './layout/footer';
+@forward './layout/container';
 
-// module
-@forward './module/_module';
-
-// プラグインのスタイル
-@forward './pulgins/_pulgins';
+/*
+  object
+********************************/
+// component
+@forward './object/component/nav';
+@forward './object/component/button';
+@forward './object/component/color';
+// project
+@forward './object/project/front-page';

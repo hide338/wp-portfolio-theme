@@ -1,0 +1,142 @@
+@use '../../foundation/variables' as *;
+@use '../../foundation/mixins' as *;
+
+/* ==========================================================================================================
+  header
+  =========================================================================================================== */
+.p-branding__title {
+  font-size: 1.5rem;
+  font-family: $font-family-accent;
+  font-weight: normal;
+  color: $main-color;
+  &:hover {
+    opacity: $opacity;
+  }
+}
+
+/* ==========================================================================================================
+  FV
+  =========================================================================================================== */
+.p-fv {
+  height: 680px;
+  max-width: 1800px;
+  position: relative;
+  @include mq(sp) {
+    height: 410px;
+  }
+
+  &__inner {
+    position: relative;
+    height: 100%;
+  }
+
+  &__text-area {
+    position: absolute;
+    top: 220px;
+    left: 15%;
+    z-index: 1;
+    @include mq(md) {
+      top: 150px;
+      left: 20px;
+    }
+  }
+
+  &__title {
+    font-size: clamp(2.578rem, 1.344rem + 6.17vw, 5.625rem);
+    font-style: italic;
+    color: $text-color;
+    line-height: 1;
+    @include mq(md) {
+      font-size: 2.5rem;
+    }
+
+    span {
+      background-color: #fff;
+    }
+
+    &--pink {
+      color: $main-color;
+    }
+  }
+
+  &__text {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: clamp(0.831rem, 0.459rem + 1.86vw, 1.75rem);
+    font-weight: bold;
+    line-height: 1;
+    background-color: #fff;
+  }
+
+  &__btn {
+    margin-top: 30px;
+    font-size: 1.25rem;
+    width: 100%;
+    @include mq(sp) {
+      font-size: .8125rem;
+    }
+  }
+
+  &__image-area {
+    position: absolute;
+    top: 0;
+    right: 0;
+    // width: max(calc(100% - ((100% - 1110px) / 2) - 228px), 228px);
+    width: 73.6%;
+    height: 100%;
+    overflow: hidden;
+    border-bottom-left-radius: 90px;
+    background-image: url($imgDir + "bg_mv.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include mq(sp) {
+
+      border-bottom-left-radius: 50px;
+    }
+  }
+}
+
+/* ==========================================================================================================
+  about
+  =========================================================================================================== */
+.p-about {
+  &__header {
+    position: relative;
+    transform: translateY(-20px);
+  }
+
+  &__title {
+    color: $main-color;
+    font-size: clamp(3.5rem, 2.184rem + 6.58vw, 6.75rem);
+    font-weight: bold;
+    font-style: italic;
+    line-height: 1;
+    text-align: center;
+  }
+
+  &__sub-title {
+    margin-top: 10px;
+    font-size: clamp(1rem, 0.595rem + 2.03vw, 2rem);
+    font-weight: bold;
+    text-align: center;
+    @include mq(sp) {
+      margin-top: 0;
+    }
+  }
+
+  &__text {
+    margin-top: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.7;
+    text-align: center;
+    @include mq(sp) {
+      font-size: 15px;
+    }
+  }
+
+  &__body {
+    margin-top: 10px;
+  }
+}

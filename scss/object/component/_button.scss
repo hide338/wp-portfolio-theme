@@ -1,0 +1,31 @@
+@use '../../foundation/variables' as *;
+@use '../../foundation/mixins' as *;
+
+/* ==========================================================================================================
+  Button
+  =========================================================================================================== */
+.c-btn {
+  @include button();
+
+  &--header {
+    width: 184px;
+    height: 36px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all $duration-time;
+  }
+
+  &--fv {
+    max-width: 370px;
+    height: 80px;
+    @include mq(sp) {
+      max-width: 220px;
+      height: 53px;
+    }
+  }
+
+  &--about {
+    max-width: 360px;
+    height: 80px;
+  }
+}

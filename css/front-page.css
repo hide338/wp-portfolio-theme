@@ -74,14 +74,6 @@
 }
 .fv__bg-img {
   height: 100%;
-  background-image: url("../img/sp-hero.png");
-  background-size: cover;
-  background-position: right bottom;
-}
-@media screen and (min-width: 600px) {
-  .fv__bg-img {
-    background-image: url("../img/hero.jpg");
-  }
 }
 .fv__container {
   position: relative;

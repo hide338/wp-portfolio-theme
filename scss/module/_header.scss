@@ -5,10 +5,11 @@
   ヘッダー
 **********************************************/
 .header {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
-  background-color: #fff;
-  box-shadow: 0 10px 25px 0 $shadow-color;
+  // background-color: #fff;
+  // box-shadow: 0 10px 25px 0 $shadow-color;
   z-index: 10;
   height: $sp-header-height;
   @include mq(tb) {

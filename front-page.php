@@ -32,6 +32,7 @@ Template Name: front-page
             </div>
         </div>
       </div>
+      <!-- <div class="wave"></div> -->
     </section>
   
     <section id="service" class="section snap-start container">

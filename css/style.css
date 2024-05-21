@@ -564,10 +564,9 @@ Version: 1.0.0
   ヘッダー
 **********************************************/
 .header {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
-  background-color: #fff;
-  box-shadow: 0 10px 25px 0 #ccc;
   z-index: 10;
   height: 4rem;
 }

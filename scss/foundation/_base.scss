@@ -22,12 +22,11 @@ body {
   font-feature-settings: "palt";
   overflow-x: hidden;
   @include mq(md) {
-    font-size: .875rem;
+    font-size: .75rem;
   }
 }
 
 main {
-  overflow-x: hidden;
   @include container($container-width);
 }
 

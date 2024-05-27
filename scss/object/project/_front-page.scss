@@ -5,41 +5,77 @@
 /* ==========================================================================================================
   FV
   =========================================================================================================== */
-.p-fv {
-  height: 680px;
-  max-width: 1800px;
-  position: relative;
-  @include mq(sp) {
-    height: 410px;
-  }
 
-  &__inner {
-    position: relative;
+.p-fv {
+  height: 100vh;
+  @include expand();
+
+  &__particle {
+    position:fixed;/*描画固定*/
+    z-index:-1;/*描画を一番下に*/
+    width: 100%;
     height: 100%;
   }
 
-  &__text-area {
-    position: absolute;
-    top: 220px;
-    left: 15%;
-    z-index: 1;
+  &__wrapper {
+    position: relative;/*描画を#particles-jsよりも上にするためposition:relative;を指定*/
+    z-index: 1;/*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
+    width:100%;
+    height: 100%;
+  }
+
+  &__inner {
+    @include container($container-width);
+  }
+
+  &__flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
     @include mq(md) {
-      top: 150px;
-      left: 20px;
+      flex-direction: column;
+    }
+  }
+
+  &__text {
+    width: 50%;
+    @include mq(md) {
+      width: 100%;
+    }
+  }
+
+  &__img {
+    width: 50%;
+    @include mq(md) {
+      width: 70%;
+    }
+    img {
+      width: 70%;
+      margin-inline: auto;
+      @include mq(md) {
+        width: 100%;
+      }
     }
   }
 
   &__title {
     font-size: clamp(2.578rem, 1.344rem + 6.17vw, 5.625rem);
     font-style: italic;
+    font-weight: bold;
     color: $text-color;
     line-height: 1;
     @include mq(md) {
-      font-size: 2.5rem;
+      font-size: 3em;
     }
 
     span {
       background-color: #fff;
+      margin-top: .5rem;
+      display: inline-block;
+      &:first-of-type {
+        margin-top: 0;
+      }
     }
 
     &--pink {
@@ -47,19 +83,22 @@
     }
   }
 
-  &__text {
-    display: inline-block;
-    margin-top: 20px;
-    font-size: clamp(0.831rem, 0.459rem + 1.86vw, 1.75rem);
+  &__description {
+    margin-top: 1.5rem;
+    font-size: 1.25rem;
     font-weight: bold;
-    line-height: 1;
-    background-color: #fff;
+    line-height: 1.7;
+    @include mq(sp) {
+      font-size: 1rem;
+    }
   }
 
   &__btn {
     margin-top: 30px;
     font-size: 1.25rem;
     width: 100%;
+    display: block;
+    @include push-btn();
     @include mq(sp) {
       font-size: .8125rem;
     }

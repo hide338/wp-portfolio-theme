@@ -1,24 +1,28 @@
-const NAV_BTN = document.getElementById('navbtn');
-const bars = document.getElementById('bars');
-const xmark = document.getElementById('xmark');
-const menu = document.getElementById('menu');
-const mask = document.getElementById('mask');
-const hamburger = document.getElementById('hamburger');
-navbtn.addEventListener('click', e => {
-  menu.classList.toggle('translate-x-full');
-  mask.classList.toggle('hidden');
-  hamburger.classList.toggle('active');
+/* ============================================================================================
+SPメニュー制御
+============================================================================================ */
+/* 必要な要素の取得(hanburger, mask, menu) 
+*************************************************************************************** */
+const HAMBURGER = document.querySelector('.js-hamburger');
+const MASK = document.querySelector('.js-mask');
+const MENU = document.querySelector('.js-navList');
+const LINKS = document.querySelectorAll('.js-navLink');
+
+/* ハンバーガーメニューをクリックした時の処理
+*************************************************************************************** */
+HAMBURGER.addEventListener('click', () => {
+  HAMBURGER.classList.toggle('is-active');
+  MASK.classList.toggle('is-active');
+  MENU.classList.toggle('is-active');
 });
-mask.addEventListener('click', e => {
-  menu.classList.toggle('translate-x-full');
-  mask.classList.toggle('hidden');
-  hamburger.classList.toggle('active');
-});
-document.querySelectorAll('.sp-gnav__link').forEach(item => {
-  item.addEventListener('click', () => {
-    menu.classList.toggle('translate-x-full');
-    mask.classList.toggle('hidden');
-    hamburger.classList.toggle('active');
+
+/* メニューのリンクをクリックした時の処理
+*************************************************************************************** */
+LINKS.forEach(link => {
+  link.addEventListener('click', () => {
+    HAMBURGER.classList.remove('is-active');
+    MASK.classList.remove('is-active');
+    MENU.classList.remove('is-active');
   });
 });
 

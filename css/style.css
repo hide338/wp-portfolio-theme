@@ -615,6 +615,57 @@ th {
 /* ==========================================================================================================
   hamburger
   =========================================================================================================== */
+.c-hamburger {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 4rem;
+  background-color: #1C75BC;
+  transition: all 0.3s;
+  z-index: 999;
+}
+@media screen and (max-width: 768px) {
+  .c-hamburger {
+    display: block;
+  }
+}
+.c-hamburger span {
+  height: 3px;
+  width: 50%;
+  border-radius: 999px;
+  background: #fff;
+  position: absolute;
+  transition: all 0.3s;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.c-hamburger span:first-child {
+  top: 25%;
+}
+.c-hamburger span:last-child {
+  top: 75%;
+}
+.c-hamburger.is-active {
+  background-color: #f8f8f8;
+}
+.c-hamburger.is-active span {
+  background: #1C75BC;
+}
+.c-hamburger.is-active span:nth-of-type(1) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.c-hamburger.is-active span:nth-of-type(2) {
+  opacity: 0;
+}
+.c-hamburger.is-active span:nth-of-type(3) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
 /* ==========================================================================================================
   gnavSp
   =========================================================================================================== */
@@ -638,99 +689,45 @@ th {
   opacity: 0;
   visibility: hidden;
 }
-.c-gnavSp__btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  position: fixed;
-  top: 3rem;
-  right: 1rem;
-  height: 3rem;
-  width: 3rem;
-  border-radius: 999px;
-  background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
-  box-shadow: 0 3px 2px 1px #fcfcfc, 0 4px 6px #cecfd1, 0 -2px 2px #cecfd1, 0 -4px 2px #eee, inset 0 0 2px 2px #cecfd1;
-  transform: translateY(-50%);
-  z-index: 20;
+.c-gnavSp__mask.is-active {
+  opacity: 0.5;
+  visibility: visible;
 }
-@media screen and (max-width: 768px) {
-  .c-gnavSp__btn {
-    top: 2rem;
-  }
-}
-.c-gnavSp__hamburger {
-  position: relative;
-  height: 40%;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.c-gnavSp__hamburger span {
-  height: 3px;
-  width: 1.5rem;
-  border-radius: 999px;
-  background: #1C75BC;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: all 0.3s;
-}
-.c-gnavSp__hamburger span:first-child {
-  top: 0;
-}
-.c-gnavSp__hamburger span:last-child {
-  top: 100%;
-}
-.c-gnavSp__hamburger.is-active span:nth-of-type(1) {
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-.c-gnavSp__hamburger.is-active span:nth-of-type(2) {
-  opacity: 0;
-}
-.c-gnavSp__hamburger.is-active span:nth-of-type(3) {
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(-45deg);
-}
-.c-gnavSp__menu {
+.c-gnavSp__list {
   position: fixed;
   top: 0;
-  left: 100%;
-  width: 100%;
+  right: 0;
+  width: 50vw;
   height: 100vh;
   background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s;
   z-index: 10;
+  transform: translateX(100%);
 }
-.c-gnavSp__menu.is-active {
+.c-gnavSp__list.is-active {
   opacity: 1;
   visibility: visible;
-  left: 0;
-}
-.c-gnavSp__list {
-  list-style: none;
-  text-align: center;
-  background-color: #1C75BC;
-  transition-duration: 0.3s;
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  transform: none;
 }
 .c-gnavSp__item {
-  padding: 1rem;
+  text-align: center;
   background-color: #f8f8f8;
   transition: all 0.3s;
 }
 .c-gnavSp__item:hover {
-  transform: translate(10px, 10px);
+  transform: translate(-10px, -10px);
+  box-shadow: 10px 10px 0 0 #1C75BC;
+  border: 1px solid #1C75BC;
 }
 .c-gnavSp__link {
   text-decoration: none;
-  width: 100%;
-  height: 100%;
+  padding: 1rem;
+  display: block;
 }
 
 /* ==========================================================================================================

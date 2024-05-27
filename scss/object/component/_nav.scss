@@ -33,7 +33,61 @@
 
 /* ==========================================================================================================
   hamburger
-  =========================================================================================================== */  
+  =========================================================================================================== */
+.c-hamburger {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 4rem;
+  background-color: $main-color;
+  transition: all $duration-time;
+  z-index: 999;
+  @include mq(md) {
+    display: block;
+  }
+  
+  span {
+    height: 3px;
+    width: 50%;
+    border-radius: 999px;
+    background: #fff;
+    position: absolute;
+    transition: all $duration-time;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &:first-child {
+      top: calc(100% / 4);
+    }
+
+    &:last-child {
+      top: calc(100% / 4) * 3;
+    }
+  }
+
+  &.is-active {
+    background-color: $base-color;
+    span {
+      background: $main-color;
+      &:nth-of-type(1) {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+
+      &:nth-of-type(2) {
+        opacity: 0;
+      }
+
+      &:nth-of-type(3) {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+  }
+}
 
 /* ==========================================================================================================
   gnavSp
@@ -56,114 +110,48 @@
     transition-duration: 1s;
     opacity: 0;
     visibility: hidden;
-    
-  }
-
-  &__btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    position: fixed;
-    top: calc($header-height / 2);
-    right: 1rem;
-    height: 3rem;
-    width: 3rem;
-    border-radius: 999px;
-    background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
-    box-shadow: 0 3px 2px 1px #fcfcfc, 0 4px 6px #cecfd1, 0 -2px 2px #cecfd1, 0 -4px 2px #eee, inset 0 0 2px 2px #cecfd1;
-    transform: translateY(-50%);
-    z-index: 20;
-    @include mq(md) {
-      top: calc($sp-header-height / 2);
-    }
-  }
-
-  
-  &__hamburger {
-    position: relative;
-    height: 40%;
-    top: 50%;
-    transform: translateY(-50%);
-    
-    span {
-      height: 3px;
-      width: 1.5rem;
-      border-radius: 999px;
-      background: $main-color;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      transition: all $duration-time;
-
-      &:first-child {
-        top: 0;
-      }
-
-      &:last-child {
-        top: 100%;
-      }
-    }
-
-    &.is-active span {
-
-      &:nth-of-type(1) {
-        top: 50%;
-        transform: translate(-50%, -50%) rotate(45deg);
-      }
-
-      &:nth-of-type(2) {
-        opacity: 0;
-      }
-
-      &:nth-of-type(3) {
-        top: 50%;
-        transform: translate(-50%, -50%) rotate(-45deg);
-      }
-    }
-  }
-
-  &__menu {
-    position: fixed;
-    top: 0;
-    left: 100%;
-    width: 100%;
-    height: 100vh;
-    background-color: $base-color;
-    opacity: 0;
-    visibility: hidden;
-    transition: all $duration-time;
-    z-index: 10;
     &.is-active {
-      opacity: 1;
+      opacity: .5;
       visibility: visible;
-      left: 0;
     }
   }
 
   &__list {
-    list-style: none;
-    text-align: center;
-    background-color: $main-color;
-    transition-duration: $duration-time;
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    height: 100vh;
+    background-color: $base-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all $duration-time;
+    z-index: 10;
+    transform: translateX(100%);
+    &.is-active {
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+    }
   }
 
   &__item {
-    padding: 1rem;
+    text-align: center;
     background-color: $base-color;
     transition: all $duration-time;
     &:hover {
-      transform: translate(10px, 10px);
+      transform: translate(-10px, -10px);
+      box-shadow: 10px 10px 0 0 $main-color;
+      border: 1px solid $main-color;
     }
   }
 
   &__link {
     text-decoration: none;
-    width: 100%;
-    height: 100%;
+    padding: 1rem;
+    display: block;
   }
 }

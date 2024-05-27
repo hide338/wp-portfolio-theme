@@ -19,7 +19,7 @@
 </nav><!-- #site-navigation -->
 
 <!-- ハンバーガーメニュー -->
-<div id="hamburger" class="c-hamburger">
+<div id="hamburger" class="c-hamburger js-hamburger">
   <span></span>
   <span></span>
   <span></span>
@@ -27,15 +27,11 @@
 
 <!-- モバイルナビゲーション -->
 <nav class="c-gnavSp">
-  <div id="mask" class="c-gnavSp__mask"></div>
-  <div id="navbtn" type="button" class="c-gnavSp__btn">
-    <!-- <i id="bars" class="fa-solid fa-bars fa-2x"></i>
-    <i id="xmark" class="fa-solid fa-x fa-2x hidden"></i> -->
-  </div>
-  <ul id="menu" class="c-c-gnavSp__list">
+  <div class="c-gnavSp__mask js-mask"></div>
+  <ul class="c-gnavSp__list js-navList">
     <?php foreach($menu_items as $item): ?>
     <li class="c-gnavSp__item">
-      <a class="c-gnavSp__link" href="<?= esc_attr($item->url) ?>"><?= esc_html($item->title) ?></a>
+      <a class="c-gnavSp__link js-navLink" href="<?= esc_attr($item->url) ?>"><?= esc_html($item->title) ?></a>
     </li>
     <?php endforeach; ?>
   </ul>

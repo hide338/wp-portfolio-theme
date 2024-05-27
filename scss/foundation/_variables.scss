@@ -3,7 +3,7 @@
   =========================================================================================================== */
 // Breakpoint
 $breakpoints: (
-  'sp': 425px,
+  'sp': 431px,
   'md': 768px,
   'lg': 1024px,
   'xl': 1440px,
@@ -24,7 +24,7 @@ $opacity: 0.7;
 $imgDir: '../img/';
 
 //PCレイアウト時の最大横幅
-$container-width: 78.75rem;
+$container-width: 80rem;
 
 // ヘッダーの高さ
 $header-height: 6rem;
@@ -32,7 +32,7 @@ $sp-header-height: 4rem;
 
 // フォントファミリー
 $font-family: "Roboto", "Noto Sans JP", sans-serif;
-$font-family-accent: "Rubik Dirt", system-ui, sans-serif;
+$font-family-branding: "Rubik Dirt", system-ui, sans-serif;
 $font-family-number: "Protest Guerrilla", sans-serif;
 
 // フォントサイズ

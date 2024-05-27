@@ -30,25 +30,26 @@
 
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
-  <header id="header" class="header">
-    <div class="header__inner container">
-      <div class="branding">
+  <header id="header" class="l-header">
+    <div class="l-header__wrapper l-header__flex">
+      <div class="l-header__branding">
         <?php
           the_custom_logo();
           if ( is_front_page() && is_home() ) :
         ?>
-          <h1 class="branding__title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+          <h1 class="l-header__brandingTitle"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
         <?php
           else :
         ?>
-          <p class="branding__title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+          <p class="l-header__brandingTitle"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
         <?php
           endif;
         ?>
       </div>
       <!-- .branding -->
-
-      <?php get_template_part( 'template-parts/content', 'gnav' ); ?>
+      <div class="l-header__gnav">
+        <?php get_template_part( 'template-parts/content', 'gnav' ); ?>
+      </div>
     </div>
   </header><!-- #masthead -->
   <div class="site-grid">

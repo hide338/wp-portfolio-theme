@@ -1,38 +1,31 @@
 @charset "UTF-8";
 /*
-Theme Name: Portfolio Original Theme
-Author: Toshihide Nakahara
-Version: 1.0.0
-*/
-/**********************************************
-  各スタイルのインポート
-**********************************************/
-/**********************************************
+  fundation
+********************************/
+/* ==========================================================================================================
   変数
-**********************************************/
-/*
-Theme Name: Portfolio Original Theme
-Author: Toshihide Nakahara
-Version: 1.0.0
-*/
-/**********************************************
-  各スタイルのインポート
-**********************************************/
-/**********************************************
+  =========================================================================================================== */
+/* ==========================================================================================================
   Break Points
-**********************************************/
-/* ---------------------------------------------
-  Gap
---------------------------------------------- */
+  =========================================================================================================== */
+/* ==========================================================================================================
+  Containerレイアウト
+  =========================================================================================================== */
+/* ==========================================================================================================
+  画面幅に合わせて拡大
+  ========================================================================================================== */
+/* ==========================================================================================================
+  Gridレイアウト
+  =========================================================================================================== */
+/* Gap
+   ---------------------------------------------------------------------------------------------------------- */
 /* Gapをループですべて作成する場合、下記を有効化 */
 /* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
-/* ---------------------------------------------
-  Grid Columns
---------------------------------------------- */
+/* Grid Columns
+   ---------------------------------------------------------------------------------------------------------- */
 /* Grid Columnsをループですべて作成する場合、下記を有効化 */
 /* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
-/* ---------------------------------------------
-  Grid Columns Span
+/* Grid Columns Span
 --------------------------------------------- */
 /* col-spanをループですべて作成する場合、下記を有効化 */
 /* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
@@ -42,14 +35,12 @@ Version: 1.0.0
 /* ------------ col-end --------------- */
 /* col-endをループですべて作成する場合、下記を有効化 */
 /* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
-/* ---------------------------------------------
-  Grid rows
---------------------------------------------- */
+/* Grid rows
+   ---------------------------------------------------------------------------------------------------------- */
 /* Grid rowsをループですべて作成する場合、下記を有効化 */
 /* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
-/* ---------------------------------------------
-  Grid Rows Span
---------------------------------------------- */
+/* Grid Rows Span
+   ---------------------------------------------------------------------------------------------------------- */
 /* row-spanをループですべて作成する場合、下記を有効化 */
 /* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
 /* ------------ row-start --------------- */
@@ -58,117 +49,67 @@ Version: 1.0.0
 /* ------------ row-end --------------- */
 /* row-endをループですべて作成する場合、下記を有効化 */
 /* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
-/*
-Theme Name: Portfolio Original Theme
-Author: Toshihide Nakahara
-Version: 1.0.0
-*/
-/**********************************************
-  各スタイルのインポート
-**********************************************/
-/**********************************************
-  ホバーアクション
-**********************************************/
-/*
-Theme Name: Portfolio Original Theme
-Author: Toshihide Nakahara
-Version: 1.0.0
-*/
-/**********************************************
-  各スタイルのインポート
-**********************************************/
-/**********************************************
-  Button
-**********************************************/
-/*
-Theme Name: Portfolio Original Theme
-Author: Toshihide Nakahara
-Version: 1.0.0
-*/
-/**********************************************
-  各スタイルのインポート
-**********************************************/
-/**********************************************
-  Tag
-**********************************************/
-/*
-Theme Name: Portfolio Original Theme
-Author: Toshihide Nakahara
-Version: 1.0.0
-*/
-/**********************************************
-  各スタイルのインポート
-**********************************************/
-/**********************************************
-  Card
-**********************************************/
-/*
-Theme Name: Portfolio Original Theme
-Author: Toshihide Nakahara
-Version: 1.0.0
-*/
-/**********************************************
-  各スタイルのインポート
-**********************************************/
-/**********************************************
-  Button
-**********************************************/
-/*
-Theme Name: Portfolio Original Theme
-Author: Toshihide Nakahara
-Version: 1.0.0
-*/
-/**********************************************
-  各スタイルのインポート
-**********************************************/
-/**********************************************
+/* ==========================================================================================================
+  hoverアクション
+  =========================================================================================================== */
+/* ==========================================================================================================
+  Cardレイアウト
+  =========================================================================================================== */
+/* Card
+   ---------------------------------------------------------------------------------------------------------- */
+/* ==========================================================================================================
+  Buttonレイアウト
+  =========================================================================================================== */
+/* Button
+   ---------------------------------------------------------------------------------------------------------- */
+/* ==========================================================================================================
+  hoverアクション
+  =========================================================================================================== */
+/* ==========================================================================================================
   サイトのベーススタイル(タグ指定)
   JavaScript使用のスタイル
-**********************************************/
+  =========================================================================================================== */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 4rem;
+  scroll-padding-top: 6rem;
 }
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 768px) {
   html {
-    scroll-padding-top: 6rem;
+    scroll-padding-top: 4rem;
   }
 }
 
 body {
   color: #3b3b3b;
   font-family: "Roboto", "Noto Sans JP", sans-serif;
-  font-size: 0.875rem;
   letter-spacing: 0.05em;
-  background-color: #F7F7F7;
-  line-height: 1.6;
+  background-color: #f8f8f8;
+  line-height: 2;
+  font-feature-settings: "palt";
 }
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 768px) {
   body {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 }
 
 main {
-  overflow: hidden;
+  overflow-x: hidden;
+  margin-inline: auto;
+  padding-inline: 2rem;
+  max-width: 80rem;
 }
-
-._pc {
-  display: none;
-}
-@media screen and (min-width: 600px) {
-  ._pc {
-    display: block;
+@media screen and (max-width: 768px) {
+  main {
+    padding-inline: 1rem;
   }
 }
 
-._sp {
-  display: block;
-}
-@media screen and (min-width: 600px) {
-  ._sp {
-    display: none;
-  }
+input[type=checkbox],
+input[type=radio] {
+  -webkit-appearance: revert;
+     -moz-appearance: revert;
+          appearance: revert;
 }
 
 /**********************************************
@@ -369,6 +310,12 @@ iframe {
   vertical-align: bottom;
 }
 
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 /* Forms */
 /* ============================================ */
 /**
@@ -553,133 +500,85 @@ th {
 }
 
 /*
-Theme Name: Portfolio Original Theme
-Author: Toshihide Nakahara
-Version: 1.0.0
-*/
-/**********************************************
-  各スタイルのインポート
-**********************************************/
-/**********************************************
-  ヘッダー
-**********************************************/
-.header {
+  layout
+********************************/
+/* ==========================================================================================================
+  headerレイアウト
+  =========================================================================================================== */
+.l-header {
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 10;
-  height: 4rem;
+  height: 6rem;
 }
-@media screen and (min-width: 600px) {
-  .header {
-    height: 6rem;
+@media screen and (max-width: 768px) {
+  .l-header {
+    height: 4rem;
   }
 }
-.header__inner {
+.l-header__wrapper {
+  width: 100%;
+  padding-inline: 2rem;
+}
+@media screen and (max-width: 768px) {
+  .l-header__wrapper {
+    padding-inline: 1rem;
+  }
+}
+.l-header__flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100%;
 }
-
-.branding__title {
+.l-header__brandingTitle {
   font-size: 1.5rem;
   font-family: "Rubik Dirt", system-ui, sans-serif;
   font-weight: normal;
   color: #1C75BC;
-  transition-duration: 0.3s;
 }
-.branding__title:hover {
-  opacity: 0.85;
-}
-
-/*
-Theme Name: Portfolio Original Theme
-Author: Toshihide Nakahara
-Version: 1.0.0
-*/
-/**********************************************
-  各スタイルのインポート
-**********************************************/
-/**********************************************
-  メイン
-**********************************************/
-.site-main {
-  margin: 0 auto;
+.l-header__brandingTitle:hover {
+  opacity: 0.7;
 }
 
-/*
-Theme Name: Portfolio Original Theme
-Author: Toshihide Nakahara
-Version: 1.0.0
-*/
-/**********************************************
-  各スタイルのインポート
-**********************************************/
-/**********************************************
-  コンテンツエリア
-**********************************************/
-.content-area {
+/* ==========================================================================================================
+  container
+  =========================================================================================================== */
+.l-container {
+  margin-inline: auto;
+  padding-inline: 2rem;
   max-width: 80rem;
-  margin: 0 auto;
-  padding: 0 3%;
-  margin: 3rem auto;
 }
-.content-area--mt-none {
-  margin-top: 0 !important;
-}
-
-/*
-Theme Name: Portfolio Original Theme
-Author: Toshihide Nakahara
-Version: 1.0.0
-*/
-/**********************************************
-  各スタイルのインポート
-**********************************************/
-/**********************************************
-  フッター
-**********************************************/
-.footer {
-  background-color: #fff;
-}
-.footer-info {
-  padding-top: 4rem !important;
-  padding-bottom: 4rem !important;
-  text-align: center;
-}
-
-/*
-Theme Name: Portfolio Original Theme
-Author: Toshihide Nakahara
-Version: 1.0.0
-*/
-/**********************************************
-  各スタイルのインポート
-**********************************************/
-/**********************************************
-  グローバルナビゲーション
-**********************************************/
-.gnav {
-  display: none;
-}
-@media screen and (min-width: 1024px) {
-  .gnav {
-    display: block;
+@media screen and (max-width: 768px) {
+  .l-container {
+    padding-inline: 1rem;
   }
 }
-.gnav__list {
+
+/*
+  object
+********************************/
+/* ==========================================================================================================
+  gnav
+  =========================================================================================================== */
+@media screen and (max-width: 768px) {
+  .c-gnav {
+    display: none;
+  }
+}
+.c-gnav__list {
   list-style: none;
   display: flex;
   padding: 0;
   align-items: center;
 }
-.gnav__item {
+.c-gnav__item {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.gnav__link {
+.c-gnav__link {
   display: inline-block;
   position: relative;
   overflow: hidden;
@@ -689,7 +588,7 @@ Version: 1.0.0
   padding-left: 1rem;
   padding-right: 1rem;
 }
-.gnav__link::before, .gnav__link::after {
+.c-gnav__link::before, .c-gnav__link::after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -701,24 +600,33 @@ Version: 1.0.0
   transform: translateX(-105%);
   transition: all 0.3s cubic-bezier(0.2, 1, 0.2, 1);
 }
-.gnav__link:hover {
+.c-gnav__link:hover {
   color: #1C75BC;
-  opacity: 0.85;
+  opacity: 0.7;
 }
-.gnav__link:hover::before {
+.c-gnav__link:hover::before {
   transform: translateX(0);
   transition-delay: 0.2s;
 }
-.gnav__link:hover::after {
+.c-gnav__link:hover::after {
   transform: translateX(100%);
 }
 
-@media screen and (min-width: 1024px) {
-  .sp-gnav {
-    display: none;
+/* ==========================================================================================================
+  hamburger
+  =========================================================================================================== */
+/* ==========================================================================================================
+  gnavSp
+  =========================================================================================================== */
+.c-gnavSp {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .c-gnavSp {
+    display: block;
   }
 }
-.sp-gnav__mask {
+.c-gnavSp__mask {
   position: absolute;
   top: 0;
   left: 0;
@@ -727,14 +635,15 @@ Version: 1.0.0
   background-color: #c4c4c4;
   opacity: 0.5;
   transition-duration: 1s;
+  opacity: 0;
+  visibility: hidden;
 }
-.sp-gnav__btn {
+.c-gnavSp__btn {
   background: none;
   border: none;
   cursor: pointer;
-  color: #3b3b3b;
   position: fixed;
-  top: 2rem;
+  top: 3rem;
   right: 1rem;
   height: 3rem;
   width: 3rem;
@@ -744,18 +653,18 @@ Version: 1.0.0
   transform: translateY(-50%);
   z-index: 20;
 }
-@media screen and (min-width: 600px) {
-  .sp-gnav__btn {
-    top: 3rem;
+@media screen and (max-width: 768px) {
+  .c-gnavSp__btn {
+    top: 2rem;
   }
 }
-.sp-gnav__hamburger {
+.c-gnavSp__hamburger {
   position: relative;
   height: 40%;
   top: 50%;
   transform: translateY(-50%);
 }
-.sp-gnav__hamburger span {
+.c-gnavSp__hamburger span {
   height: 3px;
   width: 1.5rem;
   border-radius: 999px;
@@ -766,469 +675,234 @@ Version: 1.0.0
   transform: translate(-50%, -50%);
   transition: all 0.3s;
 }
-.sp-gnav__hamburger span:first-child {
+.c-gnavSp__hamburger span:first-child {
   top: 0;
 }
-.sp-gnav__hamburger span:last-child {
+.c-gnavSp__hamburger span:last-child {
   top: 100%;
 }
-.sp-gnav__hamburger.active span:nth-of-type(1) {
+.c-gnavSp__hamburger.is-active span:nth-of-type(1) {
   top: 50%;
   transform: translate(-50%, -50%) rotate(45deg);
 }
-.sp-gnav__hamburger.active span:nth-of-type(2) {
+.c-gnavSp__hamburger.is-active span:nth-of-type(2) {
   opacity: 0;
 }
-.sp-gnav__hamburger.active span:nth-of-type(3) {
+.c-gnavSp__hamburger.is-active span:nth-of-type(3) {
   top: 50%;
   transform: translate(-50%, -50%) rotate(-45deg);
 }
-.sp-gnav__list {
-  list-style: none;
+.c-gnavSp__menu {
   position: fixed;
   top: 0;
-  left: 50vw;
-  width: 50vw;
+  left: 100%;
+  width: 100%;
   height: 100vh;
-  text-align: center;
-  background-color: #1C75BC;
-  padding: 10px;
-  margin: 0;
-  transition-duration: 0.3s;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  background-color: #f8f8f8;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
   z-index: 10;
 }
-.sp-gnav__list.translate-x-full {
-  translate: 100vw;
-}
-.sp-gnav__item {
-  margin-bottom: 5px;
-}
-.sp-gnav__link {
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s cubic-bezier(0.2, 1, 0.2, 1);
-  text-decoration: none;
-  color: #fff;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-.sp-gnav__link::before, .sp-gnav__link::after {
-  position: absolute;
-  bottom: 0;
+.c-gnavSp__menu.is-active {
+  opacity: 1;
+  visibility: visible;
   left: 0;
-  display: block;
+}
+.c-gnavSp__list {
+  list-style: none;
+  text-align: center;
+  background-color: #1C75BC;
+  transition-duration: 0.3s;
   width: 100%;
-  height: 1px;
-  content: "";
-  background: #fff;
-  transform: translateX(-105%);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.c-gnavSp__item {
+  padding: 1rem;
+  background-color: #f8f8f8;
+  transition: all 0.3s;
+}
+.c-gnavSp__item:hover {
+  transform: translate(10px, 10px);
+}
+.c-gnavSp__link {
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+}
+
+/* ==========================================================================================================
+  Button
+  =========================================================================================================== */
+.c-btn {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  border: 1px solid #1C75BC;
+  border-radius: 999px;
+  background-color: #1C75BC;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: all 0.3s cubic-bezier(0.2, 1, 0.2, 1);
 }
-.sp-gnav__link:hover {
-  color: #fff;
-  opacity: "";
+.c-btn:hover {
+  background-color: #fff;
+  color: #1C75BC;
 }
-.sp-gnav__link:hover::before {
-  transform: translateX(0);
-  transition-delay: 0.2s;
-}
-.sp-gnav__link:hover::after {
-  transform: translateX(100%);
-}
-
-/*
-Theme Name: Portfolio Original Theme
-Author: Toshihide Nakahara
-Version: 1.0.0
-*/
-/**********************************************
-  各スタイルのインポート
-**********************************************/
-/**********************************************
-  パンくずリスト
-**********************************************/
-.breadcrumb__item {
-  display: inline-block;
-}
-.breadcrumb__item:nth-of-type(n + 2):before {
-  content: "";
-  display: inline-block;
-  transform: rotate(45deg);
-  width: 5px;
-  height: 5px;
-  border-top: 1px solid #3b3b3b;
-  border-right: 1px solid #3b3b3b;
-  vertical-align: 3px;
-}
-.breadcrumb__item a {
-  transition: opacity 0.6s;
-}
-.breadcrumb__item a:hover {
-  opacity: 0.85;
-}
-
-/*
-Theme Name: Portfolio Original Theme
-Author: Toshihide Nakahara
-Version: 1.0.0
-*/
-/**********************************************
-  各スタイルのインポート
-**********************************************/
-/**********************************************
-  ページャースタイル
-**********************************************/
-.pager {
-  margin-top: 2rem;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.5rem;
-}
-@media screen and (min-width: 600px) {
-  .pager {
-    gap: 1rem;
-  }
-}
-.pager__item {
-  text-align: center;
-  margin-top: 0.5rem;
-  overflow: hidden;
-  grid-column: span 3/span 3;
-}
-@media screen and (min-width: 600px) {
-  .pager__item {
-    margin-top: 0;
-    grid-column: span 1/span 1;
-  }
-}
-@media screen and (min-width: 600px) {
-  .pager__item--prev {
-    grid-column-start: 1;
-  }
-}
-@media screen and (min-width: 600px) {
-  .pager__item--return {
-    grid-column-start: 2;
-  }
-}
-@media screen and (min-width: 600px) {
-  .pager__item--next {
-    grid-column-start: 3;
-  }
-}
-.pager__link {
-  display: block;
-  padding: 0.5rem 2rem;
-  background-color: #F3F3F3;
-  transition-duration: 0.3s;
-}
-.pager__link:hover {
-  background-color: #1C75BC;
-  color: #fff;
-}
-
-/*
-Theme Name: Portfolio Original Theme
-Author: Toshihide Nakahara
-Version: 1.0.0
-*/
-/**********************************************
-  各スタイルのインポート
-**********************************************/
-/**********************************************
-  その他のモジュール
-**********************************************/
-.container {
-  max-width: 80rem;
-  margin: 0 auto;
-  padding: 0 3%;
-}
-
-.hidden {
+.c-btn--header {
+  width: 184px;
+  height: 36px;
   opacity: 0;
-  pointer-events: none;
-  transition-duration: 0.3s;
+  visibility: hidden;
+  transition: all 0.3s;
 }
-
-.snap-start {
-  scroll-snap-align: start;
+.c-btn--fv {
+  max-width: 370px;
+  height: 80px;
 }
-
-.emphasized {
-  color: #1C75BC;
-}
-
-.card {
-  overflow: hidden;
-  background-color: white;
-  padding: 3rem 0;
-}
-.card__img {
-  position: relative;
-  padding-top: 56.25%;
-  overflow: hidden;
-}
-.card__img img {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-  aspect-ratio: 16/9;
-}
-.card__body {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.card__tag {
-  margin-top: 2rem;
-  display: block;
-}
-.card__title {
-  font-weight: bold;
-  font-size: 1.125rem;
-  margin-top: 1rem;
-}
-.card__text {
-  text-align: left;
-}
-.card__link {
-  transition-duration: 0.3s;
-  transition-duration: 0.3s;
-}
-.card__link:hover {
-  opacity: 0.85;
-}
-.card__link:hover {
-  text-decoration: underline;
-}
-.card__btn {
-  margin: 0 auto;
-  width: 60%;
-  margin-top: 2rem;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  text-align: center;
-  border: 1px solid #3b3b3b;
-}
-.card__btn a {
-  transition-duration: 0.3s;
-}
-.card__btn a:hover {
-  text-decoration: underline;
-}
-
-.tag {
-  font-size: 0.875rem;
-  padding: 0.125rem 0.25rem;
-  background-color: #1C75BC;
-  color: #fff;
-  border-radius: 0.25rem;
-  display: inline-block;
-  margin-left: 0.5rem;
-  transition-duration: 0.3s;
-}
-.tag:first-of-type {
-  margin-left: 0;
-}
-.tag:hover {
-  opacity: 0.85;
-}
-
-/**********************************************
-  プラグインのスタイル
-**********************************************/
-/*
-Theme Name: Portfolio Original Theme
-Author: Toshihide Nakahara
-Version: 1.0.0
-*/
-/**********************************************
-  各スタイルのインポート
-**********************************************/
-.wp-pagenavi {
-  text-align: center;
-}
-
-.wp-pagenavi span.current,
-.page.smaller,
-.page.larger,
-.nextpostslink,
-.previouspostslink {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  line-height: 50px;
-  padding: 0;
-  background: #1C75BC;
-  color: #FFFFFF;
-  border-radius: 50%;
-  border: none;
-}
-
-/* 共通スタイル*/
-.page.smaller,
-.page.larger {
-  background: #fff;
-  color: #1C75BC;
-  border: 1px solid #1C75BC;
-  padding: 0;
-}
-
-/* 現在ページより前のボタン */
-.page.smaller {
-  margin-right: 25px;
-}
-
-/* 現在ページより後のボタン */
-.page.larger {
-  margin-left: 25px;
-}
-
-.wp-pagenavi a:hover {
-  color: #FFF;
-  background-color: #999;
-  border: 1px solid #999 !important;
-}
-
-.nextpostslink,
-.previouspostslink {
-  line-height: 40px;
-  border: 1px solid #1C75BC !important;
-  color: #1C75BC !important;
-  position: relative;
-  background: #fff;
-  color: #1C75BC;
-  top: -3px;
-}
-
-.nextpostslink {
-  left: 25px;
-}
-
-.previouspostslink {
-  right: 25px;
-}
-
-.nextpostslink::before,
-.previouspostslink::after {
-  content: "";
-  width: 0.5px;
-  height: 40px;
-  background-color: rgb(224, 215, 215);
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.nextpostslink::before {
-  left: -15px;
-}
-
-.previouspostslink::after {
-  right: -15px;
-}
-
-/* 〇/〇 の部分のスタイル → 不要の場合は非表示 */
-.pages {
-  display: none;
-}
-
-/*
-Theme Name: Portfolio Original Theme
-Author: Toshihide Nakahara
-Version: 1.0.0
-*/
-/**********************************************
-  各スタイルのインポート
-**********************************************/
-.xo-event-calendar table.xo-month button {
-  text-align: center;
-}
-.xo-event-calendar table.xo-month button span.nav-prev {
-  border-color: #3b3b3b;
-  border-top: none;
-  border-right: none;
-  transition-duration: 0.3s;
-}
-.xo-event-calendar table.xo-month button span.nav-next {
-  border-color: #3b3b3b;
-  border-bottom: none;
-  border-left: none;
-  transition-duration: 0.3s;
-}
-.xo-event-calendar table.xo-month button:hover span.nav-prev,
-.xo-event-calendar table.xo-month button:hover span.nav-next {
-  opacity: 0.85;
-}
-.xo-event-calendar table.xo-month .month-dayname td div {
-  border: none;
-}
-
-/*
-Theme Name: Portfolio Original Theme
-Author: Toshihide Nakahara
-Version: 1.0.0
-*/
-/**********************************************
-  各スタイルのインポート
-**********************************************/
-/* ======================================
-* mw_wp_formプラグインスタイル
-* =================================== */
-.mw_wp_form .attention {
-  color: red; /* アスタリスクを赤色に */
-}
-.mw_wp_form .must {
-  color: rgb(253, 25, 93);
-  padding-left: 1rem;
-}
-.mw_wp_form input {
-  -webkit-appearance: revert;
-     -moz-appearance: revert;
-          appearance: revert;
-}
-.mw_wp_form input[type=text], .mw_wp_form input[type=email], .mw_wp_form textarea {
-  width: 100%; /* 記入欄を画面サイズいっぱいにする */
-  border: 1px solid #3b3b3b;
-  border-radius: 0.25rem;
-  padding: 5px;
-}
-.mw_wp_form input[type=text], .mw_wp_form input[type=email] {
-  width: 100%;
-}
-@media screen and (min-width: 1024px) {
-  .mw_wp_form input[type=text], .mw_wp_form input[type=email] {
-    width: 50%;
+@media screen and (max-width: 431px) {
+  .c-btn--fv {
+    max-width: 220px;
+    height: 53px;
   }
 }
-.mw_wp_form input[type=radio], .mw_wp_form input[type=check] {
-  cursor: pointer;
+.c-btn--about {
+  max-width: 360px;
+  height: 80px;
 }
-.mw_wp_form [type=submit] {
-  background-color: #1C75BC;
-  color: #fff;
-  padding: 1rem 2rem;
-  border-radius: 9999px;
-  box-shadow: 0.125rem 0.125rem 0.25rem #ccc;
-  transition-duration: 0.3s;
-  margin-inline: auto;
+
+/* ==========================================================================================================
+  Text
+  =========================================================================================================== */
+.c-text-pink {
+  color: #1C75BC;
 }
-.mw_wp_form [type=submit]:hover {
-  opacity: 0.85;
+
+/* ==========================================================================================================
+  FV
+  =========================================================================================================== */
+.p-fv {
+  height: 680px;
+  max-width: 1800px;
+  position: relative;
 }
-.mw_wp_form p {
-  font-weight: bold; /* 項目名を太字 */
-  padding-bottom: 20px; /* 項目の間に余白を設置 */
-  margin-top: 0 !important;
+@media screen and (max-width: 431px) {
+  .p-fv {
+    height: 410px;
+  }
 }
-.mw_wp_form p:last-of-type {
+.p-fv__inner {
+  position: relative;
+  height: 100%;
+}
+.p-fv__text-area {
+  position: absolute;
+  top: 220px;
+  left: 15%;
+  z-index: 1;
+}
+@media screen and (max-width: 768px) {
+  .p-fv__text-area {
+    top: 150px;
+    left: 20px;
+  }
+}
+.p-fv__title {
+  font-size: clamp(2.578rem, 1.344rem + 6.17vw, 5.625rem);
+  font-style: italic;
+  color: #3b3b3b;
+  line-height: 1;
+}
+@media screen and (max-width: 768px) {
+  .p-fv__title {
+    font-size: 2.5rem;
+  }
+}
+.p-fv__title span {
+  background-color: #fff;
+}
+.p-fv__title--pink {
+  color: #1C75BC;
+}
+.p-fv__text {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: clamp(0.831rem, 0.459rem + 1.86vw, 1.75rem);
+  font-weight: bold;
+  line-height: 1;
+  background-color: #fff;
+}
+.p-fv__btn {
+  margin-top: 30px;
+  font-size: 1.25rem;
+  width: 100%;
+}
+@media screen and (max-width: 431px) {
+  .p-fv__btn {
+    font-size: 0.8125rem;
+  }
+}
+.p-fv__image-area {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 73.6%;
+  height: 100%;
+  overflow: hidden;
+  border-bottom-left-radius: 90px;
+  background-image: url("../img/bg_mv.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 431px) {
+  .p-fv__image-area {
+    border-bottom-left-radius: 50px;
+  }
+}
+
+/* ==========================================================================================================
+  about
+  =========================================================================================================== */
+.p-about__header {
+  position: relative;
+  transform: translateY(-20px);
+}
+.p-about__title {
+  color: #1C75BC;
+  font-size: clamp(3.5rem, 2.184rem + 6.58vw, 6.75rem);
+  font-weight: bold;
+  font-style: italic;
+  line-height: 1;
   text-align: center;
+}
+.p-about__sub-title {
+  margin-top: 10px;
+  font-size: clamp(1rem, 0.595rem + 2.03vw, 2rem);
+  font-weight: bold;
+  text-align: center;
+}
+@media screen and (max-width: 431px) {
+  .p-about__sub-title {
+    margin-top: 0;
+  }
+}
+.p-about__text {
+  margin-top: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.7;
+  text-align: center;
+}
+@media screen and (max-width: 431px) {
+  .p-about__text {
+    font-size: 15px;
+  }
+}
+.p-about__body {
+  margin-top: 10px;
 }/*# sourceMappingURL=style.css.map */

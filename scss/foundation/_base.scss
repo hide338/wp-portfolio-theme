@@ -20,10 +20,14 @@ body {
   background-color: $base-color;
   line-height: $line-height;
   font-feature-settings: "palt";
+  @include mq(md) {
+    font-size: .875rem;
+  }
 }
 
 main {
   overflow-x: hidden;
+  @include container($container-width);
 }
 
 input[type="checkbox"],

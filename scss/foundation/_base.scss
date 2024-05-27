@@ -20,6 +20,7 @@ body {
   background-color: $base-color;
   line-height: $line-height;
   font-feature-settings: "palt";
+  overflow-x: hidden;
   @include mq(md) {
     font-size: .875rem;
   }

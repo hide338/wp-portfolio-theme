@@ -11,8 +11,8 @@ Template Name: front-page
         <div class="p-fv__wrapper">
           <div class="p-fv__flex p-fv__inner">
             <div class="p-fv__text">
-              <h2 class="p-fv__title"><span>コーディング</span><br><span>WordPress</span><br><span>Web制作</span></h2>
-              <p class="p-fv__description">確かな手仕事・迅速なレスポンス・柔軟なアプローチ<br>幅広い知識で期待以上の価値をお届けします。</p>
+              <h2 class="p-fv__title"><span>コーディング</span><br><span>Web制作</span><br><span>ECサイト構築</span></h2>
+              <p class="p-fv__description">バックエンドからフロントエンドまで経験した<br>幅広い知識で、本当に必要なホームページを<br>素早く構築いたします。</p>
               <div class="p-fv__btn">
                 <a href="<?php echo esc_url( get_the_permalink( 2173 ) ); ?>" class="p-fv__link">お問い合わせ</a>
               </div>
@@ -20,32 +20,6 @@ Template Name: front-page
             <div class="p-fv__img">
               <img src="<?= get_template_directory_uri(); ?>/img/fv-image.png" alt="メインイメージ">
             </div>
-          </div>
-        </div>
-        <div class="fv__bg-img">
-          <div class="fv__container container">
-            <!-- <div class="grid gap-4 grid-rows-5 md:grid-cols-12 h-full"> -->
-              <div class="fv__text">
-                <div class="fv__catch-copy">
-                  <h2 class="fv__title">
-                    <span class="emphasized">フルスタックエンジニア</span>が<br>あなたのお仕事サポートします
-                  </h2>
-                  <p class="">
-                    確かな手仕事・迅速なレスポンス・柔軟なアプローチで、
-                    <br>
-                    期待以上の価値をお届けします。
-                    <br>
-                    信頼と幅広い知識でIT技術のトータルパートナーを務めます。
-                  </p>
-                </div>
-                <div class="fv__btn">
-                  <div class="fv__btn--copy">お気軽にお問い合わせください！</div>
-                  <a class="fv__btn--contact" href="<?php echo esc_url( get_the_permalink( 2173 ) ); ?>">お問い合わせ</a>
-                </div>
-              </div>
-              <div class="fv__img">
-                <img class="animate-scale-down-bottom h-full object-cover mx-auto" src="<?= get_template_directory_uri(); ?>/img/my-icon_main.png" alt="メインイメージ">
-              </div>
           </div>
         </div>
       </div>

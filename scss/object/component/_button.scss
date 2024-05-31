@@ -4,28 +4,40 @@
 /* ==========================================================================================================
   Button
   =========================================================================================================== */
+.c-cta {
+  @include push-btn(30rem, 4rem, 999px, #fff, $accent-color, #cf7500, $duration-time);
+  @include mq(sp) {
+    @include push-btn(20rem, 3rem, 999px, #fff, $accent-color, #cf7500, $duration-time);
+  }
+}
+
 .c-btn {
-  @include button();
-
-  &--header {
-    width: 184px;
-    height: 36px;
-    opacity: 0;
-    visibility: hidden;
-    transition: all $duration-time;
-  }
-
-  &--fv {
-    max-width: 370px;
-    height: 80px;
-    @include mq(sp) {
-      max-width: 220px;
-      height: 53px;
-    }
-  }
-
-  &--about {
-    max-width: 360px;
-    height: 80px;
-  }
+  @include coloring-btn(30rem, 4rem, 999px, 1s);
+  // color: #3b3b3b;
+  // font-weight: bold;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // width: 100%;
+  // height: 4rem;
+  // overflow: hidden;
+  // border-radius: 9999px;
+  // text-align: center;
+  // background-color: #fff;
+  // position: relative;
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   width: 4rem;
+  //   height: 100%;
+  //   left: 0;
+  //   background-color: $main-color;
+  //   border-radius: 9999px;
+  //   transition-duration: $duration-time;
+  // }
+  // span {
+  //   transition-delay: 0.3s;
+  //   z-index: 2;
+  // }
 }

@@ -9,27 +9,25 @@ Template Name: front-page
       <div class="p-fv">
         <div id="particles-js" class="p-fv__particle"></div>
         <div class="p-fv__wrapper">
-          <div class="p-fv__flex p-fv__inner">
-            <div class="p-fv__text">
-              <h2 class="p-fv__title"><span>コーディング</span><br><span>Web制作</span><br><span>ECサイト構築</span></h2>
-              <p class="p-fv__description">バックエンドからフロントエンドまで経験した<br>幅広い知識で、本当に必要なホームページを<br>素早く構築いたします。</p>
-              <div class="p-fv__btn">
-                <a href="<?php echo esc_url( get_the_permalink( 2173 ) ); ?>" class="p-fv__link">お問い合わせ</a>
-              </div>
-            </div>
-            <div class="p-fv__img">
-              <img src="<?= get_template_directory_uri(); ?>/img/fv-image.png" alt="メインイメージ">
+          <div class="p-fv__text">
+            <h2 class="p-fv__title"><span>視力2.0エンジニア</span><br><span><span class="u-text-blue">"中原 利秀"</span>を<br class="u-sp-active">知ってもらうための</span><br><span>ポートフォリオサイト<br class="u-sp-active">です！</span></h2>
+            <p class="p-fv__description">バックエンドからフロントエンドまでの開発経験を活かし<br>幅広い知識でWeb制作業務をサポートします。</p>
+            <div class="p-fv__btn">
+              <a href="<?php echo esc_url( get_the_permalink( 2173 ) ); ?>" class="p-fv__link c-cta">お問い合わせ</a>
             </div>
           </div>
+            <!-- <div class="p-fv__img">
+              <img src="<?= get_template_directory_uri(); ?>/img/fv-image.png" alt="メインイメージ">
+            </div> -->
         </div>
       </div>
       <!-- <div class="wave"></div> -->
     </section>
   
-    <section id="service" class="section snap-start container">
-      <div class="section__header">
-        <h2 class="section__title section__title--ja">サービス</h2>
-        <p class="section__title section__title--en">SERVICE</p>
+    <section id="service" class="l-section snap-start container">
+      <div class="l-section__header">
+        <h2 class="l-section__title section__title--ja">サービス</h2>
+        <p class="l-section__title section__title--en">SERVICE</p>
       </div>
       <?php
         $args = [
@@ -50,19 +48,21 @@ Template Name: front-page
               $img = array(get_template_directory_uri() . '/img/post-bg.jpg');
             endif;
           ?>
-          <div class="section__body service-post">
-            <div class="service-post__wrapper service-post__grid">
-              <span class="service-post__number"><?= sprintf('%02d', $service_count); ?></span>
-              <div class="service-post__img js__slide-in">
-                <img class="service-post__img-slide" src="<?= $img[0]; ?>" alt="" loading="lazy">
-              </div>
-              <div class="service-post__text js__slide-in">
-                <div class="service-post__text-slide">
-                  <h3 class="service-post__title"><?php the_title(); ?></h3>
-                  <p class="service-post__description"><?= get_the_excerpt(); ?></p>
-                  <div class="service-post__btn">
-                    <p class="service-post__btn--copy">料金・納品までの流れをチェック</p>
-                    <a href="<?php echo get_the_permalink(); ?>" class="service-post__btn--link"><span>詳しく見る</span></a>
+          <div class="l-section__body">
+            <div class="p-service">
+              <div class="p-service__grid">
+                <span class="p-service__number"><?= sprintf('%02d', $service_count); ?></span>
+                <div class="p-service__img-area js-scroll">
+                  <img class="" src="<?= $img[0]; ?>" alt="" loading="lazy">
+                </div>
+                <div class="p-service__text-area js-scroll">
+                  <div class="p-service__text">
+                    <h3 class="p-service__title"><?php the_title(); ?></h3>
+                    <p class="p-service__description"><?= get_the_excerpt(); ?></p>
+                    <div class="p-service__btn">
+                      <!-- <p class="p-service__btn--copy">料金・納品までの流れをチェック</p> -->
+                      <a href="<?php echo get_the_permalink(); ?>" class="c-btn"><span>詳しく見る</span></a>
+                    </div>
                   </div>
                 </div>
               </div>

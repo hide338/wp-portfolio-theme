@@ -10,6 +10,7 @@
 @forward './layout/header';
 @forward './layout/footer';
 @forward './layout/container';
+@forward './layout/section';
 
 /*
   object
@@ -20,3 +21,6 @@
 @forward './object/component/color';
 // project
 @forward './object/project/front-page';
+// utility
+@forward './object/utility/color';
+@forward './object/utility/etc';

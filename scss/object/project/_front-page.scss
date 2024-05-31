@@ -8,7 +8,6 @@
 
 .p-fv {
   height: 100vh;
-  @include expand();
 
   &__particle {
     position:fixed;/*描画固定*/

@@ -81,50 +81,24 @@
   =========================================================================================================== */
 .p-service {
   position: relative;
-  padding-block: 4rem;
-  margin-top: 4rem;
-  &:first-of-type {
-    margin-top: 0;
-  }
-  &::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: "";
-    background-color: #edf8fd;
+  height: 30.5rem;
+
+  @include mq(md) {
     height: 100%;
-    margin-left: calc(50% - 35vw);
-    width: 85vw;
   }
   
   &:nth-last-of-type(odd) {
-    &::before {
-      margin-left: calc(50% - 50vw);
-      width: 85vw;
+    display: flex;
+    justify-content: right;
+
+    @include mq(md) {
+      display: block;
     }
-    .p-service__img-area {
-      order: 2;
-      @include mq(md) {
-        order: 1;
-      }
-    }
+
     .p-service__text-area {
-      order: 1;
-      @include mq(md) {
-        order: 2;
-      }
-    }
-    .p-service__number {
       left: 0;
       right: auto;
     }
-  }
-
-  &__grid {
-    @include grid-cols(2);
-    @include gap(16);
-    position: relative;
-    z-index: 1;
   }
 
   &__number {
@@ -132,36 +106,39 @@
     font-family: $font-family-number;
     font-size: clamp(8rem, 4.8rem + 16vw, 17rem);
     font-weight: bold;
-    // color: #75B7EB;
-    color: $main-color;
+    color: $text-color;
     opacity: 0.4;
-    bottom: 0;
-    // transform: translateY(-50%);
+    top: 0;
     right: 0;
     line-height: 1;
   }
 
   &__img-area {
-    position: relative;
-    z-index: 1;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    @include col-span(1);
+    width: 70%;
     @include mq(md) {
-      @include col-span(2);
+      width: 100%;
+      @include expand();
     }
   }
   
   &__text-area {
-    position: relative;
+    position: absolute;
     z-index: 1;
     overflow: hidden;
-    @include col-span(1);
+    width: 60%;
+    min-width: 500px;
+    bottom: -1rem;
+    right: 0;
+    background-color: #fff;
+    padding: 2rem;
+    box-shadow: 0 0 5px rgba(172, 172, 172, 0.3);
     @include mq(md) {
-      margin-top: 2.5rem;
-      @include col-span(2);
+      position: relative;
+      top: -1rem;
+      width: 100%;
+      min-width: auto;
+
     }
   }
 

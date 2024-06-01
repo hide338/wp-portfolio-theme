@@ -29,7 +29,7 @@ Template Name: front-page
         <h2 class="l-section__title section__title--ja">サービス</h2>
         <p class="l-section__title section__title--en">SERVICE</p>
       </div>
-      <div class="l-section__body">
+      <div class="l-section__body l-section__grid">
       <?php
         $args = [
           'post_type' => 'service',
@@ -50,22 +50,22 @@ Template Name: front-page
             endif;
           ?>
             <div class="p-service">
-              <div class="p-service__grid">
-                <span class="p-service__number"><?= sprintf('%02d', $service_count); ?></span>
-                <div class="p-service__img-area js-scroll">
-                  <img class="" src="<?= $img[0]; ?>" alt="" loading="lazy">
-                </div>
-                <div class="p-service__text-area js-scroll">
-                  <div class="p-service__text">
-                    <h3 class="p-service__title"><?php the_title(); ?></h3>
-                    <p class="p-service__description"><?= get_the_excerpt(); ?></p>
-                    <div class="p-service__btn">
-                      <!-- <p class="p-service__btn--copy">料金・納品までの流れをチェック</p> -->
-                      <a href="<?php echo get_the_permalink(); ?>" class="c-btn"><span>詳しく見る</span></a>
-                    </div>
+              <!-- <div class="p-service__grid"> -->
+                <!-- <span class="p-service__number"><?= sprintf('%02d', $service_count); ?></span> -->
+              <div class="p-service__img-area js-scroll">
+                <img class="" src="<?= $img[0]; ?>" alt="" loading="lazy">
+              </div>
+              <div class="p-service__text-area js-scroll">
+                <div class="p-service__text">
+                  <h3 class="p-service__title"><?php the_title(); ?></h3>
+                  <p class="p-service__description"><?= get_the_excerpt(); ?></p>
+                  <div class="p-service__btn">
+                    <!-- <p class="p-service__btn--copy">料金・納品までの流れをチェック</p> -->
+                    <a href="<?php echo get_the_permalink(); ?>" class="c-btn"><span>詳しく見る</span></a>
                   </div>
                 </div>
               </div>
+              <!-- </div> -->
             </div>
           <?php $service_count += 1; endwhile; ?>
         <?php endif; ?>

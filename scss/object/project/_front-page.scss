@@ -81,28 +81,50 @@
   =========================================================================================================== */
 .p-service {
   position: relative;
-  padding-block: 8rem;
-  // &::before {
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   content: "";
-  //   background-color: #edf8fd;
-  //   height: 100%;
-  //   margin-left: calc(50% - 35vw);
-  //   width: 85vw;
-  // }
+  padding-block: 4rem;
+  margin-top: 4rem;
+  &:first-of-type {
+    margin-top: 0;
+  }
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    background-color: #edf8fd;
+    height: 100%;
+    margin-left: calc(50% - 35vw);
+    width: 85vw;
+  }
   
-  &:nth-of-type(odd) {
+  &:nth-last-of-type(odd) {
     &::before {
-      margin-left: calc(50% + 50vw);
+      margin-left: calc(50% - 50vw);
       width: 85vw;
+    }
+    .p-service__img-area {
+      order: 2;
+      @include mq(md) {
+        order: 1;
+      }
+    }
+    .p-service__text-area {
+      order: 1;
+      @include mq(md) {
+        order: 2;
+      }
+    }
+    .p-service__number {
+      left: 0;
+      right: auto;
     }
   }
 
   &__grid {
     @include grid-cols(2);
     @include gap(16);
+    position: relative;
+    z-index: 1;
   }
 
   &__number {
@@ -110,15 +132,22 @@
     font-family: $font-family-number;
     font-size: clamp(8rem, 4.8rem + 16vw, 17rem);
     font-weight: bold;
-    color: #75B7EB;
+    // color: #75B7EB;
+    color: $main-color;
     opacity: 0.4;
-    top: 0;
-    transform: translateY(-50%);
+    bottom: 0;
+    // transform: translateY(-50%);
     right: 0;
+    line-height: 1;
   }
 
   &__img-area {
+    position: relative;
+    z-index: 1;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     @include col-span(1);
     @include mq(md) {
       @include col-span(2);
@@ -126,16 +155,19 @@
   }
   
   &__text-area {
+    position: relative;
+    z-index: 1;
     overflow: hidden;
-    margin-top: 2.5rem;
     @include col-span(1);
     @include mq(md) {
+      margin-top: 2.5rem;
       @include col-span(2);
     }
   }
 
   &__text {
     text-align: left;
+    font-weight: bold;
     @include mq(md) {
       text-align: center;
     }

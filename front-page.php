@@ -29,6 +29,7 @@ Template Name: front-page
         <h2 class="l-section__title section__title--ja">サービス</h2>
         <p class="l-section__title section__title--en">SERVICE</p>
       </div>
+      <div class="l-section__body">
       <?php
         $args = [
           'post_type' => 'service',
@@ -48,7 +49,6 @@ Template Name: front-page
               $img = array(get_template_directory_uri() . '/img/post-bg.jpg');
             endif;
           ?>
-          <div class="l-section__body">
             <div class="p-service">
               <div class="p-service__grid">
                 <span class="p-service__number"><?= sprintf('%02d', $service_count); ?></span>
@@ -67,9 +67,9 @@ Template Name: front-page
                 </div>
               </div>
             </div>
-          </div>
-        <?php $service_count += 1; endwhile; ?>
-      <?php endif; ?>
+          <?php $service_count += 1; endwhile; ?>
+        <?php endif; ?>
+      </div>
     </section>
   
     <div id="work" class="snap-start section--bg">

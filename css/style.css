@@ -86,7 +86,7 @@ body {
   background-color: #f8f8f8;
   line-height: 2;
   font-feature-settings: "palt";
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 @media screen and (max-width: 768px) {
   body {
@@ -506,7 +506,7 @@ th {
   headerレイアウト
   =========================================================================================================== */
 .l-header {
-  position: fixed;
+  position: sticky;
   width: 100%;
   top: 0;
   z-index: 10;
@@ -559,6 +559,43 @@ th {
 /* ==========================================================================================================
   sectionレイアウト
   =========================================================================================================== */
+.l-section {
+  position: relative;
+  padding-block: 10rem;
+}
+.l-section:nth-of-type(even) {
+  background-color: #edf8fd;
+  margin-left: calc(50% - 50vw);
+  width: 100vw;
+}
+.l-section::after {
+  position: absolute;
+  font-size: clamp(4rem, 3.091rem + 4.55vw, 6rem);
+  color: #75B7EB;
+  opacity: 0.85;
+  font-family: "Rubik Dirt", system-ui, sans-serif;
+  top: 0;
+  transform: translateY(-50%);
+}
+.l-section__wrapper {
+  margin-inline: auto;
+  padding-inline: 2rem;
+  max-width: 80rem;
+}
+@media screen and (max-width: 768px) {
+  .l-section__wrapper {
+    padding-inline: 1rem;
+  }
+}
+.l-section__sepa-title {
+  position: absolute;
+  font-size: clamp(4rem, 3.091rem + 4.55vw, 6rem);
+  color: #75B7EB;
+  opacity: 0.85;
+  font-family: "Rubik Dirt", system-ui, sans-serif;
+  top: 0;
+  transform: translateY(-50%);
+}
 .l-section__header {
   text-align: center;
 }
@@ -817,9 +854,9 @@ th {
   content: "";
   position: absolute;
   top: 0;
+  left: 0;
   width: 4rem;
   height: 100%;
-  left: 0;
   background-color: #1C75BC;
   border-radius: 9999px;
   transition-duration: 0.5s;
@@ -847,20 +884,26 @@ th {
   FV
   =========================================================================================================== */
 .p-fv {
-  height: 100vh;
+  height: calc(100vh - 6rem);
+}
+@media screen and (max-width: 768px) {
+  .p-fv {
+    height: calc(100vh - 4rem);
+  }
 }
 .p-fv__particle {
   position: fixed; /*描画固定*/
   z-index: -1; /*描画を一番下に*/
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
 }
 .p-fv__wrapper {
   position: relative; /*描画を#particles-jsよりも上にするためposition:relative;を指定*/
   z-index: 1; /*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
   width: 100%;
   height: 100%;
-  padding-top: 6rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -871,11 +914,6 @@ th {
 @media screen and (max-width: 768px) {
   .p-fv__wrapper {
     padding-inline: 1rem;
-  }
-}
-@media screen and (max-width: 768px) {
-  .p-fv__wrapper {
-    padding-top: 4rem;
   }
 }
 .p-fv__text {
@@ -941,8 +979,13 @@ th {
   }
 }
 .p-service:nth-last-of-type(odd) .p-service__text-area {
-  left: 0;
+  left: 1.5rem;
   right: auto;
+}
+@media screen and (max-width: 768px) {
+  .p-service:nth-last-of-type(odd) .p-service__text-area {
+    left: 0;
+  }
 }
 .p-service__number {
   position: absolute;
@@ -973,7 +1016,7 @@ th {
   width: 60%;
   min-width: 500px;
   bottom: -1rem;
-  right: 0;
+  right: 1.5rem;
   background-color: #fff;
   padding: 2rem;
   box-shadow: 0 0 5px rgba(172, 172, 172, 0.3);
@@ -984,6 +1027,7 @@ th {
     top: -1rem;
     width: 100%;
     min-width: auto;
+    right: 0;
   }
 }
 .p-service__text {
@@ -1010,10 +1054,98 @@ th {
 }
 
 /* ==========================================================================================================
+  Works
+  =========================================================================================================== */
+.p-work__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3rem;
+}
+@media screen and (max-width: 768px) {
+  .p-work__grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1rem;
+  }
+}
+.p-work__grid-item {
+  grid-column: span 1/span 1;
+}
+.p-work__title {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1C75BC;
+  line-height: 1;
+}
+@media screen and (max-width: 768px) {
+  .p-work__title {
+    font-size: 1rem;
+  }
+}
+.p-work__tag {
+  margin-top: 1rem;
+}
+
+/* ==========================================================================================================
+  Skill
+  =========================================================================================================== */
+.p-skill__grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 2rem;
+}
+@media screen and (max-width: 768px) {
+  .p-skill__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 431px) {
+  .p-skill__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+}
+.p-skill__grid-item {
+  grid-column: span 1/span 1;
+}
+
+.p-skill-card {
+  box-shadow: 0.8rem 0.8rem 1.2rem rgba(0, 0, 0, 0.05), -0.8rem -0.8rem 1.2rem #fff;
+  background-color: #fff;
+  padding: 1rem;
+}
+.p-skill-card__title {
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #1C75BC;
+  line-height: 1;
+}
+.p-skill-card__year {
+  margin-top: 1rem;
+  line-height: 1;
+}
+.p-skill-card__level {
+  margin-top: 1rem;
+  line-height: 1;
+}
+
+/* ==========================================================================================================
   カラースタイル
   =========================================================================================================== */
 .u-text-blue {
   color: #1C75BC;
+}
+
+/* ==========================================================================================================
+  テキストポジション
+  =========================================================================================================== */
+.u-position-right {
+  right: 0;
 }
 
 /* ==========================================================================================================

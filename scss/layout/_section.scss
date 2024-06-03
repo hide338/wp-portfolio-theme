@@ -5,6 +5,41 @@
   sectionレイアウト
   =========================================================================================================== */
 .l-section {
+  position: relative;
+  padding-block: 10rem;
+
+  // &:nth-of-type(odd) {
+  //   background-color: $base-color;
+  //   @include expand();
+  // }
+  &:nth-of-type(even) {
+    background-color: #edf8fd;
+    @include expand();
+  }
+
+  &::after {
+    position: absolute;
+    font-size: clamp(4rem, 3.091rem + 4.55vw, 6rem);
+    color: #75B7EB;
+    opacity: 0.85;
+    font-family: "Rubik Dirt", system-ui, sans-serif;
+    top: 0;
+    transform: translateY(-50%);
+  }
+
+  &__wrapper {
+    @include container($container-width);
+  }
+
+  &__sepa-title {
+    position: absolute;
+    font-size: clamp(4rem, 3.091rem + 4.55vw, 6rem);
+    color: #75B7EB;
+    opacity: 0.85;
+    font-family: "Rubik Dirt", system-ui, sans-serif;
+    top: 0;
+    transform: translateY(-50%);
+  }
   
   &__header {
     text-align: center;

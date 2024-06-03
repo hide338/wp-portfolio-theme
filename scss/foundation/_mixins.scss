@@ -421,9 +421,9 @@
     content: '';
     position: absolute;
     top: 0;
+    left: 0;
     width: $height;
     height: 100%;
-    left: 0;
     background-color: $main-color;
     border-radius: 9999px;
     transition-duration: $duration-time;

@@ -5,194 +5,187 @@ Template Name: front-page
 ?>
 <?php get_header(); ?>
   <main class="site-main">
-    <section class="c-section">
-      <div class="p-fv">
-        <div id="particles-js" class="p-fv__particle"></div>
-        <div class="p-fv__wrapper">
-          <div class="p-fv__text">
-            <h2 class="p-fv__title"><span>視力2.0エンジニア</span><br><span><span class="u-text-blue">"中原 利秀"</span>を<br class="u-sp-active">知ってもらうための</span><br><span>ポートフォリオサイト<br class="u-sp-active">です！</span></h2>
-            <p class="p-fv__description">バックエンドからフロントエンドまでの開発経験を活かし<br>幅広い知識でWeb制作業務をサポートします。</p>
-            <div class="p-fv__btn">
-              <a href="<?php echo esc_url( get_the_permalink( 2173 ) ); ?>" class="p-fv__link c-cta">お問い合わせ</a>
-            </div>
+    <section class="p-fv">
+      <div id="particles-js" class="p-fv__particle"></div>
+      <div class="p-fv__wrapper">
+        <div class="p-fv__text">
+          <h2 class="p-fv__title"><span>視力2.0エンジニア</span><br><span><span class="u-text-blue">"中原 利秀"</span>を<br class="u-sp-active">知ってもらうための</span><br><span>ポートフォリオサイト<br class="u-sp-active">です！</span></h2>
+          <p class="p-fv__description">バックエンドからフロントエンドまでの開発経験を活かし<br>幅広い知識でWeb制作業務をサポートします。</p>
+          <div class="p-fv__btn">
+            <a href="<?php echo esc_url( get_the_permalink( 2173 ) ); ?>" class="p-fv__link c-cta">お問い合わせ</a>
           </div>
-            <!-- <div class="p-fv__img">
-              <img src="<?= get_template_directory_uri(); ?>/img/fv-image.png" alt="メインイメージ">
-            </div> -->
         </div>
-      </div>
-      <!-- <div class="wave"></div> -->
-    </section>
-  
-    <section id="service" class="l-section snap-start container">
-      <div class="l-section__header">
-        <h2 class="l-section__title section__title--ja">サービス</h2>
-        <p class="l-section__title section__title--en">SERVICE</p>
-      </div>
-      <div class="l-section__body l-section__grid">
-      <?php
-        $args = [
-          'post_type' => 'service',
-          'order' => 'ASC',
-          'orderby' => 'menu_order' 
-        ];
-        $service_posts = new WP_Query( $args );
-        $service_count = 1;
-      ?>
-      <?php if ( $service_posts->have_posts()): ?>
-        <?php while( $service_posts->have_posts() ): $service_posts->the_post(); ?>
-          <?php
-            if (has_post_thumbnail()):
-              $id = get_post_thumbnail_id();
-              $img = wp_get_attachment_image_src($id,'full');
-            else:
-              $img = array(get_template_directory_uri() . '/img/post-bg.jpg');
-            endif;
-          ?>
-            <div class="p-service">
-              <!-- <div class="p-service__grid"> -->
-                <!-- <span class="p-service__number"><?= sprintf('%02d', $service_count); ?></span> -->
-              <div class="p-service__img-area js-scroll">
-                <img class="" src="<?= $img[0]; ?>" alt="" loading="lazy">
-              </div>
-              <div class="p-service__text-area js-scroll">
-                <div class="p-service__text">
-                  <h3 class="p-service__title"><?php the_title(); ?></h3>
-                  <p class="p-service__description"><?= get_the_excerpt(); ?></p>
-                  <div class="p-service__btn">
-                    <!-- <p class="p-service__btn--copy">料金・納品までの流れをチェック</p> -->
-                    <a href="<?php echo get_the_permalink(); ?>" class="c-btn"><span>詳しく見る</span></a>
-                  </div>
-                </div>
-              </div>
-              <!-- </div> -->
-            </div>
-          <?php $service_count += 1; endwhile; ?>
-        <?php endif; ?>
+          <!-- <div class="p-fv__img">
+            <img src="<?= get_template_directory_uri(); ?>/img/fv-image.png" alt="メインイメージ">
+          </div> -->
       </div>
     </section>
-  
-    <div id="work" class="snap-start section--bg">
-      <section class="container section section__border-title section__border-title--work">
-        <div class="section__header">
-          <h2 class="section__title section__title--ja">実績</h2>
-          <p class="section__title section__title--en">WORKS</p>
+
+    <section id="service" class="l-section">
+      <div class="l-section__wrapper">
+        <div class="l-section__header">
+          <h2 class="l-section__title l-section__title--ja">サービス</h2>
+          <p class="l-section__title l-section__title--en">SERVICE</p>
         </div>
-        <div class="section__body section__body--work">
+        <div class="l-section__body l-section__grid">
         <?php
           $args = [
-            'post_type' => 'work',
-            'posts_per_page' => 9,
+            'post_type' => 'service',
+            'order' => 'ASC',
+            'orderby' => 'menu_order' 
           ];
           $service_posts = new WP_Query( $args );
+          $service_count = 1;
         ?>
         <?php if ( $service_posts->have_posts()): ?>
           <?php while( $service_posts->have_posts() ): $service_posts->the_post(); ?>
             <?php
-              // サムネイル画像を取得
               if (has_post_thumbnail()):
                 $id = get_post_thumbnail_id();
                 $img = wp_get_attachment_image_src($id,'full');
               else:
                 $img = array(get_template_directory_uri() . '/img/post-bg.jpg');
               endif;
-              // カテゴリーを取得
-              $categories = get_the_terms(get_the_ID(), 'work-cat');
             ?>
-            <div class="work-post card js__rotate work-post__rotate">
-              <div class="card__img">
-                <a class="card__link" href="<?php the_permalink(); ?>">
-                  <img class="object-cover" src="<?= $img[0]; ?>" alt="" loading="lazy">
-                </a>
-              </div>
-              <div class="card__body">
-                <?php if ($categories) : ?>
-                <div class="card__tag">
-                  <?php foreach ($categories as $category) : ?>
-                    <a href="<?= esc_url(get_category_link($category->term_id)); ?>" class="tag"><?= esc_html($category->name); ?></a>
-                  <?php endforeach; ?>
+              <div class="p-service">
+                <!-- <div class="p-service__grid"> -->
+                  <!-- <span class="p-service__number"><?= sprintf('%02d', $service_count); ?></span> -->
+                <div class="p-service__img-area js-scroll">
+                  <img class="" src="<?= $img[0]; ?>" alt="" loading="lazy">
                 </div>
+                <div class="p-service__text-area js-scroll">
+                  <div class="p-service__text">
+                    <h3 class="p-service__title"><?php the_title(); ?></h3>
+                    <p class="p-service__description"><?= get_the_excerpt(); ?></p>
+                    <!-- <div class="p-service__btn">
+                      <p class="p-service__btn--copy">料金・納品までの流れをチェック</p>
+                      <a href="<?php echo get_the_permalink(); ?>" class="c-btn"><span>詳しく見る</span></a>
+                    </div> -->
+                  </div>
+                </div>
+                <!-- </div> -->
+              </div>
+            <?php $service_count += 1; endwhile; ?>
+          <?php endif; ?>
+        </div>
+      </div>
+    </section>
+  
+    <section id="work" class="l-section">
+      <div class="l-section__wrapper">
+        <span class="l-section__sepa-title">WORKS</span>
+        <div class="l-section__header">
+          <h2 class="l-section__title l-section__title--ja">実績</h2>
+          <p class="l-section__title l-section__title--en">WORKS</p>
+        </div>
+        <div class="l-section__body">
+          <div class="p-work">
+            <div class="p-work__grid">
+                <?php
+                  $args = [
+                    'post_type' => 'work',
+                    'posts_per_page' => 9,
+                  ];
+                  $service_posts = new WP_Query( $args );
+                ?>
+                <?php if ( $service_posts->have_posts()): ?>
+                  <?php while( $service_posts->have_posts() ): $service_posts->the_post(); ?>
+                    <?php
+                      // サムネイル画像を取得
+                      if (has_post_thumbnail()):
+                        $id = get_post_thumbnail_id();
+                        $img = wp_get_attachment_image_src($id,'full');
+                      else:
+                        $img = array(get_template_directory_uri() . '/img/post-bg.jpg');
+                      endif;
+                      // カテゴリーを取得
+                      $categories = get_the_terms(get_the_ID(), 'work-cat');
+                    ?>
+                    <div class="p-work__grid-item">
+                      <a class="p-work__link" href="<?php the_permalink(); ?>">
+                        <div class="p-work__img-area">
+                          <img src="<?= $img[0]; ?>" alt="" loading="lazy">
+                        </div>
+                        <div class="p-work__text-area">
+                        <?php if ($categories) : ?>
+                          <h3 class="p-work__title"><?php the_title() ?></h3>
+                          <div class="p-work__tag">
+                            <?php foreach ($categories as $category) : ?>
+                            <span><?= esc_html($category->name); ?></span>
+                            <?php endforeach; ?>
+                          </div>
+                          <?php endif; ?>
+                          <!-- /.card__btn -->
+                        </div>
+                      </a>
+                    </div>
+                  <?php endwhile; ?>
                 <?php endif; ?>
-                <a class="card__link" href="<?php the_permalink(); ?>">
-                  <h3 class="card__title"><?php the_title() ?></h3>
-                </a>
-                <div class="card__btn">
-                  <a href="<?php the_permalink(); ?>" class="card__link">詳しく見る</a>
-                  <!-- /.card__link -->
-                </div>
-                <!-- /.card__btn -->
-              </div>
             </div>
-          <?php endwhile; ?>
-        <?php endif; ?>
+          </div>
         </div>
         <div class="work__link">
           <a href="<?= esc_url(get_post_type_archive_link('work')); ?>" class="work__btn"><span>実績一覧へ</span></a>
         </div>
-      </section>
-    </div>
-  
-    <section id="skill" class="snap-start container section section__border-title section__border-title--skill">
-      <div class="section__header">
-        <h2 class="section__title section__title--ja">スキル</h2>
-        <p class="section__title section__title--en">SKILL</p>
       </div>
-      <div class="section__body section__body--skill">
-        <?php
-          $args = [
-            'post_type' => 'skill',
-            'order' => 'ASC',
-            'orderby' => 'menu_order' 
-          ];
-          $skill_posts = new WP_Query( $args );
-        ?>
-        <?php if ( $skill_posts->have_posts()): ?>
-          <?php while( $skill_posts->have_posts() ): $skill_posts->the_post(); ?>
-            <?php
-              // ポストIDの取得
-              $post_id = get_the_ID();
-              // スキルにセットされているカスタムフィールドの値を取得
-              $experience = get_post_meta($post_id, 'experience', true); // 経験年数
-              $level = get_post_meta($post_id, 'level', true); // レベル
-              $fws = get_post_meta($post_id, 'fw', false); // フレームワーク
-              // スキルページの本文を取得
-              $content = get_the_content();
-              $content = strip_tags( strip_shortcodes( $content ) );
-              // サムネイル画像を取得
-              if (has_post_thumbnail()):
-                $id = get_post_thumbnail_id();
-                $img = wp_get_attachment_image_src($id,'full');
-              else:
-                $img = array(get_template_directory_uri() . '/img/post-bg.jpg');
-              endif;
-            ?>
-            <div class="skill-post js__slide-in skill-post__slide">
-              <div class="skill-post__header">
-                <img src="<?= esc_url($img[0]); ?>" alt="" class="skill-post__img" loading="lazy">
-                <h3 class="skill-post__title"><?php the_title(); ?></h3>
-              </div>
-              <div class="skill-post__body">
-                <p class="skill-post__item">経験年数：<?= $experience ?>年</p>
-                <p class="skill-post__item skill-post__level">
-                  技術レベル：
-                  <?php for ($i=0; $i < $level; $i++): ?>
-                    <i class="fa-solid fa-star skill-post__level--star"></i>
-                  <?php endfor; ?>
-                </p>
-                <p class="skill-post__item"><?= $content; ?></p>
-                <?php foreach ($fws as $key => $value): ?>
-                  <?php if($value): ?>
-                    <p class="skill-post__item skill-post__fw">フレームワーク：
-                    <?php foreach ($value as $key => $fw): ?>
-                      <img class="" src="<?= get_template_directory_uri() . '/img/' . $value[$key] . '.png' ?>" alt="" loading="lazy">
-                    <?php endforeach; ?>
+    </section>
+  
+    <section id="skill" class="l-section">
+      <div class="l-section__wrapper">
+        <span class="l-section__sepa-title u-position-right">SKILL</span>
+        <div class="l-section__header">
+          <h2 class="l-section__title l-section__title--ja">スキル</h2>
+          <p class="l-section__title l-section__title--en">SKILL</p>
+        </div>
+        <div class="l-section__body">
+          <div class="p-skill">
+            <div class="p-skill__grid">
+              <?php
+                $args = [
+                  'post_type' => 'skill',
+                  'order' => 'ASC',
+                  'orderby' => 'menu_order' 
+                ];
+                $skill_posts = new WP_Query( $args );
+              ?>
+              <?php if ( $skill_posts->have_posts()): ?>
+                <?php while( $skill_posts->have_posts() ): $skill_posts->the_post(); ?>
+                  <?php
+                    // ポストIDの取得
+                    $post_id = get_the_ID();
+                    // スキルにセットされているカスタムフィールドの値を取得
+                    $experience = get_post_meta($post_id, 'experience', true); // 経験年数
+                    $level = get_post_meta($post_id, 'level', true); // レベル
+                    $fws = get_post_meta($post_id, 'fw', false); // フレームワーク
+                    // スキルページの本文を取得
+                    $content = get_the_content();
+                    $content = strip_tags( strip_shortcodes( $content ) );
+                    // サムネイル画像を取得
+                    if (has_post_thumbnail()):
+                      $id = get_post_thumbnail_id();
+                      $img = wp_get_attachment_image_src($id,'full');
+                    else:
+                      $img = array(get_template_directory_uri() . '/img/post-bg.jpg');
+                    endif;
+                  ?>
+                  <div class="p-skill-card">
+                    <div class="p-skill-card__img">
+                      <img src="<?= esc_url($img[0]); ?>" alt="" loading="lazy">
+                    </div>
+                    <h3 class="p-skill-card__title"><?php the_title(); ?></h3>
+                    <p class="p-skill-card__year">経験年数：<?= $experience ?>年</p>
+                    <p class="p-skill-card__level">
+                      技術レベル：
+                      <?php for ($i=0; $i < $level; $i++): ?>
+                        <i class="fa-solid fa-star p-skill-card__level--star"></i>
+                      <?php endfor; ?>
                     </p>
-                  <?php endif; ?>
-                <?php endforeach; ?>
-              </div>
+                  </div>
+                <?php endwhile; ?>
+              <?php endif; ?>
             </div>
-          <?php endwhile; ?>
-        <?php endif; ?>
+          </div>
+        </div>
       </div>
     </section>
     

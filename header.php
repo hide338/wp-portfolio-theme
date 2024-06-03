@@ -24,6 +24,12 @@
   <link rel="preload" as="image" href="<?= get_template_directory_uri(); ?>/img/hero.jpg">
   <link rel="preload" as="image" href="<?= get_template_directory_uri(); ?>/img/sp-hero.png">
   <link rel="preload" as="image" href="<?= get_template_directory_uri(); ?>/img/profile-imge.png">
+
+  <!-- swiper -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
   
 	<?php wp_head(); ?>
 </head>

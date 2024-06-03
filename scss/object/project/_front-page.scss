@@ -7,13 +7,18 @@
   =========================================================================================================== */
 
 .p-fv {
-  height: 100vh;
+  height: calc(100vh - #{$header-height});
+  @include mq(md) {
+    height: calc(100vh - #{$sp-header-height});
+  }
 
   &__particle {
     position:fixed;/*描画固定*/
     z-index:-1;/*描画を一番下に*/
     width: 100%;
     height: 100%;
+    top: 0;
+    left: 0;
   }
 
   &__wrapper {
@@ -21,13 +26,13 @@
     z-index: 1;/*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
     width:100%;
     height: 100%;
-    padding-top: $header-height;
+    // padding-top: $header-height;
     display: flex;
     justify-content: center;
     align-items: center;
     @include container($container-width);
     @include mq(md) {
-      padding-top: $sp-header-height;
+      // padding-top: $sp-header-height;
     }
   }
 
@@ -96,8 +101,11 @@
     }
 
     .p-service__text-area {
-      left: 0;
+      left: 1.5rem;
       right: auto;
+      @include mq(md) {
+        left: 0;
+      }
     }
   }
 
@@ -129,7 +137,7 @@
     width: 60%;
     min-width: 500px;
     bottom: -1rem;
-    right: 0;
+    right: 1.5rem;
     background-color: #fff;
     padding: 2rem;
     box-shadow: 0 0 5px rgba(172, 172, 172, 0.3);
@@ -138,7 +146,7 @@
       top: -1rem;
       width: 100%;
       min-width: auto;
-
+      right: 0;
     }
   }
 
@@ -164,4 +172,86 @@
     display: flex;
     justify-content: center;
   }
+}
+
+/* ==========================================================================================================
+  Works
+  =========================================================================================================== */
+.p-work {
+
+  &__grid {
+    @include grid-cols(2);
+    @include gap(48);
+    @include mq(md) {
+      @include grid-cols(1);
+      @include gap(16);
+    }
+  }
+
+  &__grid-item {
+    @include col-span(1);
+  }
+
+  &__title {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $main-color;
+    line-height: 1;
+    @include mq(md) {
+      font-size: 1rem;
+    }
+  }
+
+  &__tag {
+    margin-top: 1rem;
+  }
+}
+
+/* ==========================================================================================================
+  Skill
+  =========================================================================================================== */
+.p-skill {
+  &__grid {
+    @include grid-cols(5);
+    @include gap(32);
+    @include mq(md) {
+      @include grid-cols(3);
+      @include gap(16);
+    }
+    @include mq(sp) {
+      @include grid-cols(2);
+      @include gap(8);
+    }
+  }
+
+  &__grid-item {
+    @include col-span(1);
+  }
+
+}
+
+.p-skill-card {
+  box-shadow: $shadow-color;
+  background-color: #fff;
+  padding: 1rem;
+
+  &__title {
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: $main-color;
+    line-height: 1;
+  }
+  
+  &__year {
+    margin-top: 1rem;
+    line-height: 1;
+  }
+  
+  &__level {
+    margin-top: 1rem;
+    line-height: 1;
+  }
+
 }

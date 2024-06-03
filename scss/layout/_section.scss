@@ -12,23 +12,14 @@
   //   background-color: $base-color;
   //   @include expand();
   // }
-  &:nth-of-type(even) {
-    background-color: #edf8fd;
-    @include expand();
-  }
-
-  &::after {
-    position: absolute;
-    font-size: clamp(4rem, 3.091rem + 4.55vw, 6rem);
-    color: #75B7EB;
-    opacity: 0.85;
-    font-family: "Rubik Dirt", system-ui, sans-serif;
-    top: 0;
-    transform: translateY(-50%);
-  }
+  // &:nth-of-type(odd) {
+  //   background-color: #edf8fd;
+  //   @include expand();
+  // }
 
   &__wrapper {
     @include container($container-width);
+    padding-inline: 0 !important;
   }
 
   &__sepa-title {
@@ -61,8 +52,4 @@
     margin-bottom: 8rem;
   }
 
-  &__grid {
-    @include grid-cols(1);
-    @include gap(80);
-  }
 }

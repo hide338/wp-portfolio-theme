@@ -27,7 +27,7 @@ Template Name: front-page
           <h2 class="l-section__title l-section__title--ja">サービス</h2>
           <p class="l-section__title l-section__title--en">SERVICE</p>
         </div>
-        <div class="l-section__body l-section__grid">
+        <div class="l-section__body p-service__grid">
         <?php
           $args = [
             'post_type' => 'service',
@@ -47,23 +47,23 @@ Template Name: front-page
                 $img = array(get_template_directory_uri() . '/img/post-bg.jpg');
               endif;
             ?>
-              <div class="p-service">
-                <!-- <div class="p-service__grid"> -->
-                  <!-- <span class="p-service__number"><?= sprintf('%02d', $service_count); ?></span> -->
-                <div class="p-service__img-area js-scroll">
+              <div class="p-service-item">
+                <div class="p-service-item__grid">
+                  <!-- <span class="p-service-item__number"><?= sprintf('%02d', $service_count); ?></span> -->
+                <div class="p-service-item__img-area js-scroll">
                   <img class="" src="<?= $img[0]; ?>" alt="" loading="lazy">
                 </div>
-                <div class="p-service__text-area js-scroll">
-                  <div class="p-service__text">
-                    <h3 class="p-service__title"><?php the_title(); ?></h3>
-                    <p class="p-service__description"><?= get_the_excerpt(); ?></p>
-                    <!-- <div class="p-service__btn">
-                      <p class="p-service__btn--copy">料金・納品までの流れをチェック</p>
+                <div class="p-service-item__text-area js-scroll">
+                  <div class="p-service-item__text">
+                    <h3 class="p-service-item__title"><?php the_title(); ?></h3>
+                    <p class="p-service-item__description"><?= get_the_excerpt(); ?></p>
+                    <!-- <div class="p-service-item__btn">
+                      <p class="p-service-item__btn--copy">料金・納品までの流れをチェック</p>
                       <a href="<?php echo get_the_permalink(); ?>" class="c-btn"><span>詳しく見る</span></a>
                     </div> -->
                   </div>
                 </div>
-                <!-- </div> -->
+                </div>
               </div>
             <?php $service_count += 1; endwhile; ?>
           <?php endif; ?>
@@ -173,11 +173,11 @@ Template Name: front-page
                       <img src="<?= esc_url($img[0]); ?>" alt="" loading="lazy">
                     </div>
                     <h3 class="p-skill-card__title"><?php the_title(); ?></h3>
-                    <p class="p-skill-card__year">経験年数：<?= $experience ?>年</p>
+                    <p class="p-skill-card__year">経験年数<br><?= $experience ?>年</p>
                     <p class="p-skill-card__level">
-                      技術レベル：
+                      技術レベル<br>
                       <?php for ($i=0; $i < $level; $i++): ?>
-                        <i class="fa-solid fa-star p-skill-card__level--star"></i>
+                        <i class="fa-solid fa-star p-skill-card__star"></i>
                       <?php endfor; ?>
                     </p>
                   </div>

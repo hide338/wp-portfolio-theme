@@ -30,7 +30,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    @include container($container-width);
+    @include wrapper($container-width);
     @include mq(md) {
       // padding-top: $sp-header-height;
     }
@@ -84,9 +84,36 @@
 /* ==========================================================================================================
   service
   =========================================================================================================== */
-.p-service {
+.p-service__grid {
+  @include grid-cols(1);
+  @include gap(80);
+  @include mq(md) {
+    @include gap(80);
+  }
+}
+
+.p-service-item {
   position: relative;
-  height: 30.5rem;
+  @include col-span(1);
+  // height: 30.5rem;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -5rem;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 10rem);
+    background-color: #edf8fd;
+    z-index: -1;
+    clip-path: polygon(0 0, 100% 20%, 100% 80%, 0% 100%);
+    @include expand();
+  }
+
+  &:nth-of-type(odd) {
+    &::before {
+      clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 80%);
+    }
+  }
 
   @include mq(md) {
     height: 100%;
@@ -100,12 +127,20 @@
       display: block;
     }
 
-    .p-service__text-area {
+    .p-service-item__text-area {
       left: 1.5rem;
       right: auto;
       @include mq(md) {
         left: 0;
       }
+    }
+  }
+
+  &__grid {
+    @include grid-cols(1);
+    @include gap(80);
+    @include mq(md) {
+      @include gap(0);
     }
   }
 
@@ -123,7 +158,7 @@
 
   &__img-area {
     overflow: hidden;
-    width: 70%;
+    width: 60%;
     @include mq(md) {
       width: 100%;
       @include expand();
@@ -134,9 +169,11 @@
     position: absolute;
     z-index: 1;
     overflow: hidden;
-    width: 60%;
+    width: 50%;
     min-width: 500px;
     bottom: -1rem;
+    // top: 50%;
+    // transform: translateY(-50%);
     right: 1.5rem;
     background-color: #fff;
     padding: 2rem;
@@ -235,6 +272,11 @@
   box-shadow: $shadow-color;
   background-color: #fff;
   padding: 1rem;
+  
+  &__img {
+    width: 3rem;
+    margin-inline: auto;
+  }
 
   &__title {
     margin-top: 1rem;
@@ -252,6 +294,10 @@
   &__level {
     margin-top: 1rem;
     line-height: 1;
+  }
+
+  &__star {
+    color: $main-color;
   }
 
 }

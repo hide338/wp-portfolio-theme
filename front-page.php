@@ -24,8 +24,8 @@ Template Name: front-page
     <section id="service" class="l-section u-bg-none">
       <div class="l-section__wrapper">
         <div class="l-section__header">
-          <h2 class="l-section__title l-section__title--ja">サービス</h2>
-          <p class="l-section__title l-section__title--en">SERVICE</p>
+          <h2 class="l-section__title l-section__title--ja u-text-blue">サービス</h2>
+          <p class="l-section__title l-section__title--en u-text-blue">SERVICE</p>
         </div>
         <div class="l-section__body p-service__grid">
         <?php

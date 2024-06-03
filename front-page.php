@@ -21,7 +21,7 @@ Template Name: front-page
       </div>
     </section>
 
-    <section id="service" class="l-section">
+    <section id="service" class="l-section u-bg-none">
       <div class="l-section__wrapper">
         <div class="l-section__header">
           <h2 class="l-section__title l-section__title--ja">サービス</h2>
@@ -48,7 +48,7 @@ Template Name: front-page
               endif;
             ?>
               <div class="p-service-item">
-                <div class="p-service-item__grid">
+                <div class="p-service-item__flex">
                   <!-- <span class="p-service-item__number"><?= sprintf('%02d', $service_count); ?></span> -->
                 <div class="p-service-item__img-area js-scroll">
                   <img class="" src="<?= $img[0]; ?>" alt="" loading="lazy">
@@ -132,7 +132,7 @@ Template Name: front-page
   
     <section id="skill" class="l-section">
       <div class="l-section__wrapper">
-        <span class="l-section__sepa-title u-position-right">SKILL</span>
+        <span class="l-section__sepa-title">SKILL</span>
         <div class="l-section__header">
           <h2 class="l-section__title l-section__title--ja">スキル</h2>
           <p class="l-section__title l-section__title--en">SKILL</p>
@@ -188,14 +188,114 @@ Template Name: front-page
         </div>
       </div>
     </section>
-    
-    <section id="profile" class="snap-start section--bg">
-      <div class="container section section__border-title section__border-title--profile">
-        <div class="section__header">
-          <h2 class="section__title section__title--ja">プロフィール</h2>
-          <p class="section__title section__title--en">PROFILE</p>
+
+    <section class="l-section">
+      <div class="l-section__wrapper">
+        <span class="l-section__sepa-title">PRICE</span>
+        <div class="l-section__header">
+          <h2 class="l-section__title section__title--ja">料金目安</h2>
+          <p class="l-section__title section__title--en">PRICE</p>
         </div>
-        <div class="container section__body">
+        <div class="l-section__body">
+          <div class="p-price">
+            <div class="p-price__title-area">
+              <h3 class="p-price__title">コーディング</h3>
+              <h3 class="p-price__title">Web制作</h3>
+            </div>
+            <div class="p-coding">
+              <table class="p-coding__table">
+                <tr>
+                  <th>TOPページ/LP</th>
+                  <td>¥15,000〜</td>
+                  <td>8,00pxを超える場合は、1,000pxごとに+¥1,000の追加料金がかかります。<br>※pxはPCレイアウトで計算します。</td>
+                </tr>
+                <tr>
+                  <th>下層ページ</th>
+                  <td>¥8,000〜</td>
+                  <td>1ページあたりの金額です。<br>TOPページ同様に8,000pxを超える場合には追加料金が発生します。</td>
+                </tr>
+                <tr>
+                  <th>フォーム設置</th>
+                  <td>¥10,000〜</td>
+                  <td>フォーム1カ所あたりの金額です。</td>
+                </tr>
+                <tr>
+                  <th>アニメーション対応</th>
+                  <td>¥3,000〜</td>
+                  <td>アニメーション1つあたりの金額です。<br>複雑なアニメーションの場合には追加料金が発生する場合があります。<br>スムーススクロールは無料で対応いたします。</td>
+                </tr>
+                <tr>
+                  <th>WordPress対応</th>
+                  <td>ご相談ください</td>
+                  <td>WordPress対応も柔軟に対応いたします。<br>ノーコードでの対応も可能ですので、ご相談ください。</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="l-section">
+      <div class="l-section__wrapper">
+        <span class="l-section__sepa-title">FLOW</span>
+        <div class="l-section__header">
+          <h2 class="l-section__title section__title--ja">納品までの流れ</h2>
+          <p class="l-section__title section__title--en">FLOW</p>
+        </div>
+        <div class="l-section__body">
+          <div class="p-flow flow_design07">
+            <ul class="p-flow__list flow07">
+              <li>
+                <p class="icon07">STEP&nbsp;1</p>
+                <dl>
+                  <dt>お申し込み</dt>
+                  <dd>SEOコンテンツ無料相談フォームから調査内容を記入いただき送信をお願いします。</dd>
+                </dl>
+              </li>
+
+              <li>
+                <p class="icon07">STEP&nbsp;2</p>
+                <dl>
+                  <dt>調査</dt>
+                  <dd>調査結果をお伝えするため、事前に日程調整のご連絡を差し上げます。</dd>
+                </dl>
+              </li>
+
+              <li>
+                <p class="icon07">STEP&nbsp;3</p>
+                <dl>
+                  <dt>結果報告</dt>
+                  <dd>お約束した日時にzoomにて調査結果をお伝えします。</dd>
+                </dl>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="l-section">
+      <div class="l-section__wrapper">
+        <span class="l-section__sepa-title">FAQ</span>
+        <div class="l-section__header">
+          <h2 class="l-section__title section__title--ja">よくある質問</h2>
+          <p class="l-section__title section__title--en">FAQ</p>
+        </div>
+        <div class="l-section__body">
+
+        </div>
+      </div>
+    </section>
+    
+    <section id="profile" class="l-section">
+      <div class="l-section__wrapper">
+        <span class="l-section__sepa-title">PROFILE</span>
+        <div class="l-section__header">
+          <h2 class="l-section__title section__title--ja">プロフィール</h2>
+          <p class="l-section__title section__title--en">PROFILE</p>
+        </div>
+        <div class="l-section__body">
         <?php if ( is_home() || is_front_page() ) : ?>
           <?php
             $page_id = 8;//ページIDを指定
@@ -208,11 +308,11 @@ Template Name: front-page
               $img = array(get_template_directory_uri() . '/img/post-bg.jpg');
             endif;
           ?>
-            <div class="profile">
+            <div class="p-profile">
               <!-- <div class="profile__img col-span-1">
                 <img src="<?= esc_url($img); ?>" alt="" class="">
               </div> -->
-              <div class="profile__text col-span-1">
+              <div class="p-profile__text">
                 <p><?= $page_include; ?></p>
               </div>
             </div>
@@ -221,10 +321,11 @@ Template Name: front-page
       </div>
     </section>
   
-    <section id="contact" class="snap-start container section section__border-title section__border-title--contact">
-      <div class="section__header">
-        <h2 class="section__title section__title--ja">お問い合わせ</h2>
-        <p class="section__title section__title--en">CONTACT</p>
+    <section id="contact" class="l-section">
+      <span class="l-section__sepa-title">CONTACT</span>
+      <div class="l-section__header">
+        <h2 class="l-section__title l-section__title--ja">お問い合わせ</h2>
+        <p class="l-section__title l-section__title--en">CONTACT</p>
       </div>
       <?php if ( is_home() || is_front_page() ) : ?>
         <?php
@@ -238,19 +339,21 @@ Template Name: front-page
             $img = array(get_template_directory_uri() . '/img/post-bg.jpg');
           endif;
         ?>
-        <div class="section__body contact">
-          <ul class="contact__list">
-            <li class="contact__item">
-              <a href="<?php echo esc_url( get_the_permalink( 2173 ) ); ?>">
-                <img src="<?= get_template_directory_uri(); ?>/img/mail.png" alt="">
-              </a>
-            </li>
-            <li class="contact__item">
-              <a href="https://twitter.com/hide64980862">
-                <img src="<?= get_template_directory_uri(); ?>/img/twitter-x.png" alt="">
-              </a>
-            </li>
-          </ul>
+        <div class="l-section__body">
+          <div class="p-contact">
+            <ul class="contact__list">
+              <li class="contact__item">
+                <a href="<?php echo esc_url( get_the_permalink( 2173 ) ); ?>">
+                  <img src="<?= get_template_directory_uri(); ?>/img/mail.png" alt="">
+                </a>
+              </li>
+              <li class="contact__item">
+                <a href="https://twitter.com/hide64980862">
+                  <img src="<?= get_template_directory_uri(); ?>/img/twitter-x.png" alt="">
+                </a>
+              </li>
+            </ul>
+          </div>
           <p class="contact__comment">
             お問い合わせは、メールもしくはX(旧:Twitter)のDMから、お問い合わせください。
           </p>

@@ -14,16 +14,20 @@
   =========================================================================================================== */
 @mixin container($container-width: 80rem, $padding: 2rem, $sp-padding: 1rem) {
   margin-inline: auto;
+  // padding-inline: $padding;
+  max-width: $container-width;
+  // @include mq(md) {
+  //   padding-inline: $sp-padding;
+  // }
+}
+
+@mixin wrapper($container-width: 80rem, $padding: 2rem, $sp-padding: 1rem) {
+  margin-inline: auto;
   padding-inline: $padding;
   max-width: $container-width;
   @include mq(md) {
     padding-inline: $sp-padding;
   }
-}
-
-@mixin wrapper($container-width: 80rem, $padding: 2rem, $sp-padding: 1rem) {
-  margin-inline: auto;
-  max-width: $container-width;
 }
 
 /* ==========================================================================================================

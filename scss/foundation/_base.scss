@@ -27,7 +27,7 @@ body {
 }
 
 main {
-  @include container($container-width);
+  // @include container($container-width);
 }
 
 input[type="checkbox"],

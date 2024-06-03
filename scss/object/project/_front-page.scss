@@ -96,6 +96,10 @@
   position: relative;
   @include col-span(1);
   // height: 30.5rem;
+  @include mq(md) {
+    height: 100%;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -103,29 +107,31 @@
     left: 0;
     width: 100%;
     height: calc(100% + 10rem);
-    background-color: #edf8fd;
+    // background-color: #edf8fd;
+    // background: linear-gradient(-90deg, rgba(255,255,255,1) 0%, rgba(28,117,188,1) 100%);
+    background-color: $bg-dark-color;
     z-index: -1;
     clip-path: polygon(0 0, 100% 20%, 100% 80%, 0% 100%);
     @include expand();
   }
-
+  
   &:nth-of-type(odd) {
     &::before {
+       // background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(28,117,188,1) 100%);
       clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 80%);
     }
   }
 
-  @include mq(md) {
-    height: 100%;
-  }
   
-  &:nth-last-of-type(odd) {
-    display: flex;
-    justify-content: right;
-
+  &:nth-of-type(even) {
     @include mq(md) {
       display: block;
     }
+
+    .p-service-item__flex {
+      justify-content: flex-end;
+    }
+
 
     .p-service-item__text-area {
       left: 1.5rem;
@@ -136,24 +142,13 @@
     }
   }
 
-  &__grid {
-    @include grid-cols(1);
-    @include gap(80);
-    @include mq(md) {
-      @include gap(0);
-    }
-  }
+  &__flex {
+    display: flex;
 
-  &__number {
-    position: absolute;
-    font-family: $font-family-number;
-    font-size: clamp(8rem, 4.8rem + 16vw, 17rem);
-    font-weight: bold;
-    color: $text-color;
-    opacity: 0.4;
-    top: 0;
-    right: 0;
-    line-height: 1;
+    @include mq(md) {
+      // display: block;
+      flex-direction: column;
+    }
   }
 
   &__img-area {
@@ -171,25 +166,28 @@
     overflow: hidden;
     width: 50%;
     min-width: 500px;
-    bottom: -1rem;
-    // top: 50%;
-    // transform: translateY(-50%);
+    line-height: 1.5;
+    // bottom: -1rem;
+    top: 50%;
+    transform: translateY(-50%);
     right: 1.5rem;
     background-color: #fff;
     padding: 2rem;
     box-shadow: 0 0 5px rgba(172, 172, 172, 0.3);
     @include mq(md) {
-      position: relative;
-      top: -1rem;
+      position: static;
+      // top: auto;
+      // bottom: -1rem;
+      // right: 0;
       width: 100%;
       min-width: auto;
-      right: 0;
+      transform: translateY(-1rem);
     }
   }
 
   &__text {
     text-align: left;
-    font-weight: bold;
+    // font-weight: bold;
     @include mq(md) {
       text-align: center;
     }
@@ -269,7 +267,7 @@
 }
 
 .p-skill-card {
-  box-shadow: $shadow-color;
+  box-shadow: 0 0 10px #fff;
   background-color: #fff;
   padding: 1rem;
   
@@ -299,5 +297,177 @@
   &__star {
     color: $main-color;
   }
+}
 
+/* ==========================================================================================================
+  Price
+  =========================================================================================================== */
+.p-coding {
+  overflow-x: auto;
+
+  &__table {
+    width: 100%;
+    min-width: 35rem;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    tr {
+      border-bottom: 1px solid #ccc;
+      &:last-of-type {
+        border-bottom: none;
+      }
+    }
+    
+    th {
+      background-color: $main-color;
+      color: #fff;
+      font-weight: bold;
+      padding: 1rem;
+      text-align: center;
+      border-right: 1px solid #ccc;
+    }
+
+    td {
+      padding: 1rem;
+      text-align: center;
+      background-color: #fff;
+      border-right: 1px solid #ccc;
+      &:last-of-type {
+        text-align: left;
+        border-right: none;
+      }
+    }
+  }
+}
+
+/* ==========================================================================================================
+  Flow
+  =========================================================================================================== */
+  .p-flow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__step {
+      list-style-type: none;
+      border-radius: 15px;
+      background: #F4F6FA;
+      position: relative;
+      padding: 20px;
+      &:not(last-of-type) {
+        margin-bottom: 20px;
+      }
+
+      &:nth-of-type(2) {
+        top: 5rem;
+        background-color: #ccc;
+      }
+
+      dl {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      dt {
+        font-size: 1.2em;
+        font-weight: 700;
+        width: 20%;
+        min-width: 7em;
+      }
+
+      dd {
+        margin: 0;
+        width: calc(80% - 20px);
+      }
+
+      .p-flow__icon {
+        color: #8EB83C;
+        margin-right: 0.5em;
+      }
+    }
+  }
+  .flow_design07 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flow07 {
+    padding-left: 0;
+  }
+  
+  .flow07 > li {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  .flow07 > li:not(:last-child) {
+    margin: 0 0 50px;
+  }
+  
+  .flow07 > li .icon07 {
+    width: 90px;
+    box-sizing: border-box;
+    padding: 20px 10px 10px;
+    font-weight: bold;
+    color: #FFF;
+    text-align: center;
+    background: $main-color;
+    border-radius: 5px 5px 0 0;
+    position: relative;
+    line-height: 125%;
+    margin: 0;
+  }
+  .flow07 > li .icon07::after {
+    content: ' ';
+    width: 0;
+    height: 0;
+    border-left: 45px solid transparent;
+    border-right: 45px solid transparent;
+    border-top: 20px solid $main-color;
+    position: absolute;
+    bottom: -19px;
+    left: 0;
+  }
+  
+  .flow07 > li dl {
+    padding: 0 0 0 30px;
+    width: calc(100% - 115px);
+  }
+  
+  .flow07 > li dl dt {
+    padding: 0 0 5px;
+    margin: 0 0 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-bottom: 4px solid #CCCCCC;
+    position: relative;
+    color: #fff;
+  }
+  .flow07 > li dl dt::after {
+    content: '';
+    width: 20%;
+    height: 4px;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    background-color: $main-color;
+  }
+  
+  .flow07 > li dl dd {
+    margin: 0;
+    color: #fff;
+  }
+
+/* ==========================================================================================================
+  Profile
+  =========================================================================================================== */
+.p-profile {
+  color: #fff;
+
+  .wp-block-column {
+    svg {
+      color: #fff;
+    }
+  }
 }

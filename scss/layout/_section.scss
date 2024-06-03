@@ -5,31 +5,39 @@
   sectionレイアウト
   =========================================================================================================== */
 .l-section {
-  position: relative;
-  padding-block: 10rem;
+  padding-block: 8rem;
 
-  // &:nth-of-type(odd) {
-  //   background-color: $base-color;
-  //   @include expand();
-  // }
-  // &:nth-of-type(odd) {
-  //   background-color: #edf8fd;
-  //   @include expand();
-  // }
+  &:first-of-type {
+    padding-top: 0;
+  }
+  &:nth-of-type(even) {
+    background-color: $bg-dark-color;
+    .l-section__sepa-title {
+      color: #fff;
+      right: 0;
+      left: auto;
+    }
+    .l-section__title {
+      color: #fff;
+    }
+  }
 
   &__wrapper {
-    @include container($container-width);
-    padding-inline: 0 !important;
+    position: relative;
+    @include wrapper($container-width);
   }
 
   &__sepa-title {
     position: absolute;
     font-size: clamp(4rem, 3.091rem + 4.55vw, 6rem);
-    color: #75B7EB;
+    // color: #75B7EB;
+    color: $main-color;
     opacity: 0.85;
     font-family: "Rubik Dirt", system-ui, sans-serif;
     top: 0;
-    transform: translateY(-50%);
+    left: 0;
+    line-height: 1;
+    transform: translateY(-100%);
   }
   
   &__header {
@@ -49,7 +57,6 @@
 
   &__body {
     margin-top: 4rem;
-    margin-bottom: 8rem;
   }
 
 }

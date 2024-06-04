@@ -121,121 +121,43 @@ particlesJS("particles-js",{
 });
 
 /* ============================================================================================
-スワイパーアニメーション
+プライスアニメーション
 ============================================================================================ */
-// function slideVisibleToggle(sWrap) {
-//   sWrap.forEach(function(slideItem) {
-//       if ( slideItem.classList.contains('swiper-slide-visible') == true ){
-//           if ( slideItem.classList.contains('slide-invisible') == true ){
-//               slideItem.classList.remove('slide-invisible');
-//           }
-//       } else {
-//           if ( slideItem.classList.contains('slide-invisible') == false ){
-//               slideItem.classList.add('slide-invisible');
-//           }
-//       }
-//   });
-// }
-// var swiper = new Swiper(".swiper", {
-//   /* スライド自動切り替え */
-//   autoplay: {
-//       /* スライド自動切り替え永続 */
-//       disableOnInteraction: false,
-//       /* スライド自動切り替え方向 */
-//       reverseDirection: false,
-//       /* マウスホバーでスライド自動切り替え停止 */
-//       pauseOnMouseEnter: true,
-//   },
-//   grabCursor: true,
-//   /* カバフロー構成 */
-//   effect: "coverflow",
-//   /* 最初の画像(img1.jpeg)をスライドの先頭にする */
-//   centeredSlides: true,
-//   /* スライドの枚数(モバイル) */
-//   slidesPerView: 3,
-//   /* レスポンシブ */
-//   breakpoints: {
-//       601: {
-//           /* スライドの枚数(タブレット) */
-//           slidesPerView: 6,
-//       },
-//       1200: {
-//           /* スライドの枚数(PC) */
-//           slidesPerView: 6,
-//       }
-//   },
-//   /* スライドを切り返す */
-//   loop: true,
-//   /* カバーフローの効果 */
-//   coverflowEffect: {
-//       /* スライドの角度 */
-//       rotate: 10,
-//       /* スライドの影非表示 */
-//       slideShadows: false,
-//   },
-//   /* ページネーション表示 */
-//   pagination: {
-//       el: ".swiper-pagination",
-//   },
-//   /* スライドの切り替えボタン表示 */
-//   navigation: {
-//       nextEl: '.swiper-button-next',
-//       prevEl: '.swiper-button-prev',
-//   },
-//   /* イベント */
-//   on: {
-//       /* スライドが切り替わったとき */
-//       slideChange: function () {
-//           slideVisibleToggle(document.querySelectorAll('.swiper-slide'));
-//       },
-//   },
-// });
+// プライス切り替えボタンの取得
+const PRICE_TAB = document.querySelectorAll('.js-price-tab');
+// プライス表の取得
+const PRICE_TABLE = document.querySelectorAll('.js-price-table');
+PRICE_TAB.forEach(tab => {
+  tab.addEventListener('click', e => {
+    PRICE_TABLE.forEach(table => {
+      table.classList.remove('is-active');
+    });
+    const target = e.target.getAttribute('data-target');
+    const targetTable = document.querySelector(`.js-price-table[data-target="${target}"]`);
+    targetTable.classList.add('is-active');
 
-const swiper = new Swiper('.swiper', {
-  effect: 'coverflow',
-  grabCursor: true,
-  centeredSlides: true,
-  slidesPerView: "auto",
-  // coverflowEffect: {
-  //   rotate: 50,
-  //   stretch: 0,
-  //   depth: 100,
-  //   modifier: 1,
-  //   slideShadows: true,
-  // },
-  coverflowEffect: {
-    /* スライドの角度 */
-    rotate: 10,
-    /* スライドの影非表示 */
-    slideShadows: false,
-  },
-  autoplay: {
-    delay: 3000,
-    // disableOnInteraction: false
-  },
-  // followFinger: true,
-  // pagination: {
-  //   el: ".swiper-pagination"
-  // },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev"
-  },
-  loop: true,
-  speed: 1000,
-  // creativeEffect: {
-  //   prev: {
-  //     shadow: true,
-  //     // translate: ["-150%", 0, -500]
-  //   },
-  //   next: {
-  //     shadow: true,
-  //     // translate: ["150%", 0, -500]
-  //   }
-  // },
-  // loopAdditionalSlides: 5
+    PRICE_TAB.forEach(tab => {
+      tab.classList.remove('is-active');
+    });
+    tab.classList.add('is-active');
+  });
 });
 
+/* ============================================================================================
+FAQアコーディオン
+============================================================================================ */
+// アコーディオンの取得
+const ACCORDIONS = document.querySelectorAll('.js-accordion');
+ACCORDIONS.forEach(accordion => {
+  accordion.addEventListener('click', () => {
+    ACCORDIONS.forEach(otherAccordion => {
+      if (otherAccordion !== accordion) {
+        otherAccordion.classList.remove('is-on');
+      }
+    });
+    accordion.classList.toggle('is-on');
+  });
+});
 
 
 // スライドインする要素を取得

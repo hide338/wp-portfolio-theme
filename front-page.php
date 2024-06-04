@@ -198,47 +198,91 @@ Template Name: front-page
         </div>
         <div class="l-section__body">
           <div class="p-price">
-            <div class="p-price__title-area">
-              <h3 class="p-price__title">コーディング</h3>
-              <h3 class="p-price__title">Web制作</h3>
+            <div class="p-price__header">
+              <h3 class="p-price__title js-price-tab is-active" data-target="coding">コーディング</h3>
+              <h3 class="p-price__title js-price-tab" data-target="web">Web制作</h3>
             </div>
-            <div class="p-coding">
-              <table class="p-coding__table">
-                <thead>
-                  <tr>
-                    <th>項目</th>
-                    <th>料金</th>
-                    <th>備考</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th>TOPページ/LP</th>
-                    <td>¥15,000〜</td>
-                    <td>8,00pxを超える場合は、1,000pxごとに+¥1,000の追加料金がかかります。<br>※pxはPCレイアウトで計算します。</td>
-                  </tr>
-                  <tr>
-                    <th>下層ページ</th>
-                    <td>¥8,000〜</td>
-                    <td>1ページあたりの金額です。<br>TOPページ同様に8,000pxを超える場合には追加料金が発生します。</td>
-                  </tr>
-                  <tr>
-                    <th>フォーム設置</th>
-                    <td>¥10,000〜</td>
-                    <td>フォーム1カ所あたりの金額です。</td>
-                  </tr>
-                  <tr>
-                    <th>アニメーション対応</th>
-                    <td>¥3,000〜</td>
-                    <td>アニメーション1つあたりの金額です。<br>複雑なアニメーションの場合には追加料金が発生する場合があります。<br>スムーススクロールは無料で対応いたします。</td>
-                  </tr>
-                  <tr>
-                    <th>WordPress対応</th>
-                    <td>ご相談ください</td>
-                    <td>WordPress対応も柔軟に対応いたします。<br>ノーコードでの対応も可能ですので、ご相談ください。</td>
-                  </tr>
-                </tbody>
-              </table>
+            <div class="p-price__body">
+              <!-- コーディング料金表 -->
+              <div class="p-coding js-price-table is-active" data-target="coding">
+                <table class="p-coding__table">
+                  <thead>
+                    <tr>
+                      <th>項目</th>
+                      <th>料金</th>
+                      <th>備考</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>TOPページ/LP</th>
+                      <td>¥15,000〜</td>
+                      <td>8,00pxを超える場合は、1,000pxごとに+¥1,000の追加料金がかかります。<br>※pxはPCレイアウトで計算します。</td>
+                    </tr>
+                    <tr>
+                      <th>下層ページ</th>
+                      <td>¥8,000〜</td>
+                      <td>1ページあたりの金額です。<br>TOPページ同様に8,000pxを超える場合には追加料金が発生します。</td>
+                    </tr>
+                    <tr>
+                      <th>フォーム設置</th>
+                      <td>¥10,000〜</td>
+                      <td>フォーム1カ所あたりの金額です。</td>
+                    </tr>
+                    <tr>
+                      <th>アニメーション対応</th>
+                      <td>¥3,000〜</td>
+                      <td>アニメーション1つあたりの金額です。<br>複雑なアニメーションの場合には追加料金が発生する場合があります。<br>スムーススクロールは無料で対応いたします。</td>
+                    </tr>
+                    <tr>
+                      <th>WordPress対応</th>
+                      <td>ご相談ください</td>
+                      <td>WordPress対応も柔軟に対応いたします。<br>ノーコードでの対応も可能ですので、ご相談ください。</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+  
+              <!-- Web制作料金表 -->
+              <div class="p-web js-price-table" data-target="web">
+                <ul class="p-web__list">
+                  <li class="p-web__item">
+                    <h4 class="p-web__title">ライト</h4>
+                    <div class="p-web__price">
+                      <p class="p-web__price-title">初期費用</p>
+                      <p class="p-web__price-price">25万円</p>
+                      <p class="p-web__price-title">月額費用</p>
+                      <p class="p-web__price-price">2万円</p>
+                    </div>
+                    <div class="p-web__point">
+                      <p class="p-web__point-title">POINT</p>
+                      <ul class="p-web__point-list">
+                        <li>まずは自社サイトを持ちたい</li>
+                        <li>安く自社サイトを作成したい</li>
+                        <li>早く自社サイトを立ち上げたい</li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="p-web__item">
+                    <h4 class="p-web__title">セミオーダー</h4>
+                    <div class="p-web__price">
+                      <p class="p-web__price-title">初期費用</p>
+                      <p class="p-web__price-price">50万円</p>
+                      <p class="p-web__price-title">月額費用</p>
+                      <p class="p-web__price-price">2万円</p>
+                    </div>
+                    <div class="p-web__point">
+                      <p class="p-web__point-title">POINT</p>
+                      <ul class="p-web__point-list">
+                        <li>10ページほどのコーポレートサイト</li>
+                        <li>企業としてのしっかりしたサイトが欲しい</li>
+                        <li>事業内容をしっかり伝えたい</li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
             </div>
           </div>
         </div>
@@ -254,17 +298,17 @@ Template Name: front-page
         </div>
         <div class="l-section__body">
           <div class="p-flow">
-            <ul class="p-flow__list flow07">
+            <ul class="p-flow__list">
               <li class="p-flow__item">
-                <p class="p-flow__icon icon07">STEP&nbsp;1</p>
-                <dl>
-                  <dt>お申し込み</dt>
-                  <dd>お問い合わせフォーム、もしくはX(旧twitter)から内容を記入いただき送信をお願いします。</dd>
+                <p class="p-flow__icon">STEP&nbsp;1</p>
+                <dl class="p-flow__data-list">
+                  <dt class="p-flow__data-title">お申し込み</dt>
+                  <dd class="p-flow__data-text">お問い合わせフォーム、もしくはX(旧twitter)から内容を記入いただき送信をお願いします。</dd>
                 </dl>
               </li>
 
               <li class="p-flow__item">
-                <p class="p-flow__icon icon07">STEP&nbsp;2</p>
+                <p class="p-flow__icon">STEP&nbsp;2</p>
                 <dl class="p-flow__data-list">
                   <dt class="p-flow__data-title">ヒヤリング</dt>
                   <dd class="p-flow__data-text">お客様のご要望に完璧に添えるよう、ヒヤリングを行います。<br>一番大切な工程になります。<br>しっかりと時間をとって、丁寧に行いますので、ご要望や疑問をなんでもご相談ください。</dd>
@@ -272,7 +316,7 @@ Template Name: front-page
               </li>
 
               <li class="p-flow__item">
-                <p class="p-flow__icon icon07">STEP&nbsp;3</p>
+                <p class="p-flow__icon">STEP&nbsp;3</p>
                 <dl class="p-flow__data-list">
                   <dt class="p-flow__data-title">お見積もり</dt>
                   <dd class="p-flow__data-text">ヒヤリングでお伺いした内容を元にお見積もりを作成、提出させていただきます。</dd>
@@ -280,7 +324,7 @@ Template Name: front-page
               </li>
 
               <li class="p-flow__item">
-                <p class="p-flow__icon icon07">STEP&nbsp;4</p>
+                <p class="p-flow__icon">STEP&nbsp;4</p>
                 <dl class="p-flow__data-list">
                   <dt class="p-flow__data-title">ご契約</dt>
                   <dd class="p-flow__data-text">お見積もりに差異がないようでしたらご契約お願いいたします。</dd>
@@ -288,7 +332,7 @@ Template Name: front-page
               </li>
 
               <li class="p-flow__item">
-                <p class="p-flow__icon icon07">STEP&nbsp;5</p>
+                <p class="p-flow__icon">STEP&nbsp;5</p>
                 <dl class="p-flow__data-list">
                   <dt class="p-flow__data-title">入金確認</dt>
                   <dd class="p-flow__data-text">契約金のご入金いただき、確認いたします。</dd>
@@ -296,14 +340,14 @@ Template Name: front-page
               </li>
 
               <li class="p-flow__item">
-                <p class="p-flow__icon icon07">STEP&nbsp;6</p>
+                <p class="p-flow__icon">STEP&nbsp;6</p>
                 <dl class="p-flow__data-list">
                   <dt class="p-flow__data-title">作業開始</dt>
                   <dd class="p-flow__data-text">ご依頼の内容の作業を開始させていただきます。</dd>
                 </dl>
 
               <li class="p-flow__item">
-                <p class="p-flow__icon icon07">STEP&nbsp;7</p>
+                <p class="p-flow__icon">STEP&nbsp;7</p>
                 <dl class="p-flow__data-list">
                   <dt class="p-flow__data-title">研修・修正対応</dt>
                   <dd class="p-flow__data-text">制作物の研修・確認をお願いいたします。<br>修正(ミスや小さな修正)は無制限に行いますので、お気軽にお声掛けください。<br>「デザインが変更になる」「機能追加をお願いしたい」などの場合には、追加料金をいただく可能性がありますのでご了承ください。</dd>
@@ -311,7 +355,7 @@ Template Name: front-page
               </li>
 
               <li class="p-flow__item">
-                <p class="p-flow__icon icon07">STEP&nbsp;8</p>
+                <p class="p-flow__icon">STEP&nbsp;8</p>
                 <dl class="p-flow__data-list">
                   <dt class="p-flow__data-title">納品</dt>
                   <dd class="p-flow__data-text">お客様ご希望の納品方法で納品をして、作業終了とさせていただきます。</dd>
@@ -334,7 +378,7 @@ Template Name: front-page
         <div class="l-section__body">
           <div class="c-faq">
             <div class="c-faq__item">
-              <div class="c-faq__question is-on" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <div class="c-faq__question js-accordion is-on" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                 <p itemprop="name">よくある質問の実装はできますか？</p>
               </div>
               <div class="c-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">

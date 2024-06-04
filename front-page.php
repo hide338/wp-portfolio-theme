@@ -204,31 +204,40 @@ Template Name: front-page
             </div>
             <div class="p-coding">
               <table class="p-coding__table">
-                <tr>
-                  <th>TOPページ/LP</th>
-                  <td>¥15,000〜</td>
-                  <td>8,00pxを超える場合は、1,000pxごとに+¥1,000の追加料金がかかります。<br>※pxはPCレイアウトで計算します。</td>
-                </tr>
-                <tr>
-                  <th>下層ページ</th>
-                  <td>¥8,000〜</td>
-                  <td>1ページあたりの金額です。<br>TOPページ同様に8,000pxを超える場合には追加料金が発生します。</td>
-                </tr>
-                <tr>
-                  <th>フォーム設置</th>
-                  <td>¥10,000〜</td>
-                  <td>フォーム1カ所あたりの金額です。</td>
-                </tr>
-                <tr>
-                  <th>アニメーション対応</th>
-                  <td>¥3,000〜</td>
-                  <td>アニメーション1つあたりの金額です。<br>複雑なアニメーションの場合には追加料金が発生する場合があります。<br>スムーススクロールは無料で対応いたします。</td>
-                </tr>
-                <tr>
-                  <th>WordPress対応</th>
-                  <td>ご相談ください</td>
-                  <td>WordPress対応も柔軟に対応いたします。<br>ノーコードでの対応も可能ですので、ご相談ください。</td>
-                </tr>
+                <thead>
+                  <tr>
+                    <th>項目</th>
+                    <th>料金</th>
+                    <th>備考</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>TOPページ/LP</th>
+                    <td>¥15,000〜</td>
+                    <td>8,00pxを超える場合は、1,000pxごとに+¥1,000の追加料金がかかります。<br>※pxはPCレイアウトで計算します。</td>
+                  </tr>
+                  <tr>
+                    <th>下層ページ</th>
+                    <td>¥8,000〜</td>
+                    <td>1ページあたりの金額です。<br>TOPページ同様に8,000pxを超える場合には追加料金が発生します。</td>
+                  </tr>
+                  <tr>
+                    <th>フォーム設置</th>
+                    <td>¥10,000〜</td>
+                    <td>フォーム1カ所あたりの金額です。</td>
+                  </tr>
+                  <tr>
+                    <th>アニメーション対応</th>
+                    <td>¥3,000〜</td>
+                    <td>アニメーション1つあたりの金額です。<br>複雑なアニメーションの場合には追加料金が発生する場合があります。<br>スムーススクロールは無料で対応いたします。</td>
+                  </tr>
+                  <tr>
+                    <th>WordPress対応</th>
+                    <td>ご相談ください</td>
+                    <td>WordPress対応も柔軟に対応いたします。<br>ノーコードでの対応も可能ですので、ご相談ください。</td>
+                  </tr>
+                </tbody>
               </table>
             </div>
           </div>
@@ -244,31 +253,71 @@ Template Name: front-page
           <p class="l-section__title section__title--en">FLOW</p>
         </div>
         <div class="l-section__body">
-          <div class="p-flow flow_design07">
+          <div class="p-flow">
             <ul class="p-flow__list flow07">
-              <li>
-                <p class="icon07">STEP&nbsp;1</p>
+              <li class="p-flow__item">
+                <p class="p-flow__icon icon07">STEP&nbsp;1</p>
                 <dl>
                   <dt>お申し込み</dt>
-                  <dd>SEOコンテンツ無料相談フォームから調査内容を記入いただき送信をお願いします。</dd>
+                  <dd>お問い合わせフォーム、もしくはX(旧twitter)から内容を記入いただき送信をお願いします。</dd>
                 </dl>
               </li>
 
-              <li>
-                <p class="icon07">STEP&nbsp;2</p>
-                <dl>
-                  <dt>調査</dt>
-                  <dd>調査結果をお伝えするため、事前に日程調整のご連絡を差し上げます。</dd>
+              <li class="p-flow__item">
+                <p class="p-flow__icon icon07">STEP&nbsp;2</p>
+                <dl class="p-flow__data-list">
+                  <dt class="p-flow__data-title">ヒヤリング</dt>
+                  <dd class="p-flow__data-text">お客様のご要望に完璧に添えるよう、ヒヤリングを行います。<br>一番大切な工程になります。<br>しっかりと時間をとって、丁寧に行いますので、ご要望や疑問をなんでもご相談ください。</dd>
                 </dl>
               </li>
 
-              <li>
-                <p class="icon07">STEP&nbsp;3</p>
-                <dl>
-                  <dt>結果報告</dt>
-                  <dd>お約束した日時にzoomにて調査結果をお伝えします。</dd>
+              <li class="p-flow__item">
+                <p class="p-flow__icon icon07">STEP&nbsp;3</p>
+                <dl class="p-flow__data-list">
+                  <dt class="p-flow__data-title">お見積もり</dt>
+                  <dd class="p-flow__data-text">ヒヤリングでお伺いした内容を元にお見積もりを作成、提出させていただきます。</dd>
                 </dl>
               </li>
+
+              <li class="p-flow__item">
+                <p class="p-flow__icon icon07">STEP&nbsp;4</p>
+                <dl class="p-flow__data-list">
+                  <dt class="p-flow__data-title">ご契約</dt>
+                  <dd class="p-flow__data-text">お見積もりに差異がないようでしたらご契約お願いいたします。</dd>
+                </dl>
+              </li>
+
+              <li class="p-flow__item">
+                <p class="p-flow__icon icon07">STEP&nbsp;5</p>
+                <dl class="p-flow__data-list">
+                  <dt class="p-flow__data-title">入金確認</dt>
+                  <dd class="p-flow__data-text">契約金のご入金いただき、確認いたします。</dd>
+                </dl>
+              </li>
+
+              <li class="p-flow__item">
+                <p class="p-flow__icon icon07">STEP&nbsp;6</p>
+                <dl class="p-flow__data-list">
+                  <dt class="p-flow__data-title">作業開始</dt>
+                  <dd class="p-flow__data-text">ご依頼の内容の作業を開始させていただきます。</dd>
+                </dl>
+
+              <li class="p-flow__item">
+                <p class="p-flow__icon icon07">STEP&nbsp;7</p>
+                <dl class="p-flow__data-list">
+                  <dt class="p-flow__data-title">研修・修正対応</dt>
+                  <dd class="p-flow__data-text">制作物の研修・確認をお願いいたします。<br>修正(ミスや小さな修正)は無制限に行いますので、お気軽にお声掛けください。<br>「デザインが変更になる」「機能追加をお願いしたい」などの場合には、追加料金をいただく可能性がありますのでご了承ください。</dd>
+                </dl>
+              </li>
+
+              <li class="p-flow__item">
+                <p class="p-flow__icon icon07">STEP&nbsp;8</p>
+                <dl class="p-flow__data-list">
+                  <dt class="p-flow__data-title">納品</dt>
+                  <dd class="p-flow__data-text">お客様ご希望の納品方法で納品をして、作業終了とさせていただきます。</dd>
+                </dl>
+              </li>
+
             </ul>
           </div>
         </div>
@@ -283,7 +332,16 @@ Template Name: front-page
           <p class="l-section__title section__title--en">FAQ</p>
         </div>
         <div class="l-section__body">
-
+          <div class="c-faq">
+            <div class="c-faq__item">
+              <div class="c-faq__question is-on" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <p itemprop="name">よくある質問の実装はできますか？</p>
+              </div>
+              <div class="c-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p  itemprop="text">はい、可能です。</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

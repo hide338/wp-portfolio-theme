@@ -709,17 +709,17 @@ th {
 }
 
 /* ==========================================================================================================
-  gnavSp
+  sp gnav
   =========================================================================================================== */
-.c-gnavSp {
+.c-sp-gnav {
   display: none;
 }
 @media screen and (max-width: 768px) {
-  .c-gnavSp {
+  .c-sp-gnav {
     display: block;
   }
 }
-.c-gnavSp__mask {
+.c-sp-gnav__mask {
   position: absolute;
   top: 0;
   left: 0;
@@ -731,11 +731,11 @@ th {
   opacity: 0;
   visibility: hidden;
 }
-.c-gnavSp__mask.is-active {
+.c-sp-gnav__mask.is-active {
   opacity: 0.5;
   visibility: visible;
 }
-.c-gnavSp__list {
+.c-sp-gnav__list {
   position: fixed;
   top: 0;
   right: 0;
@@ -751,22 +751,22 @@ th {
   z-index: 10;
   transform: translateX(100%);
 }
-.c-gnavSp__list.is-active {
+.c-sp-gnav__list.is-active {
   opacity: 1;
   visibility: visible;
   transform: none;
 }
-.c-gnavSp__item {
+.c-sp-gnav__item {
   text-align: center;
   background-color: #f8f8f8;
   transition: all 0.3s;
 }
-.c-gnavSp__item:hover {
+.c-sp-gnav__item:hover {
   transform: translate(-10px, -10px);
   box-shadow: 10px 10px 0 0 #1C75BC;
   border: 1px solid #1C75BC;
 }
-.c-gnavSp__link {
+.c-sp-gnav__link {
   text-decoration: none;
   padding: 1rem;
   display: block;
@@ -1190,60 +1190,17 @@ th {
   justify-content: center;
   align-items: center;
 }
-.p-flow__step {
-  list-style-type: none;
-  border-radius: 15px;
-  background: #F4F6FA;
-  position: relative;
-  padding: 20px;
-}
-.p-flow__step:not(last-of-type) {
-  margin-bottom: 20px;
-}
-.p-flow__step:nth-of-type(2) {
-  top: 5rem;
-  background-color: #ccc;
-}
-.p-flow__step dl {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-.p-flow__step dt {
-  font-size: 1.2em;
-  font-weight: 700;
-  width: 20%;
-  min-width: 7em;
-}
-.p-flow__step dd {
-  margin: 0;
-  width: calc(80% - 20px);
-}
-.p-flow__step .p-flow__icon {
-  color: #8EB83C;
-  margin-right: 0.5em;
-}
-
-.flow_design07 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.flow07 {
+.p-flow__list {
   padding-left: 0;
 }
-
-.flow07 > li {
+.p-flow__item {
   list-style-type: none;
   display: flex;
 }
-
-.flow07 > li:not(:last-child) {
-  margin: 0 0 50px;
+.p-flow__item:not(:last-child) {
+  margin-bottom: 50px;
 }
-
-.flow07 > li .icon07 {
+.p-flow__icon {
   width: 90px;
   box-sizing: border-box;
   padding: 20px 10px 10px;
@@ -1256,8 +1213,7 @@ th {
   line-height: 125%;
   margin: 0;
 }
-
-.flow07 > li .icon07::after {
+.p-flow__icon::after {
   content: " ";
   width: 0;
   height: 0;
@@ -1268,13 +1224,11 @@ th {
   bottom: -19px;
   left: 0;
 }
-
-.flow07 > li dl {
-  padding: 0 0 0 30px;
+.p-flow__data-list {
+  padding-left: 30px;
   width: calc(100% - 115px);
 }
-
-.flow07 > li dl dt {
+.p-flow__data-title {
   padding: 0 0 5px;
   margin: 0 0 15px;
   font-size: 1.2em;
@@ -1283,8 +1237,7 @@ th {
   position: relative;
   color: #fff;
 }
-
-.flow07 > li dl dt::after {
+.p-flow__data-title::after {
   content: "";
   width: 20%;
   height: 4px;
@@ -1293,10 +1246,57 @@ th {
   left: 0;
   background-color: #1C75BC;
 }
-
-.flow07 > li dl dd {
+.p-flow__data-text {
   margin: 0;
   color: #fff;
+}
+
+/* ==========================================================================================================
+  FAQ
+  =========================================================================================================== */
+.c-faq__item {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 1000px;
+}
+.c-faq__question {
+  padding: 20px;
+  padding-right: 52px;
+  position: relative;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.c-faq__question:hover {
+  cursor: pointer;
+}
+.c-faq__question::before {
+  content: "+";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  transform-origin: center center;
+  transition: all 0.2s linear 0s;
+  font-size: 24px;
+  font-weight: 400;
+}
+.c-faq__question.is-on::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+  transform-origin: center center;
+}
+.c-faq__question.is-on::after {
+  content: "";
+  position: absolute;
+  width: calc(100% - 32px);
+  height: 1px;
+  background: #ccc;
+  bottom: 0;
+  left: 50%;
+  transform: translatex(-50%);
+}
+.c-faq__answer {
+  padding: 20px;
 }
 
 /* ==========================================================================================================

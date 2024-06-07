@@ -4,14 +4,17 @@ Template Name: front-page
 */
 ?>
 <?php get_header(); ?>
+  <div class="p-loader js-loader">
+    <div class="p-loader__item"></div>
+  </div>
   <main class="site-main">
     <section class="p-fv">
       <div id="particles-js" class="p-fv__particle"></div>
       <div class="p-fv__wrapper">
         <div class="p-fv__text">
-          <h2 class="p-fv__title"><span>視力2.0エンジニア</span><br><span><span class="u-text-blue">"中原 利秀"</span>を<br class="u-sp-active">知ってもらうための</span><br><span>ポートフォリオサイト<br class="u-sp-active">です！</span></h2>
-          <p class="p-fv__description">バックエンドからフロントエンドまでの開発経験を活かし<br>幅広い知識でWeb制作業務をサポートします。</p>
-          <div class="p-fv__btn">
+          <h2 class="p-fv__title js-load"><span>視力2.0エンジニア</span><br><span><span class="u-text-blue">"中原 利秀"</span>を<br class="u-sp-active">知ってもらうための</span><br><span>ポートフォリオサイト<br class="u-sp-active">です！</span></h2>
+          <p class="p-fv__description js-load">バックエンドからフロントエンドまでの開発経験を活かし<br>幅広い知識でWeb制作業務をサポートします。</p>
+          <div class="p-fv__btn js-load">
             <a href="<?php echo esc_url( get_the_permalink( 2173 ) ); ?>" class="p-fv__link c-cta">お問い合わせ</a>
           </div>
         </div>
@@ -47,22 +50,26 @@ Template Name: front-page
                 $img = array(get_template_directory_uri() . '/img/post-bg.jpg');
               endif;
             ?>
-              <div class="p-service-item">
+              <div class="p-service-item js-scroll">
                 <div class="p-service-item__flex">
                   <!-- <span class="p-service-item__number"><?= sprintf('%02d', $service_count); ?></span> -->
-                <div class="p-service-item__img-area js-scroll">
-                  <img class="" src="<?= $img[0]; ?>" alt="" loading="lazy">
-                </div>
-                <div class="p-service-item__text-area js-scroll">
-                  <div class="p-service-item__text">
-                    <h3 class="p-service-item__title"><?php the_title(); ?></h3>
-                    <p class="p-service-item__description"><?= get_the_excerpt(); ?></p>
-                    <!-- <div class="p-service-item__btn">
-                      <p class="p-service-item__btn--copy">料金・納品までの流れをチェック</p>
-                      <a href="<?php echo get_the_permalink(); ?>" class="c-btn"><span>詳しく見る</span></a>
-                    </div> -->
+                  <div class="p-service-item__img-area">
+                    <span class="c-bg-extend js-scroll">
+                      <span class="c-bg-appear">
+                        <img class="" src="<?= $img[0]; ?>" alt="" loading="lazy">
+                      </span>
+                    </span>
                   </div>
-                </div>
+                  <div class="p-service-item__text-area js-scroll">
+                    <div class="p-service-item__text">
+                      <h3 class="p-service-item__title"><?php the_title(); ?></h3>
+                      <p class="p-service-item__description"><?= get_the_excerpt(); ?></p>
+                      <!-- <div class="p-service-item__btn">
+                        <p class="p-service-item__btn--copy">料金・納品までの流れをチェック</p>
+                        <a href="<?php echo get_the_permalink(); ?>" class="c-btn"><span>詳しく見る</span></a>
+                      </div> -->
+                    </div>
+                  </div>
                 </div>
               </div>
             <?php $service_count += 1; endwhile; ?>
@@ -101,7 +108,7 @@ Template Name: front-page
                       // カテゴリーを取得
                       $categories = get_the_terms(get_the_ID(), 'work-cat');
                     ?>
-                    <div class="p-work__grid-item">
+                    <div class="p-work__grid-item js-scroll">
                       <a class="p-work__link" href="<?php the_permalink(); ?>">
                         <div class="p-work__img-area">
                           <img src="<?= $img[0]; ?>" alt="" loading="lazy">
@@ -168,7 +175,7 @@ Template Name: front-page
                       $img = array(get_template_directory_uri() . '/img/post-bg.jpg');
                     endif;
                   ?>
-                  <div class="p-skill-card">
+                  <div class="p-skill-card js-scroll">
                     <div class="p-skill-card__img">
                       <img src="<?= esc_url($img[0]); ?>" alt="" loading="lazy">
                     </div>
@@ -299,7 +306,7 @@ Template Name: front-page
         <div class="l-section__body">
           <div class="p-flow">
             <ul class="p-flow__list">
-              <li class="p-flow__item">
+              <li class="p-flow__item js-scroll">
                 <p class="p-flow__icon">STEP&nbsp;1</p>
                 <dl class="p-flow__data-list">
                   <dt class="p-flow__data-title">お申し込み</dt>
@@ -307,7 +314,7 @@ Template Name: front-page
                 </dl>
               </li>
 
-              <li class="p-flow__item">
+              <li class="p-flow__item js-scroll">
                 <p class="p-flow__icon">STEP&nbsp;2</p>
                 <dl class="p-flow__data-list">
                   <dt class="p-flow__data-title">ヒヤリング</dt>
@@ -315,7 +322,7 @@ Template Name: front-page
                 </dl>
               </li>
 
-              <li class="p-flow__item">
+              <li class="p-flow__item js-scroll">
                 <p class="p-flow__icon">STEP&nbsp;3</p>
                 <dl class="p-flow__data-list">
                   <dt class="p-flow__data-title">お見積もり</dt>
@@ -323,7 +330,7 @@ Template Name: front-page
                 </dl>
               </li>
 
-              <li class="p-flow__item">
+              <li class="p-flow__item js-scroll">
                 <p class="p-flow__icon">STEP&nbsp;4</p>
                 <dl class="p-flow__data-list">
                   <dt class="p-flow__data-title">ご契約</dt>
@@ -331,7 +338,7 @@ Template Name: front-page
                 </dl>
               </li>
 
-              <li class="p-flow__item">
+              <li class="p-flow__item js-scroll">
                 <p class="p-flow__icon">STEP&nbsp;5</p>
                 <dl class="p-flow__data-list">
                   <dt class="p-flow__data-title">入金確認</dt>
@@ -339,14 +346,14 @@ Template Name: front-page
                 </dl>
               </li>
 
-              <li class="p-flow__item">
+              <li class="p-flow__item js-scroll">
                 <p class="p-flow__icon">STEP&nbsp;6</p>
                 <dl class="p-flow__data-list">
                   <dt class="p-flow__data-title">作業開始</dt>
                   <dd class="p-flow__data-text">ご依頼の内容の作業を開始させていただきます。</dd>
                 </dl>
 
-              <li class="p-flow__item">
+              <li class="p-flow__item js-scroll">
                 <p class="p-flow__icon">STEP&nbsp;7</p>
                 <dl class="p-flow__data-list">
                   <dt class="p-flow__data-title">研修・修正対応</dt>
@@ -354,7 +361,7 @@ Template Name: front-page
                 </dl>
               </li>
 
-              <li class="p-flow__item">
+              <li class="p-flow__item js-scroll">
                 <p class="p-flow__icon">STEP&nbsp;8</p>
                 <dl class="p-flow__data-list">
                   <dt class="p-flow__data-title">納品</dt>
@@ -376,13 +383,25 @@ Template Name: front-page
           <p class="l-section__title section__title--en">FAQ</p>
         </div>
         <div class="l-section__body">
-          <div class="c-faq">
-            <div class="c-faq__item">
-              <div class="c-faq__question js-accordion is-on" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="c-accordion">
+            <div class="c-accordion__item">
+              <div class="c-accordion__parent js-accordion is-on" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <span>Q</span>
                 <p itemprop="name">よくある質問の実装はできますか？</p>
               </div>
-              <div class="c-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p  itemprop="text">はい、可能です。</p>
+              <div class="c-accordion__child" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <span>A</span>
+                <p itemprop="text">はい、可能です。</p>
+              </div>
+            </div>
+            <div class="c-accordion__item">
+              <div class="c-accordion__parent js-accordion" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <span>Q</span>
+                <p itemprop="name">よくある質問の実装はできますか？</p>
+              </div>
+              <div class="c-accordion__child" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <span>A</span>
+                <p itemprop="text">はい、可能です。</p>
               </div>
             </div>
           </div>

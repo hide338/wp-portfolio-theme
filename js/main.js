@@ -1,3 +1,24 @@
+/* ==============================================================================
+  ローディングアニメーション
+  ============================================================================= */
+const LOADING = document.querySelector('.js-loader');
+const LODE_ITEMS = document.querySelectorAll('.js-load');
+
+window.onload = () => {
+
+  // ローディング画面の設定
+  setTimeout(() => {
+    LOADING.classList.add('is-loaded');
+  }, 1000);
+
+  // ロード後のアニメーション設定
+  setTimeout(() => {
+    LODE_ITEMS.forEach(element => {
+      element.classList.add('is-load');
+    });
+  }, 1700);
+};
+
 /* ============================================================================================
 SPメニュー制御
 ============================================================================================ */
@@ -150,30 +171,28 @@ FAQアコーディオン
 const ACCORDIONS = document.querySelectorAll('.js-accordion');
 ACCORDIONS.forEach(accordion => {
   accordion.addEventListener('click', () => {
-    ACCORDIONS.forEach(otherAccordion => {
-      if (otherAccordion !== accordion) {
-        otherAccordion.classList.remove('is-on');
-      }
-    });
+    // ACCORDIONS.forEach(otherAccordion => {
+    //   if (otherAccordion !== accordion) {
+    //     otherAccordion.classList.remove('is-on');
+    //   }
+    // });
     accordion.classList.toggle('is-on');
   });
 });
 
 
-// スライドインする要素を取得
-const slideInElements = document.querySelectorAll('.js__slide-in');
-const rotateElements = document.querySelectorAll('.js__rotate');
+/* ============================================================================================
+スクロールアニメーション
+============================================================================================ */
+const SCROLL_ANIMATION_ITEMS = document.querySelectorAll('.js-scroll');
 
 // IntersectionObserverのコールバック関数
 const callback = (entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       // 可視範囲に入った要素にクラスを追加
-      if (entry.target.classList.contains('js__slide-in')) {
-        entry.target.classList.add('slide-in');
-      }
-      if (entry.target.classList.contains('js__rotate')) {
-        entry.target.classList.add('rotate-in');
+      if (entry.target.classList.contains('js-scroll')) {
+        entry.target.classList.add('is-active');
       }
       // 観察を停止
       observer.unobserve(entry.target);
@@ -183,17 +202,13 @@ const callback = (entries, observer) => {
 
 // IntersectionObserverのオプション
 const options = {
-  threshold: 0.2
+  threshold: 0.4
 };
 
 // IntersectionObserverのインスタンスを作成
 const observer = new IntersectionObserver(callback, options);
 
 // スライドインする要素を観察
-slideInElements.forEach(element => {
-  observer.observe(element);
-});
-
-rotateElements.forEach(element => {
+SCROLL_ANIMATION_ITEMS.forEach(element => {
   observer.observe(element);
 });

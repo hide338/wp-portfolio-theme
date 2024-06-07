@@ -1,7 +1,6 @@
 @use '../../foundation/variables' as *;
 @use '../../foundation/mixins' as *;
 
-
 /* ==========================================================================================================
   FV
   =========================================================================================================== */
@@ -46,6 +45,15 @@
     font-weight: bold;
     color: $text-color;
     line-height: 1;
+    transform: scale(0);
+    opacity: 0;
+    visibility: hidden;
+    transition: all $duration-time;
+    &.is-load {
+      transform: scale(1);
+      opacity: 1;
+      visibility: visible;
+    }
     @include mq(md) {
       // text-align: center;
     }
@@ -65,6 +73,16 @@
     font-size: 1.5rem;
     font-weight: bold;
     line-height: 1.7;
+    transform: scale(0);
+    opacity: 0;
+    visibility: hidden;
+    transition: all $duration-time;
+    transition-delay: .4s;
+    &.is-load {
+      transform: scale(1);
+      opacity: 1;
+      visibility: visible;
+    }
     @include mq(sp) {
       font-size: 1rem;
     }
@@ -75,6 +93,16 @@
     font-size: 1.25rem;
     display: flex;
     justify-content: center;
+    transform: translateY(2rem);
+    opacity: 0;
+    visibility: hidden;
+    transition: all $duration-time;
+    transition-delay: .8s;
+    &.is-load {
+      transform: none;
+      opacity: 1;
+      visibility: visible;
+    }
     @include mq(sp) {
       font-size: 1rem;
     }
@@ -107,21 +135,24 @@
     left: 0;
     width: 100%;
     height: calc(100% + 10rem);
-    // background-color: #edf8fd;
-    // background: linear-gradient(-90deg, rgba(255,255,255,1) 0%, rgba(28,117,188,1) 100%);
     background-color: $bg-dark-color;
     z-index: -1;
-    clip-path: polygon(0 0, 100% 20%, 100% 80%, 0% 100%);
+    clip-path: polygon(0 20%, 0 0, 0 100%, 0 80%);
+    // clip-path: polygon(0 0, 100% 20%, 100% 80%, 0% 100%);
+    // transform: scale(0);
+    opacity: 0;
+    visibility: hidden;
+    transition: all $duration-time;
     @include expand();
   }
   
   &:nth-of-type(odd) {
     &::before {
-       // background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(28,117,188,1) 100%);
-      clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 80%);
+      // background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(28,117,188,1) 100%);
+      clip-path: polygon(100% 20%, 100% 0, 100% 100%, 100% 80%);
+      // clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 80%);
     }
   }
-
   
   &:nth-of-type(even) {
     @include mq(md) {
@@ -139,6 +170,22 @@
       @include mq(md) {
         left: 0;
       }
+    }
+  }
+
+  &.is-active {
+    &::before {
+      opacity: 1;
+      visibility: visible;
+      clip-path: polygon(0 0, 100% 20%, 100% 80%, 0% 100%);
+    }
+    &:nth-of-type(odd) {
+      &::before {
+        opacity: 1;
+        visibility: visible;
+        clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 80%);
+      }
+
     }
   }
 
@@ -174,6 +221,10 @@
     background-color: #fff;
     padding: 2rem;
     box-shadow: 0 0 5px rgba(172, 172, 172, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .6s;
+    transition-delay: .5s;
     @include mq(md) {
       position: static;
       // top: auto;
@@ -182,6 +233,10 @@
       width: 100%;
       min-width: auto;
       transform: translateY(-1rem);
+    }
+    &.is-active {
+      opacity: 1;
+      visibility: visible;
     }
   }
 
@@ -225,6 +280,15 @@
 
   &__grid-item {
     @include col-span(1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(2rem);
+    transition: all $duration-time;
+    &.is-active {
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+    }
   }
 
   &__title {
@@ -270,6 +334,15 @@
   box-shadow: 0 0 10px #fff;
   background-color: #fff;
   padding: 1rem;
+  transform: scale(0);
+  opacity: 0;
+  visibility: hidden;
+  transition: all $duration-time;
+  &.is-active {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
   
   &__img {
     width: 3rem;
@@ -501,15 +574,25 @@
   &__item {
     list-style-type: none;
     display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-2rem);
+    transition: all $duration-time;
     &:not(:last-child) {
-      margin-bottom: 50px;
+      margin-bottom: 3.125rem;
+    }
+
+    &.is-active {
+      opacity: 1;
+      visibility: visible;
+      transform: none;
     }
   }
 
   &__icon {
-    width: 90px;
+    width: 5.625rem;
     box-sizing: border-box;
-    padding: 20px 10px 10px;
+    padding: 1.25rem 0.625rem 0.625rem;
     font-weight: bold;
     color: #FFF;
     text-align: center;
@@ -526,7 +609,7 @@
       border-right: 45px solid transparent;
       border-top: 20px solid $main-color;
       position: absolute;
-      bottom: -19px;
+      bottom: -20px;
       left: 0;
     }
   }
@@ -558,58 +641,6 @@
   &__data-text {
     margin: 0;
     color: #fff;
-  }
-}
-
-/* ==========================================================================================================
-  FAQ
-  =========================================================================================================== */
-.c-faq {
-  &__item {
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    margin-bottom: 20px;
-    width: 100%;
-    background-color: #fff;
-  }
-  
-  &__question {
-    padding: 20px;
-    padding-right: 52px;
-    position: relative;
-    font-weight: bold;
-    font-size: 1.1rem;
-    &:hover {
-      cursor: pointer;
-    }
-    &::before {
-      content: "+";
-      position: absolute;
-      right: 16px;
-      top: 50%;
-      transform: translate(-50%,-50%) rotate(0deg);
-      transform-origin: center center;
-      transition: all 0.2s linear 0s;
-      font-size: 24px;
-      font-weight: 400;
-    }
-    &.is-on::before {
-      transform: translate(-50%,-50%) rotate(45deg);
-      transform-origin: center center;
-    }
-    &.is-on::after {
-      content: "";
-      position: absolute;
-      width: calc(100% - 32px);
-      height: 1px;
-      background: #ccc;
-      bottom: 0;
-      left: 50%;
-      transform:translatex(-50%);
-    }
-  }
-  
-  &__answer {
-    padding: 20px;
   }
 }
 

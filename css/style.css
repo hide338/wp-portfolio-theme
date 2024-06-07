@@ -665,7 +665,7 @@ th {
   height: 100%;
   width: 4rem;
   background-color: #1C75BC;
-  transition: all 0.3s;
+  transition: all 0.6s;
   z-index: 999;
 }
 @media screen and (max-width: 768px) {
@@ -679,7 +679,7 @@ th {
   border-radius: 999px;
   background: #fff;
   position: absolute;
-  transition: all 0.3s;
+  transition: all 0.6s;
   top: 50%;
   left: 50%;
   transform: translateX(-50%);
@@ -747,7 +747,7 @@ th {
   justify-content: center;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.3s;
+  transition: all 0.6s;
   z-index: 10;
   transform: translateX(100%);
 }
@@ -759,7 +759,7 @@ th {
 .c-sp-gnav__item {
   text-align: center;
   background-color: #f8f8f8;
-  transition: all 0.3s;
+  transition: all 0.6s;
 }
 .c-sp-gnav__item:hover {
   transform: translate(-10px, -10px);
@@ -787,7 +787,7 @@ th {
   text-align: center;
   background-color: #F9A638;
   box-shadow: 0px 10px #cf7500;
-  transition-duration: 0.3s;
+  transition-duration: 0.6s;
 }
 .c-cta:hover {
   transform: translateY(8px);
@@ -806,7 +806,7 @@ th {
     text-align: center;
     background-color: #F9A638;
     box-shadow: 0px 10px #cf7500;
-    transition-duration: 0.3s;
+    transition-duration: 0.6s;
   }
   .c-cta:hover {
     transform: translateY(8px);
@@ -853,12 +853,125 @@ th {
 }
 
 /* ==========================================================================================================
-  Text
+  Accordion
   =========================================================================================================== */
-.c-text-pink {
+.c-accordion__item {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+  width: 100%;
+  background-color: #fff;
+}
+.c-accordion__parent {
+  padding: 20px;
+  padding-right: 52px;
+  position: relative;
+  font-weight: bold;
+  font-size: 1.1rem;
+  display: flex;
+}
+.c-accordion__parent:hover {
+  cursor: pointer;
+}
+.c-accordion__parent::before {
+  content: "+";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  transform-origin: center center;
+  transition: all 0.2s linear 0s;
+  font-size: 24px;
+  font-weight: 400;
+}
+.c-accordion__parent span {
+  display: inline-block;
   color: #1C75BC;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+.c-accordion__parent.is-on::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+  transform-origin: center center;
+}
+.c-accordion__parent.is-on::after {
+  content: "";
+  position: absolute;
+  width: calc(100% - 32px);
+  height: 1px;
+  background: #ccc;
+  bottom: 0;
+  left: 50%;
+  transform: translatex(-50%);
+}
+.c-accordion__child {
+  overflow: hidden;
+  max-height: 0;
+  padding: 0 1.25rem;
+  display: flex;
+}
+.c-accordion__child span {
+  display: inline-block;
+  color: #1C75BC;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+.c-accordion .c-accordion__parent.is-on + .c-accordion__child {
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  max-height: 1000px;
+  padding-block: 1.25rem;
 }
 
+/*全共通*/
+.c-bg-extend {
+  position: relative;
+  overflow: hidden; /*　はみ出た色要素を隠す　*/
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+/*中の要素*/
+.c-bg-appear img {
+  transition: all 0.6s ease-in-out;
+  transition-delay: 0.6s;
+  opacity: 0;
+}
+
+.c-bg-extend.is-active {
+  opacity: 1;
+}
+
+.c-bg-extend.is-active .c-bg-appear img {
+  opacity: 1;
+}
+
+.c-bg-extend.is-active .c-bg-appear::before {
+  animation-name: bgLRextendAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #1C75BC; /*伸びる背景色の設定*/
+}
+
+@keyframes bgLRextendAnime {
+  0% {
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+  50% {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+  50.001% {
+    transform-origin: right;
+  }
+  100% {
+    transform-origin: right;
+    transform: scaleX(0);
+  }
+}
 /* ==========================================================================================================
   FV
   =========================================================================================================== */
@@ -904,6 +1017,15 @@ th {
   font-weight: bold;
   color: #3b3b3b;
   line-height: 1;
+  transform: scale(0);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.6s;
+}
+.p-fv__title.is-load {
+  transform: scale(1);
+  opacity: 1;
+  visibility: visible;
 }
 .p-fv__title span {
   background-color: #fff;
@@ -918,6 +1040,16 @@ th {
   font-size: 1.5rem;
   font-weight: bold;
   line-height: 1.7;
+  transform: scale(0);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.6s;
+  transition-delay: 0.4s;
+}
+.p-fv__description.is-load {
+  transform: scale(1);
+  opacity: 1;
+  visibility: visible;
 }
 @media screen and (max-width: 431px) {
   .p-fv__description {
@@ -929,6 +1061,16 @@ th {
   font-size: 1.25rem;
   display: flex;
   justify-content: center;
+  transform: translateY(2rem);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.6s;
+  transition-delay: 0.8s;
+}
+.p-fv__btn.is-load {
+  transform: none;
+  opacity: 1;
+  visibility: visible;
 }
 @media screen and (max-width: 431px) {
   .p-fv__btn {
@@ -968,14 +1110,17 @@ th {
   height: calc(100% + 10rem);
   background-color: #3b3b3b;
   z-index: -1;
-  -webkit-clip-path: polygon(0 0, 100% 20%, 100% 80%, 0% 100%);
-          clip-path: polygon(0 0, 100% 20%, 100% 80%, 0% 100%);
+  -webkit-clip-path: polygon(0 20%, 0 0, 0 100%, 0 80%);
+          clip-path: polygon(0 20%, 0 0, 0 100%, 0 80%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.6s;
   margin-left: calc(50% - 50vw);
   width: 100vw;
 }
 .p-service-item:nth-of-type(odd)::before {
-  -webkit-clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 80%);
-          clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 80%);
+  -webkit-clip-path: polygon(100% 20%, 100% 0, 100% 100%, 100% 80%);
+          clip-path: polygon(100% 20%, 100% 0, 100% 100%, 100% 80%);
 }
 @media screen and (max-width: 768px) {
   .p-service-item:nth-of-type(even) {
@@ -993,6 +1138,18 @@ th {
   .p-service-item:nth-of-type(even) .p-service-item__text-area {
     left: 0;
   }
+}
+.p-service-item.is-active::before {
+  opacity: 1;
+  visibility: visible;
+  -webkit-clip-path: polygon(0 0, 100% 20%, 100% 80%, 0% 100%);
+          clip-path: polygon(0 0, 100% 20%, 100% 80%, 0% 100%);
+}
+.p-service-item.is-active:nth-of-type(odd)::before {
+  opacity: 1;
+  visibility: visible;
+  -webkit-clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 80%);
+          clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 80%);
 }
 .p-service-item__flex {
   display: flex;
@@ -1026,6 +1183,10 @@ th {
   background-color: #fff;
   padding: 2rem;
   box-shadow: 0 0 5px rgba(172, 172, 172, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.6s;
+  transition-delay: 0.5s;
 }
 @media screen and (max-width: 768px) {
   .p-service-item__text-area {
@@ -1034,6 +1195,10 @@ th {
     min-width: auto;
     transform: translateY(-1rem);
   }
+}
+.p-service-item__text-area.is-active {
+  opacity: 1;
+  visibility: visible;
 }
 .p-service-item__text {
   text-align: left;
@@ -1074,6 +1239,15 @@ th {
 }
 .p-work__grid-item {
   grid-column: span 1/span 1;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(2rem);
+  transition: all 0.6s;
+}
+.p-work__grid-item.is-active {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
 }
 .p-work__title {
   margin-top: 1rem;
@@ -1121,6 +1295,15 @@ th {
   box-shadow: 0 0 10px #fff;
   background-color: #fff;
   padding: 1rem;
+  transform: scale(0);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.6s;
+}
+.p-skill-card.is-active {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
 }
 .p-skill-card__img {
   width: 3rem;
@@ -1319,14 +1502,23 @@ th {
 .p-flow__item {
   list-style-type: none;
   display: flex;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-2rem);
+  transition: all 0.6s;
 }
 .p-flow__item:not(:last-child) {
-  margin-bottom: 50px;
+  margin-bottom: 3.125rem;
+}
+.p-flow__item.is-active {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
 }
 .p-flow__icon {
-  width: 90px;
+  width: 5.625rem;
   box-sizing: border-box;
-  padding: 20px 10px 10px;
+  padding: 1.25rem 0.625rem 0.625rem;
   font-weight: bold;
   color: #FFF;
   text-align: center;
@@ -1344,7 +1536,7 @@ th {
   border-right: 45px solid transparent;
   border-top: 20px solid #1C75BC;
   position: absolute;
-  bottom: -19px;
+  bottom: -20px;
   left: 0;
 }
 .p-flow__data-list {
@@ -1375,54 +1567,6 @@ th {
 }
 
 /* ==========================================================================================================
-  FAQ
-  =========================================================================================================== */
-.c-faq__item {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  margin-bottom: 20px;
-  width: 100%;
-  background-color: #fff;
-}
-.c-faq__question {
-  padding: 20px;
-  padding-right: 52px;
-  position: relative;
-  font-weight: bold;
-  font-size: 1.1rem;
-}
-.c-faq__question:hover {
-  cursor: pointer;
-}
-.c-faq__question::before {
-  content: "+";
-  position: absolute;
-  right: 16px;
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(0deg);
-  transform-origin: center center;
-  transition: all 0.2s linear 0s;
-  font-size: 24px;
-  font-weight: 400;
-}
-.c-faq__question.is-on::before {
-  transform: translate(-50%, -50%) rotate(45deg);
-  transform-origin: center center;
-}
-.c-faq__question.is-on::after {
-  content: "";
-  position: absolute;
-  width: calc(100% - 32px);
-  height: 1px;
-  background: #ccc;
-  bottom: 0;
-  left: 50%;
-  transform: translatex(-50%);
-}
-.c-faq__answer {
-  padding: 20px;
-}
-
-/* ==========================================================================================================
   Profile
   =========================================================================================================== */
 .p-profile {
@@ -1432,6 +1576,43 @@ th {
   color: #fff;
 }
 
+/* ==========================================================================================================
+  Loading
+  =========================================================================================================== */
+.p-loader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 555;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease-in-out;
+}
+.p-loader.is-loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.p-loader__item {
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 30px;
+  animation: l1 1s linear infinite alternate;
+}
+
+.p-loader__item::before {
+  content: "NAKAHARA PORTFOLIO";
+}
+
+@keyframes l1 {
+  to {
+    opacity: 0;
+  }
+}
 /* ==========================================================================================================
   カラースタイル
   =========================================================================================================== */

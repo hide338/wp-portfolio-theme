@@ -18,9 +18,11 @@
 // component
 @forward './object/component/nav';
 @forward './object/component/button';
-@forward './object/component/color';
+@forward './object/component/accordion';
+@forward './object/component/extend';
 // project
 @forward './object/project/front-page';
+@forward './object/project/loading';
 // utility
 @forward './object/utility/color';
 @forward './object/utility/position';

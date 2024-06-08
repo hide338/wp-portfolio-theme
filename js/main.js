@@ -19,6 +19,19 @@ window.onload = () => {
   }, 1700);
 };
 
+/* ==============================================================================
+  ヘッダースクロールイベント
+  ============================================================================= */
+  const HEADER = document.querySelector('.js-header');
+  console.log(HEADER);
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+      HEADER.classList.add('is-active');
+    } else {
+      HEADER.classList.remove('is-active');
+    }
+  });
+
 /* ============================================================================================
 SPメニュー制御
 ============================================================================================ */
@@ -180,7 +193,6 @@ ACCORDIONS.forEach(accordion => {
   });
 });
 
-
 /* ============================================================================================
 スクロールアニメーション
 ============================================================================================ */
@@ -193,6 +205,9 @@ const callback = (entries, observer) => {
       // 可視範囲に入った要素にクラスを追加
       if (entry.target.classList.contains('js-scroll')) {
         entry.target.classList.add('is-active');
+      }
+      if (entry.target.classList.contains('js-scroll-showText')) {
+        entry.target.classList.add('p-onetext-animation');
       }
       // 観察を停止
       observer.unobserve(entry.target);
@@ -212,3 +227,30 @@ const observer = new IntersectionObserver(callback, options);
 SCROLL_ANIMATION_ITEMS.forEach(element => {
   observer.observe(element);
 });
+
+/* ============================================================================================
+テキストアニメーション
+============================================================================================ */
+document.addEventListener("DOMContentLoaded", function() {
+  const TEXTELEMENTS = document.querySelectorAll(".js-animate-text");
+
+  TEXTELEMENTS.forEach(textElement => {
+      const TEXT = textElement.innerText;
+      textElement.innerHTML = "";
+
+      TEXT.split("").forEach((char, index) => {
+          const span = document.createElement("span");
+          span.innerText = char;
+          span.classList.add("js-scroll-showText");
+          span.style.animationDelay = `${index * 0.1}s`;
+          textElement.appendChild(span);
+      });
+      // アニメーションテキストの観察
+      SCROLL_ANIMATION_SHOWTWXTS.forEach(element => {
+        observer.observe(element);
+      });
+  });
+});
+
+const SCROLL_ANIMATION_SHOWTWXTS = document.querySelectorAll('.js-scroll-showText');
+console.log(SCROLL_ANIMATION_SHOWTWXTS);

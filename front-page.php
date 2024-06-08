@@ -341,8 +341,8 @@ Template Name: front-page
               <li class="p-flow__item js-scroll">
                 <p class="p-flow__icon">STEP&nbsp;5</p>
                 <dl class="p-flow__data-list">
-                  <dt class="p-flow__data-title">入金確認</dt>
-                  <dd class="p-flow__data-text">契約金のご入金いただき、確認いたします。</dd>
+                  <dt class="p-flow__data-title">着手金の入金確認</dt>
+                  <dd class="p-flow__data-text">契約金額の50%をご入金いただき、確認いたします。</dd>
                 </dl>
               </li>
 
@@ -350,7 +350,7 @@ Template Name: front-page
                 <p class="p-flow__icon">STEP&nbsp;6</p>
                 <dl class="p-flow__data-list">
                   <dt class="p-flow__data-title">作業開始</dt>
-                  <dd class="p-flow__data-text">ご依頼の内容の作業を開始させていただきます。</dd>
+                  <dd class="p-flow__data-text">ご依頼内容の作業を開始させていただきます。</dd>
                 </dl>
 
               <li class="p-flow__item js-scroll">

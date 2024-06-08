@@ -36,7 +36,7 @@
 
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
-  <header id="header" class="l-header">
+  <header id="header" class="l-header js-header">
     <div class="l-header__wrapper l-header__flex">
       <div class="l-header__branding">
         <?php

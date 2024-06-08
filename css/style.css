@@ -500,6 +500,11 @@ th {
   top: 0;
   z-index: 10;
   height: 6rem;
+  transition: all 0.3s;
+}
+.l-header.is-active {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 @media screen and (max-width: 768px) {
   .l-header {
@@ -555,6 +560,7 @@ th {
   color: #fff;
   right: 0;
   left: auto;
+  overflow: hidden;
 }
 .l-section:nth-of-type(even) .l-section__title {
   color: #fff;
@@ -1611,6 +1617,25 @@ th {
 @keyframes l1 {
   to {
     opacity: 0;
+  }
+}
+/* ==========================================================================================================
+  JSアニメーション用スタイル
+  =========================================================================================================== */
+.p-onetext-animation {
+  animation: showText 3s;
+}
+
+@keyframes showText {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(2rem);
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
   }
 }
 /* ==========================================================================================================

@@ -21,6 +21,7 @@
 @forward './object/component/accordion';
 @forward './object/component/extend';
 @forward './object/component/card';
+@forward './object/component/wp-pager';
 // project
 @forward './object/project/front-page';
 @forward './object/project/loading';
@@ -30,3 +31,10 @@
 @forward './object/utility/color';
 @forward './object/utility/position';
 @forward './object/utility/etc';
+
+/*
+plugin
+********************************/
+@forward './plugin/mw_wp_form';
+@forward './plugin/wp-pagenavi';
+@forward './plugin/xo-event-calendar';

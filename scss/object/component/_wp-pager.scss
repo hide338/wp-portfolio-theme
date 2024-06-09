@@ -1,0 +1,33 @@
+@use '../../foundation/variables' as *;
+@use '../../foundation/mixins' as *;
+
+/**********************************************
+  ページャースタイル
+**********************************************/
+.pager {
+  margin-top: 2rem;
+  padding: 2rem;
+  @include grid-cols(3);
+  @include gap(16);
+  @include mq(md) {
+    @include grid-cols(1);
+    @include gap(8);
+  }
+  
+  &__item {
+    text-align: center;
+    overflow: hidden;
+    @include col-span(1);
+  }
+
+  &__link {
+    display: block;
+    padding: 0.5rem 2rem;
+    background-color: #F3F3F3;
+    transition-duration: $duration-time;
+    &:hover {
+      background-color: $main-color;
+      color: #fff;
+    }
+  }
+}

@@ -1,12 +1,12 @@
   </div>
   <!-- /.container -->
-  <div class="container">
+  <div class="l-container">
     <?php if(!(is_home() || is_front_page())): ?>
       <?php breadcrumb(); ?>
     <?php endif; ?>
   </div>
-  <footer id="colophon" class="footer">
-    <div class="footer-info container">
+  <footer id="colophon" class="l-footer">
+    <div class="l-footer-info l-container">
       <p>&copy; 2024 Toshihide Portfolio</p>
     </div><!-- .site-info -->
   </footer><!-- #colophon -->

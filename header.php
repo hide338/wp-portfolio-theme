@@ -17,7 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Protest+Guerrilla&family=Roboto:wght@400;700&family=Rubik+Dirt&display=swap" rel="stylesheet">
 
   <!-- スタイルシートの読み込み -->
-  <!-- <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/style.css"> -->
+  <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/css/style.css">
 
 
   <!-- ファーストビューの画像を先に読み込む設定 -->

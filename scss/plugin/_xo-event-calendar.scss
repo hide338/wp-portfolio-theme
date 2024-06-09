@@ -1,0 +1,34 @@
+@use '../foundation/variables' as *;
+@use '../foundation/mixins' as *;
+
+.xo-event-calendar {
+
+  table.xo-month {
+
+    button {
+      text-align: center;
+      span.nav-prev {
+        border-color: $text-color;
+        border-top: none;
+        border-right: none;
+        transition-duration: $duration-time;
+      }
+      span.nav-next {
+        border-color: $text-color;
+        border-bottom: none;
+        border-left: none;
+        transition-duration: $duration-time;
+      }
+      &:hover {
+        span.nav-prev,
+        span.nav-next {
+          opacity: $opacity;
+        }
+      }
+    }
+
+    .month-dayname td div {
+      border: none;
+    }
+  }
+}

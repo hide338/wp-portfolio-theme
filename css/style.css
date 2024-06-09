@@ -537,6 +537,21 @@ th {
 }
 
 /* ==========================================================================================================
+  footer
+  =========================================================================================================== */
+.l-footer {
+  background-color: #3b3b3b;
+  color: #fff;
+  text-align: center;
+  padding-block: 5rem;
+}
+@media screen and (max-width: 768px) {
+  .l-footer {
+    padding-block: 3rem;
+  }
+}
+
+/* ==========================================================================================================
   container
   =========================================================================================================== */
 .l-container {
@@ -1011,6 +1026,39 @@ th {
   border-radius: 5px;
 }
 
+/**********************************************
+  ページャースタイル
+**********************************************/
+.pager {
+  margin-top: 2rem;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+@media screen and (max-width: 768px) {
+  .pager {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+}
+.pager__item {
+  text-align: center;
+  overflow: hidden;
+  grid-column: span 1/span 1;
+}
+.pager__link {
+  display: block;
+  padding: 0.5rem 2rem;
+  background-color: #F3F3F3;
+  transition-duration: 0.6s;
+}
+.pager__link:hover {
+  background-color: #1C75BC;
+  color: #fff;
+}
+
 /* ==========================================================================================================
   FV
   =========================================================================================================== */
@@ -1117,7 +1165,7 @@ th {
 .p-service__grid {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: 5rem;
+  gap: 3rem;
 }
 @media screen and (max-width: 768px) {
   .p-service__grid {
@@ -1128,6 +1176,7 @@ th {
 .p-service-item {
   position: relative;
   grid-column: span 1/span 1;
+  padding-block: 3rem;
 }
 @media screen and (max-width: 768px) {
   .p-service-item {
@@ -1137,23 +1186,17 @@ th {
 .p-service-item::before {
   content: "";
   position: absolute;
-  top: -5rem;
-  left: 0;
-  width: 100%;
-  height: calc(100% + 10rem);
-  background-color: #3b3b3b;
-  z-index: -1;
-  -webkit-clip-path: polygon(0 20%, 0 0, 0 100%, 0 80%);
-          clip-path: polygon(0 20%, 0 0, 0 100%, 0 80%);
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.6s;
-  margin-left: calc(50% - 50vw);
-  width: 100vw;
+  width: 85%;
+  height: 100%;
+  background-color: #edf8fd;
+  top: 0;
 }
 .p-service-item:nth-of-type(odd)::before {
-  -webkit-clip-path: polygon(100% 20%, 100% 0, 100% 100%, 100% 80%);
-          clip-path: polygon(100% 20%, 100% 0, 100% 100%, 100% 80%);
+  right: 0;
+}
+.p-service-item:nth-of-type(odd) .p-service-item__number {
+  left: auto;
+  right: 0;
 }
 @media screen and (max-width: 768px) {
   .p-service-item:nth-of-type(even) {
@@ -1175,14 +1218,36 @@ th {
 .p-service-item.is-active::before {
   opacity: 1;
   visibility: visible;
-  -webkit-clip-path: polygon(0 0, 100% 20%, 100% 80%, 0% 100%);
-          clip-path: polygon(0 0, 100% 20%, 100% 80%, 0% 100%);
 }
 .p-service-item.is-active:nth-of-type(odd)::before {
   opacity: 1;
   visibility: visible;
-  -webkit-clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 80%);
-          clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 80%);
+}
+.p-service-item.is-active .p-service-item__number {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+.p-service-item__number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 10rem;
+  font-weight: bold;
+  color: #1C75BC;
+  font-family: "Protest Guerrilla", sans-serif;
+  line-height: 1;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(3rem);
+  transition: all 0.6s;
+  transition-delay: 0.5s;
+}
+@media screen and (max-width: 768px) {
+  .p-service-item__number {
+    font-size: 8rem;
+    top: -3rem;
+  }
 }
 .p-service-item__flex {
   display: flex;
@@ -1267,7 +1332,7 @@ th {
   .p-work__grid {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
-    gap: 1rem;
+    gap: 2rem;
   }
 }
 .p-work__grid-item {
@@ -1594,6 +1659,12 @@ th {
   color: #fff;
 }
 
+@media screen and (max-width: 768px) {
+  .wp-block-image .aligncenter {
+    max-width: 50%;
+  }
+}
+
 /* ==========================================================================================================
   Loading
   =========================================================================================================== */
@@ -1668,7 +1739,7 @@ archive body
   .p-archive__grid {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
-    gap: 1rem;
+    gap: 2rem;
   }
 }
 
@@ -1870,4 +1941,178 @@ archive body
   .u-sp-active {
     display: block;
   }
+}
+
+/*
+plugin
+********************************/
+/* ======================================
+* mw_wp_formプラグインスタイル
+* =================================== */
+.mw_wp_form .attention {
+  color: red; /* アスタリスクを赤色に */
+}
+.mw_wp_form .must {
+  color: rgb(253, 25, 93);
+  padding-left: 1rem;
+}
+.mw_wp_form input {
+  -webkit-appearance: revert;
+     -moz-appearance: revert;
+          appearance: revert;
+}
+.mw_wp_form input[type=text], .mw_wp_form input[type=email], .mw_wp_form textarea {
+  width: 100%; /* 記入欄を画面サイズいっぱいにする */
+  border: 1px solid #3b3b3b;
+  border-radius: 0.25rem;
+  padding: 5px;
+}
+.mw_wp_form input[type=text], .mw_wp_form input[type=email] {
+  width: 100%;
+}
+@media screen and (max-width: ) {
+  .mw_wp_form input[type=text], .mw_wp_form input[type=email] {
+    width: 50%;
+  }
+}
+.mw_wp_form input[type=radio], .mw_wp_form input[type=check] {
+  cursor: pointer;
+}
+.mw_wp_form [type=submit] {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  border: 1px solid #1C75BC;
+  border-radius: 999px;
+  background-color: #1C75BC;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s cubic-bezier(0.2, 1, 0.2, 1);
+  margin-inline: auto;
+}
+.mw_wp_form [type=submit]:hover {
+  background-color: #fff;
+  color: #1C75BC;
+}
+.mw_wp_form p {
+  font-weight: bold; /* 項目名を太字 */
+  padding-bottom: 20px; /* 項目の間に余白を設置 */
+  margin-top: 0 !important;
+}
+.mw_wp_form p:last-of-type {
+  text-align: center;
+}
+
+.wp-pagenavi {
+  text-align: center;
+}
+
+.wp-pagenavi span.current,
+.page.smaller,
+.page.larger,
+.nextpostslink,
+.previouspostslink {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  padding: 0;
+  background: #1C75BC;
+  color: #FFFFFF;
+  border-radius: 50%;
+  border: none;
+}
+
+/* 共通スタイル*/
+.page.smaller,
+.page.larger {
+  background: #fff;
+  color: #1C75BC;
+  border: 1px solid #1C75BC;
+  padding: 0;
+}
+
+/* 現在ページより前のボタン */
+.page.smaller {
+  margin-right: 25px;
+}
+
+/* 現在ページより後のボタン */
+.page.larger {
+  margin-left: 25px;
+}
+
+.wp-pagenavi a:hover {
+  color: #FFF;
+  background-color: #999;
+  border: 1px solid #999 !important;
+}
+
+.nextpostslink,
+.previouspostslink {
+  line-height: 40px;
+  border: 1px solid #1C75BC !important;
+  color: #1C75BC !important;
+  position: relative;
+  background: #fff;
+  color: #1C75BC;
+  top: -3px;
+}
+
+.nextpostslink {
+  left: 25px;
+}
+
+.previouspostslink {
+  right: 25px;
+}
+
+.nextpostslink::before,
+.previouspostslink::after {
+  content: "";
+  width: 0.5px;
+  height: 40px;
+  background-color: rgb(224, 215, 215);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nextpostslink::before {
+  left: -15px;
+}
+
+.previouspostslink::after {
+  right: -15px;
+}
+
+/* 〇/〇 の部分のスタイル → 不要の場合は非表示 */
+.pages {
+  display: none;
+}
+
+.xo-event-calendar table.xo-month button {
+  text-align: center;
+}
+.xo-event-calendar table.xo-month button span.nav-prev {
+  border-color: #3b3b3b;
+  border-top: none;
+  border-right: none;
+  transition-duration: 0.6s;
+}
+.xo-event-calendar table.xo-month button span.nav-next {
+  border-color: #3b3b3b;
+  border-bottom: none;
+  border-left: none;
+  transition-duration: 0.6s;
+}
+.xo-event-calendar table.xo-month button:hover span.nav-prev,
+.xo-event-calendar table.xo-month button:hover span.nav-next {
+  opacity: 0.7;
+}
+.xo-event-calendar table.xo-month .month-dayname td div {
+  border: none;
 }/*# sourceMappingURL=style.css.map */

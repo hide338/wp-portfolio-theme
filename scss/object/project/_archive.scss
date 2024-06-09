@@ -35,7 +35,7 @@ archive body
   @include gap(48);
   @include mq(md) {
     @include grid-cols(1);
-    @include gap(16);
+    @include gap(32);
   }
 }
 

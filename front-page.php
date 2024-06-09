@@ -4,9 +4,9 @@ Template Name: front-page
 */
 ?>
 <?php get_header(); ?>
-  <div class="p-loader js-loader">
+  <!-- <div class="p-loader js-loader">
     <div class="p-loader__item"></div>
-  </div>
+  </div> -->
   <main class="l-site-main">
     <section class="p-fv l-container">
       <div id="particles-js" class="p-fv__particle"></div>
@@ -52,7 +52,7 @@ Template Name: front-page
             ?>
               <div class="p-service-item js-scroll">
                 <div class="p-service-item__flex">
-                  <!-- <span class="p-service-item__number"><?= sprintf('%02d', $service_count); ?></span> -->
+                  <span class="p-service-item__number"><?= sprintf('%02d', $service_count); ?></span>
                   <div class="p-service-item__img-area">
                     <span class="c-bg-extend js-scroll">
                       <span class="c-bg-appear">
@@ -306,7 +306,7 @@ Template Name: front-page
           <p class="l-section__title section__title--en">FLOW</p>
         </div>
         <div class="l-section__body">
-        <?php
+          <?php
           $args = [
             'post_type' => 'flow',
             'order' => 'ASC',
@@ -314,50 +314,32 @@ Template Name: front-page
           ];
           $flow_posts = new WP_Query( $args );
           $flow_count = 1;
-        ?>
-        <?php if ( $flow_posts->have_posts()): ?>
-          <?php while( $flow_posts->have_posts() ): $flow_posts->the_post(); ?>
-            <?php
-              if (has_post_thumbnail()):
-                $id = get_post_thumbnail_id();
-                $img = wp_get_attachment_image_src($id,'full');
-              else:
-                $img = array(get_template_directory_uri() . '/img/post-bg.jpg');
-              endif;
-            ?>
-              <li class="p-flow__item js-scroll">
-                <p class="p-flow__icon">STEP&nbsp;<?= $flow_count; ?></p>
-                <dl class="p-flow__data-list">
-                  <dt class="p-flow__data-title">お申し込み</dt>
-                  <dd class="p-flow__data-text">お問い合わせフォーム、もしくはX(旧twitter)から内容を記入いただき送信をお願いします。</dd>
-                </dl>
-              </li>
-
-              <div class="p-service-item js-scroll">
-                <div class="p-service-item__flex">
-                  <!-- <span class="p-service-item__number"><?= sprintf('%02d', $flow_count); ?></span> -->
-                  <div class="p-service-item__img-area">
-                    <span class="c-bg-extend js-scroll">
-                      <span class="c-bg-appear">
-                        <img class="" src="<?= $img[0]; ?>" alt="" loading="lazy">
-                      </span>
-                    </span>
-                  </div>
-                  <div class="p-service-item__text-area js-scroll">
-                    <div class="p-service-item__text">
-                      <h3 class="p-service-item__title"><?php the_title(); ?></h3>
-                      <p class="p-service-item__description"><?= get_the_excerpt(); ?></p>
-                      <!-- <div class="p-service-item__btn">
-                        <p class="p-service-item__btn--copy">料金・納品までの流れをチェック</p>
-                        <a href="<?php echo get_the_permalink(); ?>" class="c-btn"><span>詳しく見る</span></a>
-                      </div> -->
-                    </div>
-                  </div>
-                </div>
-              </div>
-            <?php $flow_count += 1; endwhile; ?>
-          <?php endif; ?>
+          ?>
           <div class="p-flow">
+            <ul class="p-flow__list">
+              <?php if ( $flow_posts->have_posts()): ?>
+                <?php while( $flow_posts->have_posts() ): $flow_posts->the_post(); ?>
+                  <?php
+                    if (has_post_thumbnail()):
+                      $id = get_post_thumbnail_id();
+                      $img = wp_get_attachment_image_src($id,'full');
+                    else:
+                      $img = array(get_template_directory_uri() . '/img/post-bg.jpg');
+                    endif;
+                  ?>
+                  <li class="p-flow__item js-scroll">
+                    <p class="p-flow__icon">STEP&nbsp;<?= $flow_count; ?></p>
+                    <dl class="p-flow__data-list">
+                      <dt class="p-flow__data-title"><?php the_title(); ?></dt>
+                      <dd class="p-flow__data-text"><?php the_content(); ?></dd>
+                    </dl>
+                  </li>
+                  <?php $flow_count += 1; ?>
+                <?php endwhile; ?>
+              <?php endif; ?>
+            </ul>
+          </div>
+          <!-- <div class="p-flow">
             <ul class="p-flow__list">
               <li class="p-flow__item js-scroll">
                 <p class="p-flow__icon">STEP&nbsp;1</p>
@@ -423,7 +405,7 @@ Template Name: front-page
               </li>
 
             </ul>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>

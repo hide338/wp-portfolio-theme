@@ -95,8 +95,8 @@ add_action('init', function() {
     );
     
     register_post_type('skill', [
-      'label' => 'スキル',
-      'public' => true,
+    'label' => 'スキル',
+    'public' => true,
     'menu_position' => 20,
     'menu_icon' => 'dashicons-desktop',
     'supports' => [
@@ -125,15 +125,101 @@ add_action('init', function() {
       'show_in_rest' => true,
     ]
   );
+
+  register_post_type('flow', [
+    'label' => '作業フロー',
+    'public' => true,
+    'menu_position' => 20,
+    'menu_icon' => 'dashicons-heart',
+    'supports' => [
+      'title',
+      'editor',
+      'thumbnail',
+      'custom-fields',
+      'excerpt',
+      'author',
+      'trackbacks',
+      'comments',
+      'revisions',
+      'page-attributes'
+    ],
+    'hierarchical' => true,
+    'has_archive' => true,
+    'show_in_rest'=> true,
+  ]);
+  register_taxonomy(
+    'flow-cat',
+    'flow',
+    [
+      'label' => '作業フローカテゴリー',
+      'hierarchical' => true,
+      'public' => true,
+      'show_in_rest' => true,
+    ]
+  );
+  register_taxonomy(
+    'flow-tag',
+    'flow',
+    [
+      'label' => '作業フロータグ',
+      'hierarchical' => false,
+      'public' => true,
+      'show_in_rest' => true,
+      'update_count_callback' => '_update_post_term_count',
+      ]
+    );
+
+  register_post_type('faq', [
+    'label' => 'よくある質問',
+    'public' => true,
+    'menu_position' => 20,
+    'menu_icon' => 'dashicons-heart',
+    'supports' => [
+      'title',
+      'editor',
+      'thumbnail',
+      'custom-fields',
+      'excerpt',
+      'author',
+      'trackbacks',
+      'comments',
+      'revisions',
+      'page-attributes'
+    ],
+    'hierarchical' => true,
+    'has_archive' => true,
+    'show_in_rest'=> true,
+  ]);
+  register_taxonomy(
+    'faq-cat',
+    'faq',
+    [
+      'label' => 'よくある質問カテゴリー',
+      'hierarchical' => true,
+      'public' => true,
+      'show_in_rest' => true,
+    ]
+  );
+  register_taxonomy(
+    'faq-tag',
+    'faq',
+    [
+      'label' => 'よくある質問タグ',
+      'hierarchical' => false,
+      'public' => true,
+      'show_in_rest' => true,
+      'update_count_callback' => '_update_post_term_count',
+      ]
+    );
 });
 
 /* スタイルシート・JSファイル読み込み設定 */
 function add_link_files() {
   // CSSの読み込み
   wp_enqueue_style( 'style', get_stylesheet_directory_uri().'/css/style.css' );
-  wp_enqueue_style( 'front-page', get_stylesheet_directory_uri().'/css/front-page.css', array('style'));
-  wp_enqueue_style( 'archive', get_stylesheet_directory_uri().'/css/archive.css', array('style'));
-  wp_enqueue_style( 'article', get_stylesheet_directory_uri().'/css/article.css', array('style'));
+  // wp_enqueue_style( 'front-page', get_stylesheet_directory_uri().'/css/front-page.css', array('style'));
+  // wp_enqueue_style( 'archive', get_stylesheet_directory_uri().'/css/archive.css', array('style'));
+  // wp_enqueue_style( 'article', get_stylesheet_directory_uri().'/css/article.css', array('style'));
 
   // JavaScriptの読み込み
   // wp_enqueue_script( 'my-script', get_template_directory_uri().'/js/script.js', array('jquery'), false, true );

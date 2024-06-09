@@ -1,0 +1,44 @@
+@use '../../foundation/variables' as *;
+@use '../../foundation/mixins' as *;
+
+/* ==========================================================================================================
+  projectレイアウト
+  =========================================================================================================== */
+/*
+archive header
+-------------------------------------------------- */
+  .p-archive {
+  &__header {
+    padding: 1.25rem 0;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-bottom: 3px solid $main-color;
+    padding: 0.5rem;
+    @include mq(md) {
+      font-size: 1.625rem;
+    }
+  }
+}
+
+/*
+archive body
+-------------------------------------------------- */
+.p-archive__body {
+  margin-top: 2rem;
+}
+
+.p-archive__grid {
+  @include grid-cols(2);
+  @include gap(48);
+  @include mq(md) {
+    @include grid-cols(1);
+    @include gap(16);
+  }
+}
+
+.p-archive__grid-item {
+  @include col-span(1);
+}

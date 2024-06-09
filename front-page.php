@@ -7,10 +7,10 @@ Template Name: front-page
   <div class="p-loader js-loader">
     <div class="p-loader__item"></div>
   </div>
-  <main class="site-main">
-    <section class="p-fv">
+  <main class="l-site-main">
+    <section class="p-fv l-container">
       <div id="particles-js" class="p-fv__particle"></div>
-      <div class="p-fv__wrapper">
+      <div class="p-fv__wrapper l-container">
         <div class="p-fv__text">
           <h2 class="p-fv__title js-load"><span>視力2.0エンジニア</span><br><span><span class="u-text-blue">"中原 利秀"</span>を<br class="u-sp-active">知ってもらうための</span><br><span>ポートフォリオサイト<br class="u-sp-active">です！</span></h2>
           <p class="p-fv__description js-load">バックエンドからフロントエンドまでの開発経験を活かし<br>幅広い知識でWeb制作業務をサポートします。</p>
@@ -25,7 +25,7 @@ Template Name: front-page
     </section>
 
     <section id="service" class="l-section u-bg-none">
-      <div class="l-section__wrapper">
+      <div class="l-container l-section__wrapper">
         <div class="l-section__header">
           <h2 class="l-section__title l-section__title--ja u-text-blue">サービス</h2>
           <p class="l-section__title l-section__title--en u-text-blue">SERVICE</p>
@@ -79,7 +79,7 @@ Template Name: front-page
     </section>
   
     <section id="work" class="l-section">
-      <div class="l-section__wrapper">
+      <div class="l-container l-section__wrapper">
         <span class="l-section__sepa-title">WORKS</span>
         <div class="l-section__header">
           <h2 class="l-section__title l-section__title--ja">実績</h2>
@@ -109,22 +109,24 @@ Template Name: front-page
                       $categories = get_the_terms(get_the_ID(), 'work-cat');
                     ?>
                     <div class="p-work__grid-item js-scroll">
-                      <a class="p-work__link" href="<?php the_permalink(); ?>">
-                        <div class="p-work__img-area">
-                          <img src="<?= $img[0]; ?>" alt="" loading="lazy">
-                        </div>
-                        <div class="p-work__text-area">
-                        <?php if ($categories) : ?>
-                          <h3 class="p-work__title"><?php the_title() ?></h3>
-                          <div class="p-work__tag">
-                            <?php foreach ($categories as $category) : ?>
-                            <span><?= esc_html($category->name); ?></span>
-                            <?php endforeach; ?>
+                      <div class="c-card">
+                        <a class="c-card__link" href="<?php the_permalink(); ?>">
+                          <div class="c-card__img">
+                            <img src="<?= $img[0]; ?>" alt="" loading="lazy">
                           </div>
-                          <?php endif; ?>
-                          <!-- /.card__btn -->
-                        </div>
-                      </a>
+                          <div class="c-card__text">
+                          <?php if ($categories) : ?>
+                            <h3 class="c-card__title"><?php the_title() ?></h3>
+                            <div class="c-card__tag">
+                              <?php foreach ($categories as $category) : ?>
+                              <span class="c-card__tag-item"><?= esc_html($category->name); ?></span>
+                              <?php endforeach; ?>
+                            </div>
+                            <?php endif; ?>
+                            <!-- /.card__btn -->
+                          </div>
+                        </a>
+                      </div>
                     </div>
                   <?php endwhile; ?>
                 <?php endif; ?>
@@ -138,7 +140,7 @@ Template Name: front-page
     </section>
   
     <section id="skill" class="l-section">
-      <div class="l-section__wrapper">
+      <div class="l-container l-section__wrapper">
         <span class="l-section__sepa-title">SKILL</span>
         <div class="l-section__header">
           <h2 class="l-section__title l-section__title--ja">スキル</h2>
@@ -197,7 +199,7 @@ Template Name: front-page
     </section>
 
     <section class="l-section">
-      <div class="l-section__wrapper">
+      <div class="l-container l-section__wrapper">
         <span class="l-section__sepa-title">PRICE</span>
         <div class="l-section__header">
           <h2 class="l-section__title section__title--ja">料金目安</h2>
@@ -297,13 +299,64 @@ Template Name: front-page
     </section>
 
     <section class="l-section">
-      <div class="l-section__wrapper">
+      <div class="l-container l-section__wrapper">
         <span class="l-section__sepa-title">FLOW</span>
         <div class="l-section__header">
           <h2 class="l-section__title section__title--ja">納品までの流れ</h2>
           <p class="l-section__title section__title--en">FLOW</p>
         </div>
         <div class="l-section__body">
+        <?php
+          $args = [
+            'post_type' => 'flow',
+            'order' => 'ASC',
+            'orderby' => 'menu_order' 
+          ];
+          $flow_posts = new WP_Query( $args );
+          $flow_count = 1;
+        ?>
+        <?php if ( $flow_posts->have_posts()): ?>
+          <?php while( $flow_posts->have_posts() ): $flow_posts->the_post(); ?>
+            <?php
+              if (has_post_thumbnail()):
+                $id = get_post_thumbnail_id();
+                $img = wp_get_attachment_image_src($id,'full');
+              else:
+                $img = array(get_template_directory_uri() . '/img/post-bg.jpg');
+              endif;
+            ?>
+              <li class="p-flow__item js-scroll">
+                <p class="p-flow__icon">STEP&nbsp;<?= $flow_count; ?></p>
+                <dl class="p-flow__data-list">
+                  <dt class="p-flow__data-title">お申し込み</dt>
+                  <dd class="p-flow__data-text">お問い合わせフォーム、もしくはX(旧twitter)から内容を記入いただき送信をお願いします。</dd>
+                </dl>
+              </li>
+
+              <div class="p-service-item js-scroll">
+                <div class="p-service-item__flex">
+                  <!-- <span class="p-service-item__number"><?= sprintf('%02d', $flow_count); ?></span> -->
+                  <div class="p-service-item__img-area">
+                    <span class="c-bg-extend js-scroll">
+                      <span class="c-bg-appear">
+                        <img class="" src="<?= $img[0]; ?>" alt="" loading="lazy">
+                      </span>
+                    </span>
+                  </div>
+                  <div class="p-service-item__text-area js-scroll">
+                    <div class="p-service-item__text">
+                      <h3 class="p-service-item__title"><?php the_title(); ?></h3>
+                      <p class="p-service-item__description"><?= get_the_excerpt(); ?></p>
+                      <!-- <div class="p-service-item__btn">
+                        <p class="p-service-item__btn--copy">料金・納品までの流れをチェック</p>
+                        <a href="<?php echo get_the_permalink(); ?>" class="c-btn"><span>詳しく見る</span></a>
+                      </div> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <?php $flow_count += 1; endwhile; ?>
+          <?php endif; ?>
           <div class="p-flow">
             <ul class="p-flow__list">
               <li class="p-flow__item js-scroll">
@@ -376,7 +429,7 @@ Template Name: front-page
     </section>
 
     <section class="l-section">
-      <div class="l-section__wrapper">
+      <div class="l-container l-section__wrapper">
         <span class="l-section__sepa-title">FAQ</span>
         <div class="l-section__header">
           <h2 class="l-section__title section__title--ja">よくある質問</h2>
@@ -410,7 +463,7 @@ Template Name: front-page
     </section>
     
     <section id="profile" class="l-section">
-      <div class="l-section__wrapper">
+      <div class="l-container l-section__wrapper">
         <span class="l-section__sepa-title">PROFILE</span>
         <div class="l-section__header">
           <h2 class="l-section__title section__title--ja">プロフィール</h2>
@@ -443,43 +496,45 @@ Template Name: front-page
     </section>
   
     <section id="contact" class="l-section">
-      <span class="l-section__sepa-title">CONTACT</span>
-      <div class="l-section__header">
-        <h2 class="l-section__title l-section__title--ja">お問い合わせ</h2>
-        <p class="l-section__title l-section__title--en">CONTACT</p>
-      </div>
-      <?php if ( is_home() || is_front_page() ) : ?>
-        <?php
-          $page_id = 2173;//ページIDを指定
-          $page = get_post($page_id, 'OBJECT', 'raw'); //指定のページIDから情報を取得
-          $page_include = apply_filters( 'the_content',$page->post_content); //ページの本文をフィルターフックで整形
-          // サムネイル画像を取得
-          if (has_post_thumbnail()):
-            $img = get_the_post_thumbnail_url($page_id);
-          else:
-            $img = array(get_template_directory_uri() . '/img/post-bg.jpg');
-          endif;
-        ?>
-        <div class="l-section__body">
-          <div class="p-contact">
-            <ul class="contact__list">
-              <li class="contact__item">
-                <a href="<?php echo esc_url( get_the_permalink( 2173 ) ); ?>">
-                  <img src="<?= get_template_directory_uri(); ?>/img/mail.png" alt="">
-                </a>
-              </li>
-              <li class="contact__item">
-                <a href="https://twitter.com/hide64980862">
-                  <img src="<?= get_template_directory_uri(); ?>/img/twitter-x.png" alt="">
-                </a>
-              </li>
-            </ul>
-          </div>
-          <p class="contact__comment">
-            お問い合わせは、メールもしくはX(旧:Twitter)のDMから、お問い合わせください。
-          </p>
+      <div class="l-container">
+        <span class="l-section__sepa-title">CONTACT</span>
+        <div class="l-section__header">
+          <h2 class="l-section__title l-section__title--ja">お問い合わせ</h2>
+          <p class="l-section__title l-section__title--en">CONTACT</p>
         </div>
-      <?php endif; ?>
+        <?php if ( is_home() || is_front_page() ) : ?>
+          <?php
+            $page_id = 2173;//ページIDを指定
+            $page = get_post($page_id, 'OBJECT', 'raw'); //指定のページIDから情報を取得
+            $page_include = apply_filters( 'the_content',$page->post_content); //ページの本文をフィルターフックで整形
+            // サムネイル画像を取得
+            if (has_post_thumbnail()):
+              $img = get_the_post_thumbnail_url($page_id);
+            else:
+              $img = array(get_template_directory_uri() . '/img/post-bg.jpg');
+            endif;
+          ?>
+          <div class="l-section__body">
+            <div class="p-contact">
+              <ul class="contact__list">
+                <li class="contact__item">
+                  <a href="<?php echo esc_url( get_the_permalink( 2173 ) ); ?>">
+                    <img src="<?= get_template_directory_uri(); ?>/img/mail.png" alt="">
+                  </a>
+                </li>
+                <li class="contact__item">
+                  <a href="https://twitter.com/hide64980862">
+                    <img src="<?= get_template_directory_uri(); ?>/img/twitter-x.png" alt="">
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <p class="contact__comment">
+              お問い合わせは、メールもしくはX(旧:Twitter)のDMから、お問い合わせください。
+            </p>
+          </div>
+        <?php endif; ?>
+      </div>
     </section>
   </main>
 <?php get_footer(); ?>

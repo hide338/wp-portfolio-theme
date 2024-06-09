@@ -1,0 +1,26 @@
+@use '../../foundation/variables' as *;
+@use '../../foundation/mixins' as *;
+
+/* ==========================================================================================================
+  card
+  =========================================================================================================== */
+.c-card__title {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1;
+  @include mq(md) {
+    font-size: 1rem;
+  }
+}
+
+.c-card__tag {
+  margin-top: 1rem;
+}
+
+.c-card__tag-item {
+  background-color: $main-color;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}

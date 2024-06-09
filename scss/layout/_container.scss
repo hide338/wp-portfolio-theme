@@ -7,3 +7,7 @@
 .l-container {
   @include container();
 }
+
+.l-container__wrapper {
+  @include wrapper($container-width);
+}

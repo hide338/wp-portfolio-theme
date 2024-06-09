@@ -541,7 +541,22 @@ th {
   =========================================================================================================== */
 .l-container {
   margin-inline: auto;
+  padding-inline: 2rem;
   max-width: 80rem;
+}
+@media screen and (max-width: 768px) {
+  .l-container {
+    padding-inline: 1rem;
+  }
+}
+
+.l-container__wrapper {
+  padding-inline: 2rem;
+}
+@media screen and (max-width: 768px) {
+  .l-container__wrapper {
+    padding-inline: 1rem;
+  }
 }
 
 /* ==========================================================================================================
@@ -567,14 +582,6 @@ th {
 }
 .l-section__wrapper {
   position: relative;
-  margin-inline: auto;
-  padding-inline: 2rem;
-  max-width: 80rem;
-}
-@media screen and (max-width: 768px) {
-  .l-section__wrapper {
-    padding-inline: 1rem;
-  }
 }
 .l-section__sepa-title {
   position: absolute;
@@ -979,6 +986,32 @@ th {
   }
 }
 /* ==========================================================================================================
+  card
+  =========================================================================================================== */
+.c-card__title {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1;
+}
+@media screen and (max-width: 768px) {
+  .c-card__title {
+    font-size: 1rem;
+  }
+}
+
+.c-card__tag {
+  margin-top: 1rem;
+}
+
+.c-card__tag-item {
+  background-color: #1C75BC;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+/* ==========================================================================================================
   FV
   =========================================================================================================== */
 .p-fv {
@@ -1005,9 +1038,7 @@ th {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-inline: auto;
   padding-inline: 2rem;
-  max-width: 80rem;
 }
 @media screen and (max-width: 768px) {
   .p-fv__wrapper {
@@ -1023,13 +1054,11 @@ th {
   font-weight: bold;
   color: #3b3b3b;
   line-height: 1;
-  transform: scale(0);
   opacity: 0;
   visibility: hidden;
   transition: all 0.6s;
 }
 .p-fv__title.is-load {
-  transform: scale(1);
   opacity: 1;
   visibility: visible;
 }
@@ -1046,14 +1075,12 @@ th {
   font-size: 1.5rem;
   font-weight: bold;
   line-height: 1.7;
-  transform: scale(0);
   opacity: 0;
   visibility: hidden;
   transition: all 0.6s;
   transition-delay: 0.4s;
 }
 .p-fv__description.is-load {
-  transform: scale(1);
   opacity: 1;
   visibility: visible;
 }
@@ -1254,21 +1281,6 @@ th {
   opacity: 1;
   visibility: visible;
   transform: none;
-}
-.p-work__title {
-  margin-top: 1rem;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #1C75BC;
-  line-height: 1;
-}
-@media screen and (max-width: 768px) {
-  .p-work__title {
-    font-size: 1rem;
-  }
-}
-.p-work__tag {
-  margin-top: 1rem;
 }
 
 /* ==========================================================================================================
@@ -1620,24 +1632,207 @@ th {
   }
 }
 /* ==========================================================================================================
-  JSアニメーション用スタイル
+  projectレイアウト
   =========================================================================================================== */
-.p-onetext-animation {
-  animation: showText 3s;
+/*
+archive header
+-------------------------------------------------- */
+.p-archive__header {
+  padding: 1.25rem 0;
+}
+.p-archive__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-bottom: 3px solid #1C75BC;
+  padding: 0.5rem;
+}
+@media screen and (max-width: 768px) {
+  .p-archive__title {
+    font-size: 1.625rem;
+  }
 }
 
-@keyframes showText {
-  0% {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(2rem);
-  }
-  100% {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+/*
+archive body
+-------------------------------------------------- */
+.p-archive__body {
+  margin-top: 2rem;
+}
+
+.p-archive__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3rem;
+}
+@media screen and (max-width: 768px) {
+  .p-archive__grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1rem;
   }
 }
+
+.p-archive__grid-item {
+  grid-column: span 1/span 1;
+}
+
+/* ==========================================================================================================
+  single.php page.php 共通レイアウト
+  =========================================================================================================== */
+.p-article {
+  background-color: #fff;
+}
+
+.p-article__header {
+  padding-block: 2rem;
+}
+
+.p-article__meta {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #6d6d6d;
+}
+
+.p-article__title {
+  font-weight: bold;
+  font-size: 1.625rem;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .p-article__title {
+    font-size: 1.5rem;
+  }
+}
+
+.p-article__thumbnail {
+  width: 100%;
+  text-align: center;
+}
+
+.p-article__body {
+  padding: 3rem 5%;
+}
+
+.p-article__body .wp-block-heading,
+.p-article__body .wp-block-image,
+.p-article__body .wp-block-table,
+.p-article__body p,
+.p-article__body a,
+.p-article__body ul, .p-article__body ol,
+.p-article__body nav {
+  margin-top: 2rem;
+}
+
+.p-article__body .wp-block-heading {
+  font-weight: bold;
+}
+
+.p-article__body h2.wp-block-heading {
+  font-size: 1.5rem;
+  background: #f7f7f7;
+  font-weight: normal;
+  padding: 20px 15px 18px;
+  border-left: 9px solid #1C75BC;
+  line-height: 40px;
+}
+@media screen and (max-width: 768px) {
+  .p-article__body h2.wp-block-heading {
+    font-size: 1.375rem;
+  }
+}
+.p-article__body h2.wp-block-heading:first-of-type {
+  margin-top: 0;
+}
+
+.p-article__body h3.wp-block-heading {
+  font-size: 1.25rem;
+  letter-spacing: 1.6px;
+  padding: 0 15px;
+  border-left: 9px solid #1C75BC;
+  line-height: 2;
+}
+@media screen and (max-width: 768px) {
+  .p-article__body h3.wp-block-heading {
+    font-size: 1.125rem;
+  }
+}
+
+.p-article__body h4.wp-block-heading {
+  font-size: 1.125rem;
+  letter-spacing: 1.6px;
+  padding: 0 10px;
+  border-bottom: 0.2rem solid #1C75BC;
+  line-height: 2;
+}
+@media screen and (max-width: 768px) {
+  .p-article__body h4.wp-block-heading {
+    font-size: 1rem;
+  }
+}
+
+.p-article__body h5.wp-block-heading {
+  letter-spacing: 1.6px;
+  padding: 0 10px;
+  border-bottom: 1px solid #1C75BC;
+  line-height: 2;
+}
+
+.p-article__body h6.wp-block-heading {
+  letter-spacing: 1.6px;
+  padding: 0 10px;
+  border-bottom: 1px dashed #1C75BC;
+  line-height: 2;
+}
+
+.p-article__body .wp-block-image {
+  border: none;
+  width: 100%;
+  padding-inline: 2rem;
+}
+
+.p-article__body ul,
+.p-article__body ol {
+  padding-left: 40px;
+  padding-right: 10px;
+  list-style: inside;
+  list-style-position: inside;
+}
+
+.p-article__body ul ul,
+.p-article__body ul ol,
+.p-article__body ol ul,
+.p-article__body ol ol {
+  margin-top: 10px;
+  list-style-type: circle;
+}
+
+.p-article__body ul ul ul,
+.p-article__body ul ul ol,
+.p-article__body ul ol ul,
+.p-article__body ul ol ol,
+.p-article__body ol ul ul,
+.p-article__body ol ul ol,
+.p-article__body ol ol ul,
+.p-article__body ol ol ol {
+  margin-top: 10px;
+  list-style-type: square;
+}
+
+.p-article__body ul li,
+.p-article__body ol li {
+  margin-bottom: 10px;
+}
+
+.p-article__body nav {
+  margin-top: 60px;
+}
+
+/**********************************************
+  singleページ　footerブロック
+**********************************************/
+.article__footer {
+  padding: 2rem 1.5rem;
+} 
 /* ==========================================================================================================
   カラースタイル
   =========================================================================================================== */

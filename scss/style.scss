@@ -20,10 +20,12 @@
 @forward './object/component/button';
 @forward './object/component/accordion';
 @forward './object/component/extend';
+@forward './object/component/card';
 // project
 @forward './object/project/front-page';
 @forward './object/project/loading';
-@forward './object/project/animetion';
+@forward './object/project/archive';
+@forward './object/project/single-page';
 // utility
 @forward './object/utility/color';
 @forward './object/utility/position';

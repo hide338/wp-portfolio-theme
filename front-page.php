@@ -457,7 +457,7 @@ Template Name: front-page
                     endif;
                   ?>
                   <li class="c-accordion__item">
-                    <div class="c-accordion__parent js-accordion is-on" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <div class="c-accordion__parent js-accordion" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                       <span>Q</span>
                       <p itemprop="name"><?php the_title(); ?></p>
                     </div>

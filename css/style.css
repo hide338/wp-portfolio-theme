@@ -843,12 +843,13 @@ th {
 }
 
 .c-btn {
+  margin-inline: auto;
   color: #3b3b3b;
   font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30rem;
+  max-width: 30rem;
   height: 4rem;
   overflow: hidden;
   border-radius: 999px;
@@ -878,6 +879,21 @@ th {
 }
 .c-btn:hover::before {
   width: 100%;
+}
+
+.c-btn--orange {
+  border-color: #cf7500;
+  color: #cf7500;
+}
+.c-btn--orange::before {
+  background-color: #cf7500;
+}
+
+.c-btn--dark {
+  border-color: #3b3b3b;
+}
+.c-btn--dark::before {
+  background-color: #3b3b3b;
 }
 
 /* ==========================================================================================================
@@ -1348,6 +1364,10 @@ th {
   transform: none;
 }
 
+.p-work__btn {
+  margin: 2rem auto;
+}
+
 /* ==========================================================================================================
   Skill
   =========================================================================================================== */
@@ -1512,19 +1532,18 @@ th {
   }
 }
 .p-web__list {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
 }
 @media screen and (max-width: 768px) {
   .p-web__list {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 }
 .p-web__item {
-  width: calc(50% - 20px);
+  grid-column: span 1/span 1;
   padding: 2rem;
   background-color: #fff;
 }
@@ -1533,13 +1552,15 @@ th {
     width: 100%;
   }
 }
+.p-web__header {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
 .p-web__title {
   font-size: 1.5rem;
   font-weight: bold;
   line-height: 1;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #ccc;
-  text-align: center;
 }
 .p-web__price {
   font-size: 1rem;
@@ -1558,17 +1579,37 @@ th {
   margin-top: 0.75rem;
 }
 .p-web__point {
-  padding-top: 1rem;
   font-size: 1rem;
   line-height: 1.5;
+  padding-block: 1rem;
+  border-bottom: 1px solid #ccc;
 }
 .p-web__point-title {
   font-weight: bold;
   text-align: center;
 }
-.p-web__point-list {
+.p-web__point-text {
   margin-top: 1rem;
   text-align: center;
+}
+.p-web__production {
+  padding-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.p-web__production-title {
+  font-weight: bold;
+  text-align: center;
+}
+.p-web__production-item {
+  margin-top: 1rem;
+  text-align: center;
+}
+.p-web__production-item i {
+  color: #1C75BC;
+}
+.p-web__footer {
+  margin-top: 2rem;
 }
 
 /* ==========================================================================================================
@@ -1663,6 +1704,23 @@ th {
   .wp-block-image .aligncenter {
     max-width: 50%;
   }
+}
+
+/* ==========================================================================================================
+  Contact
+  =========================================================================================================== */
+.p-contact__item {
+  margin-top: 2rem;
+}
+
+.p-contact__text {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.p-contact__text-list {
+  font-weight: bold;
+  font-size: 1.25rem;
 }
 
 /* ==========================================================================================================
@@ -1932,6 +1990,13 @@ archive body
 }
 
 /* ==========================================================================================================
+  パディング
+  =========================================================================================================== */
+.u-padding-none {
+  padding: 0;
+}
+
+/* ==========================================================================================================
   SPアクティブ
   =========================================================================================================== */
 .u-sp-active {
@@ -1978,10 +2043,11 @@ plugin
 .mw_wp_form input[type=radio], .mw_wp_form input[type=check] {
   cursor: pointer;
 }
-.mw_wp_form [type=submit] {
+.mw_wp_form input[type=submit] {
   display: inline-block;
-  width: 100%;
+  width: 50%;
   text-align: center;
+  padding-block: 1rem;
   border: 1px solid #1C75BC;
   border-radius: 999px;
   background-color: #1C75BC;
@@ -1992,9 +2058,14 @@ plugin
   transition: all 0.3s cubic-bezier(0.2, 1, 0.2, 1);
   margin-inline: auto;
 }
-.mw_wp_form [type=submit]:hover {
+.mw_wp_form input[type=submit]:hover {
   background-color: #fff;
   color: #1C75BC;
+}
+@media screen and (max-width: 768px) {
+  .mw_wp_form input[type=submit] {
+    width: 100%;
+  }
 }
 .mw_wp_form p {
   font-weight: bold; /* 項目名を太字 */

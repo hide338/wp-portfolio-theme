@@ -4,9 +4,9 @@ Template Name: front-page
 */
 ?>
 <?php get_header(); ?>
-  <!-- <div class="p-loader js-loader">
+  <div class="p-loader js-loader">
     <div class="p-loader__item"></div>
-  </div> -->
+  </div>
   <main class="l-site-main">
     <section class="p-fv l-container">
       <div id="particles-js" class="p-fv__particle"></div>
@@ -133,8 +133,8 @@ Template Name: front-page
             </div>
           </div>
         </div>
-        <div class="work__link">
-          <a href="<?= esc_url(get_post_type_archive_link('work')); ?>" class="work__btn"><span>実績一覧へ</span></a>
+        <div class="p-work__btn">
+          <a class="c-btn" href="<?= esc_url(get_post_type_archive_link('work')); ?>"><span>実績一覧へ</span></a>
         </div>
       </div>
     </section>
@@ -202,8 +202,8 @@ Template Name: front-page
       <div class="l-container l-section__wrapper">
         <span class="l-section__sepa-title">PRICE</span>
         <div class="l-section__header">
-          <h2 class="l-section__title section__title--ja">料金目安</h2>
-          <p class="l-section__title section__title--en">PRICE</p>
+          <h2 class="l-section__title l-section__title--ja">料金目安</h2>
+          <p class="l-section__title l-section__title--en">PRICE</p>
         </div>
         <div class="l-section__body">
           <div class="p-price">
@@ -256,42 +256,125 @@ Template Name: front-page
               <div class="p-web js-price-table" data-target="web">
                 <ul class="p-web__list">
                   <li class="p-web__item">
-                    <h4 class="p-web__title">ライト</h4>
+                    <div class="p-web__header">
+                      <h4 class="p-web__title">ライト</h4>
+                      <p class="p-web__text">WordPress</p>
+                      <p class="p-web__text">テンプレート</p>
+                    </div>
                     <div class="p-web__price">
-                      <p class="p-web__price-title">初期費用</p>
-                      <p class="p-web__price-price">25万円</p>
-                      <p class="p-web__price-title">月額費用</p>
+                      <p class="p-web__price-title">費用</p>
+                      <p class="p-web__price-price">12万円~</p>
+                      <p class="p-web__price-title">月額保守費用</p>
                       <p class="p-web__price-price">2万円</p>
                     </div>
                     <div class="p-web__point">
                       <p class="p-web__point-title">POINT</p>
-                      <ul class="p-web__point-list">
-                        <li>まずは自社サイトを持ちたい</li>
-                        <li>安く自社サイトを作成したい</li>
-                        <li>早く自社サイトを立ち上げたい</li>
+                      <p class="p-web__point-text">費用を抑えて<br>まずは自社サイトを持ちたい方向け</p>
+                    </div>
+                    <div class="p-web__production">
+                      <p class="p-web__production-title">制作内容</p>
+                      <ul class="p-web__production-list">
+                        <li class="p-web__production-item"><i class="fa-regular fa-circle-check"></i>基本料金</li>
+                        <li class="p-web__production-item"><i class="fa-regular fa-circle-check"></i>トップページ</li>
+                        <li class="p-web__production-item"><i class="fa-regular fa-circle-check"></i>下層3ページ</li>
+                        <li class="p-web__production-item"><i class="fa-regular fa-circle-check"></i>お問い合わせフォーム設置</li>
+                        <li class="p-web__production-item"><i class="fa-regular fa-circle-check"></i>レスポンシブ対応(スマホ対応)</li>
+                        <li class="p-web__production-item"><i class="fa-regular fa-circle-check"></i>WordPress初期設定</li>
+                        <li class="p-web__production-item"><i class="fa-regular fa-circle-check"></i>内部SEO対策</li>
+                        <li class="p-web__production-item"><i class="fa-regular fa-circle-check"></i>セキュリティ対策</li>
+                        <li class="p-web__production-item"><i class="fa-regular fa-circle-check"></i>操作マニュアルお渡し</li>
+                        <li class="p-web__production-item"><i class="fa-regular fa-circle-check"></i>サーバー設置サポート</li>
+                        <li class="p-web__production-item"><i class="fa-regular fa-circle-check"></i>ドメイン取得サポート</li>
+                        <li class="p-web__production-item"><i class="fa-regular fa-circle-check"></i>SSL対応サポート</li>
+                        <li class="p-web__production-item"><i class="fa-regular fa-circle-check"></i>保守管理</li>
                       </ul>
                     </div>
                   </li>
                   <li class="p-web__item">
-                    <h4 class="p-web__title">セミオーダー</h4>
+                    <div class="p-web__header">
+                      <h4 class="p-web__title">セミオーダー</h4>
+                      <p class="p-web__text">WordPress</p>
+                      <p class="p-web__text">テンプレート</p>
+                    </div>
                     <div class="p-web__price">
-                      <p class="p-web__price-title">初期費用</p>
-                      <p class="p-web__price-price">50万円</p>
-                      <p class="p-web__price-title">月額費用</p>
+                      <p class="p-web__price-title">費用</p>
+                      <p class="p-web__price-price">25万円~</p>
+                      <p class="p-web__price-title">月額保守費用</p>
                       <p class="p-web__price-price">2万円</p>
                     </div>
                     <div class="p-web__point">
                       <p class="p-web__point-title">POINT</p>
-                      <ul class="p-web__point-list">
-                        <li>10ページほどのコーポレートサイト</li>
-                        <li>企業としてのしっかりしたサイトが欲しい</li>
-                        <li>事業内容をしっかり伝えたい</li>
+                      <p class="p-web__point-text">一部カスタマイズを加えて<br>Web集客を見据えたサイトを<br>構築したい方向け</p>
+                    </div>
+                    <div class="p-web__production">
+                      <p class="p-web__production-title">制作内容</p>
+                      <ul class="p-web__production-list">
+                        <li class="p-web__production-item"><i class="fa-regular fa-circle-check"></i>基本料金</li>
+                        <li class="p-web__production-item"><i class="fa-regular fa-circle-check"></i>トップページ</li>
+                        <li class="p-web__production-item"><i class="fa-regular fa-circle-check"></i>下層8ページ</li>
+                        <li class="p-web__production-item"><i class="fa-regular fa-circle-check"></i>投稿機能実装(お知らせ、ブログ)</li>
+                        <li class="p-web__production-item"><i class="fa-regular fa-circle-check"></i>お問い合わせフォーム設置</li>
+                        <li class="p-web__production-item"><i class="fa-regular fa-circle-check"></i>レスポンシブ対応(スマホ対応)</li>
+                        <li class="p-web__production-item"><i class="fa-regular fa-circle-check"></i>WordPress初期設定</li>
+                        <li class="p-web__production-item"><i class="fa-regular fa-circle-check"></i>内部SEO対策</li>
+                        <li class="p-web__production-item"><i class="fa-regular fa-circle-check"></i>セキュリティ対策</li>
+                        <li class="p-web__production-item"><i class="fa-regular fa-circle-check"></i>操作マニュアルお渡し</li>
+                        <li class="p-web__production-item"><i class="fa-regular fa-circle-check"></i>サーバー設置サポート</li>
+                        <li class="p-web__production-item"><i class="fa-regular fa-circle-check"></i>ドメイン取得サポート</li>
+                        <li class="p-web__production-item"><i class="fa-regular fa-circle-check"></i>SSL対応サポート</li>
+                        <li class="p-web__production-item"><i class="fa-regular fa-circle-check"></i>保守管理</li>
+                        <li class="p-web__production-item"><i class="fa-regular fa-circle-check"></i>MEO対策（Googleマイビジネス設置）</li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="p-web__item">
+                    <div class="p-web__header">
+                      <h4 class="p-web__title">フルオーダー</h4>
+                      <p class="p-web__text">WordPress</p>
+                      <p class="p-web__text">オリジナルデザイン</p>
+                    </div>
+                    <div class="p-web__price">
+                      <p class="p-web__price-title">費用</p>
+                      <p class="p-web__price-price">50万円~</p>
+                      <p class="p-web__price-title">月額保守費用</p>
+                      <p class="p-web__price-price">2万円</p>
+                    </div>
+                    <div class="p-web__point">
+                      <p class="p-web__point-title">POINT</p>
+                      <p class="p-web__point-text">テンプレートではなく<br>オリジナルデザインのサイトが欲しい方向け</p>
+                    </div>
+                    <div class="p-web__production">
+                      <p class="p-web__production-title">制作内容</p>
+                      <ul class="p-web__production-list">
+                        <li class="p-web__production-item"><i class="fa-regular fa-circle-check"></i>基本料金</li>
+                        <li class="p-web__production-item"><i class="fa-regular fa-circle-check"></i>トップページ</li>
+                        <li class="p-web__production-item"><i class="fa-regular fa-circle-check"></i>下層10ページ</li>
+                        <li class="p-web__production-item"><i class="fa-regular fa-circle-check"></i>投稿機能実装(お知らせ、ブログ)</li>
+                        <li class="p-web__production-item"><i class="fa-regular fa-circle-check"></i>お問い合わせフォーム設置</li>
+                        <li class="p-web__production-item"><i class="fa-regular fa-circle-check"></i>レスポンシブ対応(スマホ対応)</li>
+                        <li class="p-web__production-item"><i class="fa-regular fa-circle-check"></i>WordPress初期設定</li>
+                        <li class="p-web__production-item"><i class="fa-regular fa-circle-check"></i>内部SEO対策</li>
+                        <li class="p-web__production-item"><i class="fa-regular fa-circle-check"></i>セキュリティ対策</li>
+                        <li class="p-web__production-item"><i class="fa-regular fa-circle-check"></i>操作マニュアルお渡し</li>
+                        <li class="p-web__production-item"><i class="fa-regular fa-circle-check"></i>サーバー設置サポート</li>
+                        <li class="p-web__production-item"><i class="fa-regular fa-circle-check"></i>ドメイン取得サポート</li>
+                        <li class="p-web__production-item"><i class="fa-regular fa-circle-check"></i>SSL対応サポート</li>
+                        <li class="p-web__production-item"><i class="fa-regular fa-circle-check"></i>保守管理</li>
+                        <li class="p-web__production-item"><i class="fa-regular fa-circle-check"></i>MEO対策(Googleマイビジネス設置)</li>
                       </ul>
                     </div>
                   </li>
                 </ul>
+                <div class="p-web__footer">
+                  <ul class="p-web__footer-list">
+                    <li class="p-web__footer-item">※基本料金には、ヒアリングやお打ち合わせ、企画・構成、動作確認作業などが含まれます。</li>
+                    <li class="p-web__footer-item">※機能の追加やページ数の追加など、お客様のご要望に合わせて別途費用で対応いたします。</li>
+                    <li class="p-web__footer-item">※上記プランでは、画像や文章はお客様にてご用意いただいております。文章等のサポートはご相談ください。</li>
+                    <li class="p-web__footer-item">※ドメイン、サーバー料金は含まれておりません。契約のサポートはさせていただきますので、ホームページ制作が初めての場合もご安心下さい。</li>
+                    <li class="p-web__footer-item">※料金・内容等は予告なく変更・改定となる場合がございますので、あらかじめご了承ください。</li>
+                  </ul>
+                </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -302,8 +385,8 @@ Template Name: front-page
       <div class="l-container l-section__wrapper">
         <span class="l-section__sepa-title">FLOW</span>
         <div class="l-section__header">
-          <h2 class="l-section__title section__title--ja">納品までの流れ</h2>
-          <p class="l-section__title section__title--en">FLOW</p>
+          <h2 class="l-section__title l-section__title--ja">納品までの流れ</h2>
+          <p class="l-section__title l-section__title--en">FLOW</p>
         </div>
         <div class="l-section__body">
           <?php
@@ -414,31 +497,45 @@ Template Name: front-page
       <div class="l-container l-section__wrapper">
         <span class="l-section__sepa-title">FAQ</span>
         <div class="l-section__header">
-          <h2 class="l-section__title section__title--ja">よくある質問</h2>
-          <p class="l-section__title section__title--en">FAQ</p>
+          <h2 class="l-section__title l-section__title--ja">よくある質問</h2>
+          <p class="l-section__title l-section__title--en">FAQ</p>
         </div>
+        
         <div class="l-section__body">
+        <?php
+          $args = [
+            'post_type' => 'faq',
+            'order' => 'ASC',
+            'orderby' => 'menu_order' 
+          ];
+          $faq_posts = new WP_Query( $args );
+          $faq_count = 1;
+          ?>
           <div class="c-accordion">
-            <div class="c-accordion__item">
-              <div class="c-accordion__parent js-accordion is-on" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <span>Q</span>
-                <p itemprop="name">よくある質問の実装はできますか？</p>
-              </div>
-              <div class="c-accordion__child" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <span>A</span>
-                <p itemprop="text">はい、可能です。</p>
-              </div>
-            </div>
-            <div class="c-accordion__item">
-              <div class="c-accordion__parent js-accordion" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <span>Q</span>
-                <p itemprop="name">よくある質問の実装はできますか？</p>
-              </div>
-              <div class="c-accordion__child" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <span>A</span>
-                <p itemprop="text">はい、可能です。</p>
-              </div>
-            </div>
+            <ul class="c-accordion__list">
+              <?php if ( $faq_posts->have_posts()): ?>
+                <?php while( $faq_posts->have_posts() ): $faq_posts->the_post(); ?>
+                  <?php
+                    if (has_post_thumbnail()):
+                      $id = get_post_thumbnail_id();
+                      $img = wp_get_attachment_image_src($id,'full');
+                    else:
+                      $img = array(get_template_directory_uri() . '/img/post-bg.jpg');
+                    endif;
+                  ?>
+                  <li class="c-accordion__item">
+                    <div class="c-accordion__parent js-accordion is-on" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                      <span>Q</span>
+                      <p itemprop="name"><?php the_title(); ?></p>
+                    </div>
+                    <div class="c-accordion__child" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                      <span>A</span>
+                      <p itemprop="text"><?php the_content(); ?></p>
+                    </div>
+                  </li>
+                <?php endwhile; ?>
+              <?php endif; ?>
+            </ul>
           </div>
         </div>
       </div>
@@ -448,30 +545,39 @@ Template Name: front-page
       <div class="l-container l-section__wrapper">
         <span class="l-section__sepa-title">PROFILE</span>
         <div class="l-section__header">
-          <h2 class="l-section__title section__title--ja">プロフィール</h2>
-          <p class="l-section__title section__title--en">PROFILE</p>
+          <h2 class="l-section__title l-section__title--ja">プロフィール</h2>
+          <p class="l-section__title l-section__title--en">PROFILE</p>
         </div>
         <div class="l-section__body">
-        <?php if ( is_home() || is_front_page() ) : ?>
-          <?php
-            $page_id = 8;//ページIDを指定
-            $page = get_post($page_id, 'OBJECT', 'raw'); //指定のページIDから情報を取得
-            $page_include = apply_filters( 'the_content',$page->post_content); //ページの本文をフィルターフックで整形
-            // サムネイル画像を取得
-            if (has_post_thumbnail()):
-              $img = get_the_post_thumbnail_url($page_id);
-            else:
-              $img = array(get_template_directory_uri() . '/img/post-bg.jpg');
-            endif;
-          ?>
-            <div class="p-profile">
-              <!-- <div class="profile__img col-span-1">
-                <img src="<?= esc_url($img); ?>" alt="" class="">
-              </div> -->
-              <div class="p-profile__text">
-                <p><?= $page_include; ?></p>
-              </div>
-            </div>
+          <?php if ( is_home() || is_front_page() ) : ?>
+            <?php
+              $args = [
+                'post_type' => 'page',
+                'order' => 'ASC',
+                'orderby' => 'menu_order' 
+              ];
+              $page_posts = new WP_Query( $args );
+            ?>
+            <?php if ( $page_posts->have_posts()): ?>
+              <?php while( $page_posts->have_posts() ): $page_posts->the_post(); ?>
+                <?php
+                  // サムネイル画像を取得
+                  if (has_post_thumbnail()):
+                    $id = get_post_thumbnail_id();
+                    $img = wp_get_attachment_image_src($id,'full');
+                  else:
+                    $img = array(get_template_directory_uri() . '/img/post-bg.jpg');
+                  endif;
+                ?>
+                <?php if (get_the_ID() === 8): ?>
+                  <div class="p-profile">
+                    <div class="p-profile__text">
+                      <p><?php the_content(); ?></p>
+                    </div>
+                  </div>
+                <?php endif; ?>
+              <?php endwhile; ?>
+            <?php endif; ?>
           <?php endif; ?>
         </div>
       </div>
@@ -485,35 +591,36 @@ Template Name: front-page
           <p class="l-section__title l-section__title--en">CONTACT</p>
         </div>
         <?php if ( is_home() || is_front_page() ) : ?>
-          <?php
-            $page_id = 2173;//ページIDを指定
-            $page = get_post($page_id, 'OBJECT', 'raw'); //指定のページIDから情報を取得
-            $page_include = apply_filters( 'the_content',$page->post_content); //ページの本文をフィルターフックで整形
-            // サムネイル画像を取得
-            if (has_post_thumbnail()):
-              $img = get_the_post_thumbnail_url($page_id);
-            else:
-              $img = array(get_template_directory_uri() . '/img/post-bg.jpg');
-            endif;
-          ?>
           <div class="l-section__body">
             <div class="p-contact">
-              <ul class="contact__list">
-                <li class="contact__item">
-                  <a href="<?php echo esc_url( get_the_permalink( 2173 ) ); ?>">
-                    <img src="<?= get_template_directory_uri(); ?>/img/mail.png" alt="">
-                  </a>
+              <ul class="p-contact__list p-contact__flex">
+                <li class="p-contact__item">
+
+                  <div class="p-contact__btn">
+                    <a class="c-btn c-btn--orange" href="<?php echo esc_url( get_the_permalink( 2173 ) ); ?>">
+                      <span>お問い合わせ</span>
+                    </a>
+                  </div>
                 </li>
-                <li class="contact__item">
-                  <a href="https://twitter.com/hide64980862">
-                    <img src="<?= get_template_directory_uri(); ?>/img/twitter-x.png" alt="">
-                  </a>
+                <li class="p-contact__item">
+                  <div class="p-contact__btn">
+                    <a class="c-btn c-btn--dark" href="https://twitter.com/hide64980862">
+                      <span>X(旧:Twitter)</span>
+                    </a>
+                  </div>
                 </li>
               </ul>
             </div>
-            <p class="contact__comment">
-              お問い合わせは、メールもしくはX(旧:Twitter)のDMから、お問い合わせください。
-            </p>
+            <div class="p-contact__text">
+              <p>お問い合わせフォームもしくはX(旧:Twitter)のDMどちらからも、お問い合わせ可能です。</p>
+              <ul class="p-contact__text-list">
+                <li>『話だけ聞いてみたい』</li>
+                <li>『お見積もりを出してほしい』</li>
+                <li>『お仕事の依頼をしたい』</li>
+                <li>『Web制作の相談がしたい』</li>
+              </ul>
+              <p>など、お気軽にお問い合わせください！</p>
+            </div>
           </div>
         <?php endif; ?>
       </div>

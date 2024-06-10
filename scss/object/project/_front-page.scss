@@ -135,7 +135,7 @@
     // left: 0;
     // width: 100%;
     // height: calc(100% + 10rem);
-    // background-color: $bg-dark-color;
+    // background-color: $dark-color;
     // z-index: -1;
     // clip-path: polygon(0 20%, 0 0, 0 100%, 0 80%);
     // opacity: 0;
@@ -321,6 +321,10 @@
   }
 }
 
+.p-work__btn {
+  margin: 2rem auto;
+}
+
 /* ==========================================================================================================
   Skill
   =========================================================================================================== */
@@ -504,18 +508,15 @@
   }
 
   &__list {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 20px;
+    @include grid-cols(3);
+    @include gap(32);
     @include mq(md) {
-      flex-direction: column;
+      @include grid-cols(1);
     }
   }
 
   &__item {
-    width: calc(100% / 2 - 20px);
+    @include col-span(1);
     padding: 2rem;
     background-color: #fff;
     @include mq(md) {
@@ -523,14 +524,17 @@
     }
   }
 
+  &__header {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+  }
+
   &__title {
     font-size: 1.5rem;
     font-weight: bold;
     // color: $main-color;
     line-height: 1;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #ccc;
-    text-align: center;
   }
 
   &__price {
@@ -555,6 +559,23 @@
   }
 
   &__point {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding-block: 1rem;
+    border-bottom: 1px solid #ccc;
+
+    &-title {
+      font-weight: bold;
+      text-align: center;
+    }
+    
+    &-text {
+      margin-top: 1rem;
+      text-align: center;
+    }
+  }
+
+  &__production {
     padding-top: 1rem;
     font-size: 1rem;
     line-height: 1.5;
@@ -564,12 +585,17 @@
       text-align: center;
     }
     
-    &-list {
+    &-item {
       margin-top: 1rem;
       text-align: center;
-      // list-style-type: disc;
-      // list-style-position: inside;
+      i {
+        color: $main-color;
+      }
     }
+  }
+
+  &__footer {
+    margin-top: 2rem;
   }
 }
 
@@ -675,4 +701,21 @@
   @include mq(md) {
     max-width: 50%;
   }
+}
+
+/* ==========================================================================================================
+  Contact
+  =========================================================================================================== */
+.p-contact__item {
+  margin-top: 2rem;
+}
+
+.p-contact__text {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.p-contact__text-list {
+  font-weight: bold;
+  font-size: 1.25rem;
 }

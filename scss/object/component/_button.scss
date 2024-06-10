@@ -13,31 +13,19 @@
 
 .c-btn {
   @include coloring-btn(30rem, 4rem, 999px, .5s);
-  // color: #3b3b3b;
-  // font-weight: bold;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  // width: 100%;
-  // height: 4rem;
-  // overflow: hidden;
-  // border-radius: 9999px;
-  // text-align: center;
-  // background-color: #fff;
-  // position: relative;
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   top: 0;
-  //   width: 4rem;
-  //   height: 100%;
-  //   left: 0;
-  //   background-color: $main-color;
-  //   border-radius: 9999px;
-  //   transition-duration: $duration-time;
-  // }
-  // span {
-  //   transition-delay: 0.3s;
-  //   z-index: 2;
-  // }
+}
+
+.c-btn--orange {
+  border-color: #cf7500;
+  color: #cf7500;
+  &::before {
+    background-color: #cf7500;
+  }
+}
+
+.c-btn--dark {
+  border-color: $dark-color;
+  &::before {
+    background-color: $dark-color;
+  }
 }

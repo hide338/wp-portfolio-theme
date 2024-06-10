@@ -13,7 +13,7 @@ Template Name: front-page
       <div class="p-fv__wrapper l-container">
         <div class="p-fv__text">
           <h2 class="p-fv__title js-load"><span>視力2.0エンジニア</span><br><span><span class="u-text-blue">"中原 利秀"</span>を<br class="u-sp-active">知ってもらうための</span><br><span>ポートフォリオサイト<br class="u-sp-active">です！</span></h2>
-          <p class="p-fv__description js-load">バックエンドからフロントエンドまでの開発経験を活かし<br>幅広い知識でWeb制作業務をサポートします。</p>
+          <p class="p-fv__description js-load">バックエンドからフロントエンドまでの<br class="-sp-active">開発経験を活かし<br>幅広い知識でWeb制作業務をサポートします。</p>
           <div class="p-fv__btn js-load">
             <a href="<?php echo esc_url( get_the_permalink( 2173 ) ); ?>" class="p-fv__link c-cta">お問い合わせ</a>
           </div>
@@ -198,7 +198,7 @@ Template Name: front-page
       </div>
     </section>
 
-    <section class="l-section">
+    <section id="price" class="l-section">
       <div class="l-container l-section__wrapper">
         <span class="l-section__sepa-title">PRICE</span>
         <div class="l-section__header">
@@ -381,7 +381,7 @@ Template Name: front-page
       </div>
     </section>
 
-    <section class="l-section">
+    <section id="flow" class="l-section">
       <div class="l-container l-section__wrapper">
         <span class="l-section__sepa-title">FLOW</span>
         <div class="l-section__header">
@@ -422,78 +422,11 @@ Template Name: front-page
               <?php endif; ?>
             </ul>
           </div>
-          <!-- <div class="p-flow">
-            <ul class="p-flow__list">
-              <li class="p-flow__item js-scroll">
-                <p class="p-flow__icon">STEP&nbsp;1</p>
-                <dl class="p-flow__data-list">
-                  <dt class="p-flow__data-title">お申し込み</dt>
-                  <dd class="p-flow__data-text">お問い合わせフォーム、もしくはX(旧twitter)から内容を記入いただき送信をお願いします。</dd>
-                </dl>
-              </li>
-
-              <li class="p-flow__item js-scroll">
-                <p class="p-flow__icon">STEP&nbsp;2</p>
-                <dl class="p-flow__data-list">
-                  <dt class="p-flow__data-title">ヒヤリング</dt>
-                  <dd class="p-flow__data-text">お客様のご要望に完璧に添えるよう、ヒヤリングを行います。<br>一番大切な工程になります。<br>しっかりと時間をとって、丁寧に行いますので、ご要望や疑問をなんでもご相談ください。</dd>
-                </dl>
-              </li>
-
-              <li class="p-flow__item js-scroll">
-                <p class="p-flow__icon">STEP&nbsp;3</p>
-                <dl class="p-flow__data-list">
-                  <dt class="p-flow__data-title">お見積もり</dt>
-                  <dd class="p-flow__data-text">ヒヤリングでお伺いした内容を元にお見積もりを作成、提出させていただきます。</dd>
-                </dl>
-              </li>
-
-              <li class="p-flow__item js-scroll">
-                <p class="p-flow__icon">STEP&nbsp;4</p>
-                <dl class="p-flow__data-list">
-                  <dt class="p-flow__data-title">ご契約</dt>
-                  <dd class="p-flow__data-text">お見積もりに差異がないようでしたらご契約お願いいたします。</dd>
-                </dl>
-              </li>
-
-              <li class="p-flow__item js-scroll">
-                <p class="p-flow__icon">STEP&nbsp;5</p>
-                <dl class="p-flow__data-list">
-                  <dt class="p-flow__data-title">着手金の入金確認</dt>
-                  <dd class="p-flow__data-text">契約金額の50%をご入金いただき、確認いたします。</dd>
-                </dl>
-              </li>
-
-              <li class="p-flow__item js-scroll">
-                <p class="p-flow__icon">STEP&nbsp;6</p>
-                <dl class="p-flow__data-list">
-                  <dt class="p-flow__data-title">作業開始</dt>
-                  <dd class="p-flow__data-text">ご依頼内容の作業を開始させていただきます。</dd>
-                </dl>
-
-              <li class="p-flow__item js-scroll">
-                <p class="p-flow__icon">STEP&nbsp;7</p>
-                <dl class="p-flow__data-list">
-                  <dt class="p-flow__data-title">研修・修正対応</dt>
-                  <dd class="p-flow__data-text">制作物の研修・確認をお願いいたします。<br>修正(ミスや小さな修正)は無制限に行いますので、お気軽にお声掛けください。<br>「デザインが変更になる」「機能追加をお願いしたい」などの場合には、追加料金をいただく可能性がありますのでご了承ください。</dd>
-                </dl>
-              </li>
-
-              <li class="p-flow__item js-scroll">
-                <p class="p-flow__icon">STEP&nbsp;8</p>
-                <dl class="p-flow__data-list">
-                  <dt class="p-flow__data-title">納品</dt>
-                  <dd class="p-flow__data-text">お客様ご希望の納品方法で納品をして、作業終了とさせていただきます。</dd>
-                </dl>
-              </li>
-
-            </ul>
-          </div> -->
         </div>
       </div>
     </section>
 
-    <section class="l-section">
+    <section id="faq" class="l-section">
       <div class="l-container l-section__wrapper">
         <span class="l-section__sepa-title">FAQ</span>
         <div class="l-section__header">

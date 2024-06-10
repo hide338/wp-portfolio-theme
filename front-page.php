@@ -537,7 +537,7 @@ Template Name: front-page
                 </li>
                 <li class="p-contact__item">
                   <div class="p-contact__btn">
-                    <a class="c-btn c-btn--dark" href="https://twitter.com/hide64980862">
+                    <a class="c-btn c-btn--dark" href="https://x.com/toshihideN1">
                       <span>X(旧:Twitter)</span>
                     </a>
                   </div>

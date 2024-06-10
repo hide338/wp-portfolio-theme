@@ -6,7 +6,7 @@
   =========================================================================================================== */
 .c-gnav {
 
-  @include mq(md) {
+  @include mq(lg) {
     display: none;
   }
 
@@ -40,12 +40,16 @@
   top: 0;
   right: 0;
   height: 100%;
-  width: 4rem;
+  width: 6rem;
   background-color: $main-color;
   transition: all $duration-time;
   z-index: 999;
-  @include mq(md) {
+  @include mq(lg) {
+    width: 6rem;
     display: block;
+  }
+  @include mq(md) {
+    width: 4rem;
   }
   
   span {
